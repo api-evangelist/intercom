@@ -10,7 +10,7 @@ apis:
       service platform. Create seamless customized experiences in the Intercom
       Help Desk and Messenger using our APIs and SDKS.
 aid: intercom
-name: Intercom
+name: intercom
 tags:
   - Bookmark
 image: >-
@@ -25,3 +25,6 @@ maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
 specificationVersion: '0.16'
+type: Index
+position: Consumer
+access: 3rd-Party
