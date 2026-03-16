@@ -1,30 +1,53 @@
-url: >-
-  https://example.com/apis/intercomintercom-openapi-an-openapi-description-for-intercoms-rest-api.yml
-apis:
-  - aid: intercom:intercome
-    name: Intercome
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://developers.intercom.com/
-    description: >-
-      Integrate with Intercom by building apps on the complete AI customer
-      service platform. Create seamless customized experiences in the Intercom
-      Help Desk and Messenger using our APIs and SDKS.
 aid: intercom
-name: intercom
-tags:
-  - Bookmark
-image: >-
-  https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/intercomintercom-openapi-an-openapi-description-for-intercoms-rest-api.png
-created: 2024/7/2
-modified: '2024-11-14'
+name: Intercom
 description: >-
-  Integrate with Intercom by building apps on the complete AI customer service
-  platform. Create seamless customized experiences in the Intercom Help Desk and
-  Messenger using our APIs and SDKS.
-maintainers:
-  - FN: API Evangelist
-    email: info@apievangelist.com
-specificationVersion: '0.16'
+  Intercom is an AI-powered customer service platform that enables businesses
+  to build seamless customized experiences through its Help Desk and Messenger.
+  The Intercom API allows developers to integrate with the Intercom platform
+  using RESTful APIs and SDKs.
 type: Index
-position: Consumer
-access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Customer Service
+  - Messaging
+  - Customer Support
+  - AI
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/intercom/refs/heads/main/apis.yml
+created: '2024-07-02'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: intercom:intercom-api
+    name: Intercom API
+    description: >-
+      The Intercom API provides programmatic access to the Intercom customer
+      service platform. Build apps on the complete AI customer service platform
+      and create seamless customized experiences in the Intercom Help Desk and
+      Messenger using APIs and SDKs.
+    humanURL: https://developers.intercom.com/
+    tags:
+      - Customer Service
+      - Messaging
+      - REST
+    properties:
+      - type: Documentation
+        url: https://developers.intercom.com/docs/
+      - type: Getting Started
+        url: https://developers.intercom.com/docs/get-started/
+      - type: Authentication
+        url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+common:
+  - type: Portal
+    url: https://developers.intercom.com/
+  - type: Website
+    url: https://www.intercom.com/
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: Support
+    url: https://www.intercom.com/help/
+  - type: Sign Up
+    url: https://app.intercom.com/a/signup/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
