@@ -8,10 +8,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Customer Service
-  - Messaging
-  - Customer Support
   - AI
+  - Customer Service
+  - Customer Support
+  - Messaging
 url: >-
   https://raw.githubusercontent.com/api-evangelist/intercom/refs/heads/main/apis.yml
 created: '2024-07-02'
