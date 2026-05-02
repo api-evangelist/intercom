@@ -1,0 +1,546 @@
+openapi: 3.1.0
+info:
+  title: Intercom API
+  description: >-
+    The Intercom API provides programmatic access to the Intercom AI-powered
+    customer service platform. It enables developers to manage contacts,
+    companies, conversations, articles, segments, messages, and data events,
+    and to build seamless integrations with the Intercom Help Desk and
+    Messenger.
+  version: '2.15'
+  contact:
+    name: Intercom Developer Support
+    url: https://developers.intercom.com/
+externalDocs:
+  description: Intercom Developer Documentation
+  url: https://developers.intercom.com/docs/
+servers:
+  - url: https://api.intercom.io
+    description: Production (US)
+  - url: https://api.eu.intercom.io
+    description: Europe
+  - url: https://api.au.intercom.io
+    description: Australia
+tags:
+  - name: Admins
+    description: Workspace teammates and admin information.
+  - name: Contacts
+    description: Manage users and leads in your Intercom workspace.
+  - name: Companies
+    description: Manage company records associated with contacts.
+  - name: Conversations
+    description: Manage conversations between contacts and admins.
+  - name: Articles
+    description: Manage Help Center articles.
+  - name: Segments
+    description: Access user and company segments.
+  - name: Messages
+    description: Send outbound messages from Intercom to contacts.
+  - name: Data Events
+    description: Submit and retrieve user activity events.
+  - name: News
+    description: Manage news items in the Help Desk.
+paths:
+  /me:
+    get:
+      operationId: getMe
+      summary: Identify an admin
+      description: >-
+        Returns information about the admin user authenticated by the access
+        token used in the request.
+      tags:
+        - Admins
+      responses:
+        '200':
+          description: Admin record returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Admin'
+  /admins:
+    get:
+      operationId: listAdmins
+      summary: List admins
+      description: >-
+        Retrieves a paginated list of admins in your Intercom workspace.
+      tags:
+        - Admins
+      responses:
+        '200':
+          description: Admin list returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  admins:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Admin'
+  /contacts:
+    get:
+      operationId: listContacts
+      summary: List contacts
+      description: Retrieves a paginated list of contacts.
+      tags:
+        - Contacts
+      parameters:
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+        - name: starting_after
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Contacts list returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContactList'
+    post:
+      operationId: createContact
+      summary: Create a contact
+      description: Creates a new contact (user or lead) in your Intercom workspace.
+      tags:
+        - Contacts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Contact'
+      responses:
+        '200':
+          description: Contact created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+  /contacts/{contact_id}:
+    get:
+      operationId: getContact
+      summary: Retrieve a contact
+      description: Retrieves a single contact by ID.
+      tags:
+        - Contacts
+      parameters:
+        - name: contact_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Contact returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+  /companies:
+    get:
+      operationId: listCompanies
+      summary: List companies
+      description: Retrieves a paginated list of companies.
+      tags:
+        - Companies
+      responses:
+        '200':
+          description: Companies list returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompanyList'
+    post:
+      operationId: createOrUpdateCompany
+      summary: Create or update a company
+      description: Creates or updates a company record by company_id.
+      tags:
+        - Companies
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Company'
+      responses:
+        '200':
+          description: Company created or updated successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Company'
+  /conversations:
+    get:
+      operationId: listConversations
+      summary: List conversations
+      description: Retrieves a paginated list of conversations.
+      tags:
+        - Conversations
+      responses:
+        '200':
+          description: Conversations list returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConversationList'
+    post:
+      operationId: createConversation
+      summary: Create a conversation
+      description: Creates a new user-initiated conversation.
+      tags:
+        - Conversations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                from:
+                  type: object
+                body:
+                  type: string
+      responses:
+        '200':
+          description: Conversation created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conversation'
+  /conversations/{conversation_id}:
+    get:
+      operationId: getConversation
+      summary: Retrieve a conversation
+      tags:
+        - Conversations
+      parameters:
+        - name: conversation_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Conversation returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conversation'
+  /articles:
+    get:
+      operationId: listArticles
+      summary: List articles
+      tags:
+        - Articles
+      responses:
+        '200':
+          description: Articles list returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Article'
+    post:
+      operationId: createArticle
+      summary: Create an article
+      tags:
+        - Articles
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Article'
+      responses:
+        '200':
+          description: Article created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Article'
+  /segments:
+    get:
+      operationId: listSegments
+      summary: List segments
+      tags:
+        - Segments
+      responses:
+        '200':
+          description: Segments list returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  segments:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Segment'
+  /messages:
+    post:
+      operationId: createMessage
+      summary: Create a message
+      description: Sends an outbound message to a contact.
+      tags:
+        - Messages
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message_type:
+                  type: string
+                subject:
+                  type: string
+                body:
+                  type: string
+                template:
+                  type: string
+                from:
+                  type: object
+                to:
+                  type: object
+      responses:
+        '200':
+          description: Message dispatched successfully.
+  /events:
+    post:
+      operationId: submitEvent
+      summary: Submit a data event
+      description: Submits a custom data event tracking user activity.
+      tags:
+        - Data Events
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                event_name:
+                  type: string
+                created_at:
+                  type: integer
+                user_id:
+                  type: string
+                email:
+                  type: string
+                metadata:
+                  type: object
+      responses:
+        '202':
+          description: Event accepted.
+    get:
+      operationId: listEvents
+      summary: List data events
+      tags:
+        - Data Events
+      parameters:
+        - name: type
+          in: query
+          schema:
+            type: string
+        - name: user_id
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Events list returned successfully.
+  /news/news_items:
+    get:
+      operationId: listNewsItems
+      summary: List news items
+      tags:
+        - News
+      responses:
+        '200':
+          description: News items list returned successfully.
+    post:
+      operationId: createNewsItem
+      summary: Create a news item
+      tags:
+        - News
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                body:
+                  type: string
+                sender_id:
+                  type: integer
+                state:
+                  type: string
+      responses:
+        '200':
+          description: News item created successfully.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Admin:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        away_mode_enabled:
+          type: boolean
+        away_mode_reassign:
+          type: boolean
+    Contact:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        external_id:
+          type: string
+        role:
+          type: string
+        email:
+          type: string
+        name:
+          type: string
+        phone:
+          type: string
+        created_at:
+          type: integer
+        updated_at:
+          type: integer
+    ContactList:
+      type: object
+      properties:
+        type:
+          type: string
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Contact'
+        total_count:
+          type: integer
+    Company:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        company_id:
+          type: string
+        name:
+          type: string
+        plan:
+          type: object
+        size:
+          type: integer
+        industry:
+          type: string
+        created_at:
+          type: integer
+    CompanyList:
+      type: object
+      properties:
+        type:
+          type: string
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Company'
+    Conversation:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        title:
+          type: string
+        created_at:
+          type: integer
+        updated_at:
+          type: integer
+        state:
+          type: string
+        open:
+          type: boolean
+        priority:
+          type: string
+    ConversationList:
+      type: object
+      properties:
+        type:
+          type: string
+        conversations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Conversation'
+        total_count:
+          type: integer
+    Article:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        body:
+          type: string
+        author_id:
+          type: integer
+        state:
+          type: string
+        created_at:
+          type: integer
+        updated_at:
+          type: integer
+    Segment:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        name:
+          type: string
+        created_at:
+          type: integer
+        updated_at:
+          type: integer
+        person_type:
+          type: string
+security:
+  - bearerAuth: []

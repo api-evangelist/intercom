@@ -15,7 +15,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/intercom/refs/heads/main/apis.yml
 created: '2024-07-02'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 apis:
   - aid: intercom:intercom-api
@@ -25,7 +25,9 @@ apis:
       service platform. Build apps on the complete AI customer service platform
       and create seamless customized experiences in the Intercom Help Desk and
       Messenger using APIs and SDKs.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://developers.intercom.com/
+    baseURL: https://api.intercom.io
     tags:
       - Customer Service
       - Messaging
@@ -37,6 +39,8 @@ apis:
         url: https://developers.intercom.com/docs/get-started/
       - type: Authentication
         url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+      - type: OpenAPI
+        url: openapi/intercom-openapi.yml
 common:
   - type: Portal
     url: https://developers.intercom.com/

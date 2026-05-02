@@ -16,7 +16,7 @@ Intercom is an AI-powered customer service platform that enables businesses to b
 ## Timestamps
 
 - **Created:** 2024-07-02 
-- **Modified:** 2026-03-16 
+- **Modified:** 2026-04-28 
 
 ## APIs
 
@@ -35,6 +35,7 @@ The Intercom API provides programmatic access to the Intercom customer service p
 - [Documentation](https://developers.intercom.com/docs/)
 - [Getting Started](https://developers.intercom.com/docs/get-started/)
 - [Authentication](https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/)
+- [OpenAPI](openapi/intercom-openapi.yml)
 
 ## Common Properties
 
