@@ -1,0 +1,98 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Intercom
+providerId: intercom
+created: '2026-05-04'
+modified: '2026-05-04'
+reconciled: true
+tags:
+  - Customer Support
+  - Messaging
+  - AI Agents
+description: Intercom per-seat pricing across Essential, Advanced, Expert. Fin AI Agent is per-resolution.
+sources:
+  - https://www.intercom.com/pricing
+plans:
+  - id: intercom-essential
+    name: Essential
+    type: paid
+    description: $29/seat/month.
+    entries:
+      - label: Per seat
+        name: seat
+        type: subscription
+        metric: user
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '29.00'
+        userMultiplied: true
+    elements:
+      - name: Fin Customer Agent (per outcome)
+      - name: Messenger
+      - name: Shared inbox
+      - name: Pre-built reports
+      - name: Public help center
+  - id: intercom-advanced
+    name: Advanced
+    type: paid
+    description: $85/seat/month.
+    entries:
+      - label: Per seat
+        name: seat
+        type: subscription
+        metric: user
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '85.00'
+        userMultiplied: true
+    elements:
+      - name: Multiple team inboxes
+      - name: Workflows builder
+      - name: Round-robin
+      - name: Private/multilingual Help Center
+      - name: 20 free Lite seats
+  - id: intercom-expert
+    name: Expert
+    type: paid
+    description: $132/seat/month.
+    entries:
+      - label: Per seat
+        name: seat
+        type: subscription
+        metric: user
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '132.00'
+        userMultiplied: true
+    elements:
+      - name: SSO
+      - name: HIPAA
+      - name: SLAs
+      - name: Multibrand
+      - name: 50 free Lite seats
+  - id: intercom-fin-standalone
+    name: Fin AI Agent (Standalone)
+    type: usage-based
+    description: $0.99 per resolution outcome.
+    entries:
+      - label: Per resolution
+        name: outcome
+        type: metered
+        metric: outcome
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.99'
+        userMultiplied: false
+    elements:
+      - name: Works with existing helpdesks
+      - name: Email/chat/phone
+      - name: Hand-off to agents

@@ -1,0 +1,38 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Intercom
+providerId: intercom
+created: '2026-05-04'
+modified: '2026-05-04'
+reconciled: true
+tags:
+  - Rate Limiting
+  - Customer Support
+description: Intercom REST API per-app rate limits.
+sources:
+  - https://www.intercom.com/pricing
+  - https://developers.intercom.com/docs/build-an-integration/learn-more/rate-limiting/
+headers:
+  limit: X-RateLimit-Limit
+  remaining: X-RateLimit-Remaining
+  reset: X-RateLimit-Reset
+responseCodes:
+  throttled: 429
+limits:
+  - name: Standard REST API
+    scope: app
+    metric: requests_per_10s
+    limit: 166
+    timeFrame: 10 seconds
+    notes: Equivalent to ~1000 req/min.
+  - name: Search API
+    scope: app
+    metric: requests_per_10s
+    limit: 33
+    timeFrame: 10 seconds
+  - name: Bulk API
+    scope: app
+    metric: requests_per_10s
+    limit: 16
+    timeFrame: 10 seconds

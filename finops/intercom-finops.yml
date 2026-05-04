@@ -1,0 +1,65 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Intercom
+providerId: intercom
+created: '2026-05-04'
+modified: '2026-05-04'
+reconciled: true
+tags:
+  - FinOps
+  - FOCUS
+  - Customer Support
+description: FOCUS-aligned FinOps for Intercom.
+sources:
+  - https://www.intercom.com/pricing
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Intercom
+serviceCategory: Customer Support
+billingModel:
+  pricingCategory: Per-Seat + Per-Resolution
+  billingFrequency: Monthly
+  billingCurrency: USD
+focusColumns:
+  ServiceName: Intercom
+  ServiceCategory: Customer Support
+  ProviderName: Intercom
+  PublisherName: Intercom
+  BillingCurrency: USD
+meters:
+  - name: user_seats
+    unit: seat-month
+    aggregation: max
+    dimensions:
+      - plan
+  - name: fin_resolutions
+    unit: resolution
+    aggregation: sum
+  - name: outbound_messages
+    unit: message
+    aggregation: sum
+    dimensions:
+      - channel
+  - name: phone_minutes
+    unit: minute
+    aggregation: sum
+  - name: sms_segments
+    unit: segment
+    aggregation: sum
+  - name: email_sends
+    unit: email
+    aggregation: sum
+principles:
+  - name: Visibility
+    description: Track Intercom consumption monthly via admin/billing exports.
+  - name: Allocation
+    description: Tag seats/usage to teams or cost centers for chargeback.
+  - name: Optimization
+    description: Right-size tier and seat count quarterly; reclaim inactive seats.
+  - name: Accountability
+    description: Set spend alerts and renew at observed active utilization.
