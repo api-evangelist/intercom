@@ -1,0 +1,639 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Intercom API
+  description: The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables
+    developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless
+    integrations with the Intercom Help Desk and Messenger.
+  tags:
+  - Intercom
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: intercom
+    baseUri: https://api.intercom.io
+    description: Intercom API HTTP API.
+    authentication:
+      type: bearer
+      token: '{{INTERCOM_TOKEN}}'
+    resources:
+    - name: me
+      path: /me
+      operations:
+      - name: getme
+        method: GET
+        description: Identify an admin
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: admins
+      path: /admins
+      operations:
+      - name: listadmins
+        method: GET
+        description: List admins
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: contacts
+      path: /contacts
+      operations:
+      - name: listcontacts
+        method: GET
+        description: List contacts
+        inputParameters:
+        - name: per_page
+          in: query
+          type: integer
+        - name: starting_after
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createcontact
+        method: POST
+        description: Create a contact
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: contacts-contact-id
+      path: /contacts/{contact_id}
+      operations:
+      - name: getcontact
+        method: GET
+        description: Retrieve a contact
+        inputParameters:
+        - name: contact_id
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: companies
+      path: /companies
+      operations:
+      - name: listcompanies
+        method: GET
+        description: List companies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createorupdatecompany
+        method: POST
+        description: Create or update a company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: conversations
+      path: /conversations
+      operations:
+      - name: listconversations
+        method: GET
+        description: List conversations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createconversation
+        method: POST
+        description: Create a conversation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: conversations-conversation-id
+      path: /conversations/{conversation_id}
+      operations:
+      - name: getconversation
+        method: GET
+        description: Retrieve a conversation
+        inputParameters:
+        - name: conversation_id
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: articles
+      path: /articles
+      operations:
+      - name: listarticles
+        method: GET
+        description: List articles
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createarticle
+        method: POST
+        description: Create an article
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: segments
+      path: /segments
+      operations:
+      - name: listsegments
+        method: GET
+        description: List segments
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: messages
+      path: /messages
+      operations:
+      - name: createmessage
+        method: POST
+        description: Create a message
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: events
+      path: /events
+      operations:
+      - name: submitevent
+        method: POST
+        description: Submit a data event
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listevents
+        method: GET
+        description: List data events
+        inputParameters:
+        - name: type
+          in: query
+          type: string
+        - name: user_id
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: news-news-items
+      path: /news/news_items
+      operations:
+      - name: listnewsitems
+        method: GET
+        description: List news items
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createnewsitem
+        method: POST
+        description: Create a news item
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: intercom-rest
+    description: REST adapter for Intercom API.
+    resources:
+    - path: /me
+      name: getme
+      operations:
+      - method: GET
+        name: getme
+        description: Identify an admin
+        call: intercom.getme
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /admins
+      name: listadmins
+      operations:
+      - method: GET
+        name: listadmins
+        description: List admins
+        call: intercom.listadmins
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts
+      name: listcontacts
+      operations:
+      - method: GET
+        name: listcontacts
+        description: List contacts
+        call: intercom.listcontacts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts
+      name: createcontact
+      operations:
+      - method: POST
+        name: createcontact
+        description: Create a contact
+        call: intercom.createcontact
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /contacts/{contact_id}
+      name: getcontact
+      operations:
+      - method: GET
+        name: getcontact
+        description: Retrieve a contact
+        call: intercom.getcontact
+        with:
+          contact_id: rest.contact_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /companies
+      name: listcompanies
+      operations:
+      - method: GET
+        name: listcompanies
+        description: List companies
+        call: intercom.listcompanies
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /companies
+      name: createorupdatecompany
+      operations:
+      - method: POST
+        name: createorupdatecompany
+        description: Create or update a company
+        call: intercom.createorupdatecompany
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /conversations
+      name: listconversations
+      operations:
+      - method: GET
+        name: listconversations
+        description: List conversations
+        call: intercom.listconversations
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /conversations
+      name: createconversation
+      operations:
+      - method: POST
+        name: createconversation
+        description: Create a conversation
+        call: intercom.createconversation
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /conversations/{conversation_id}
+      name: getconversation
+      operations:
+      - method: GET
+        name: getconversation
+        description: Retrieve a conversation
+        call: intercom.getconversation
+        with:
+          conversation_id: rest.conversation_id
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /articles
+      name: listarticles
+      operations:
+      - method: GET
+        name: listarticles
+        description: List articles
+        call: intercom.listarticles
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /articles
+      name: createarticle
+      operations:
+      - method: POST
+        name: createarticle
+        description: Create an article
+        call: intercom.createarticle
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /segments
+      name: listsegments
+      operations:
+      - method: GET
+        name: listsegments
+        description: List segments
+        call: intercom.listsegments
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /messages
+      name: createmessage
+      operations:
+      - method: POST
+        name: createmessage
+        description: Create a message
+        call: intercom.createmessage
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /events
+      name: submitevent
+      operations:
+      - method: POST
+        name: submitevent
+        description: Submit a data event
+        call: intercom.submitevent
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /events
+      name: listevents
+      operations:
+      - method: GET
+        name: listevents
+        description: List data events
+        call: intercom.listevents
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /news/news_items
+      name: listnewsitems
+      operations:
+      - method: GET
+        name: listnewsitems
+        description: List news items
+        call: intercom.listnewsitems
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /news/news_items
+      name: createnewsitem
+      operations:
+      - method: POST
+        name: createnewsitem
+        description: Create a news item
+        call: intercom.createnewsitem
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: intercom-mcp
+    transport: http
+    description: MCP adapter for Intercom API for AI agent use.
+    tools:
+    - name: getme
+      description: Identify an admin
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.getme
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listadmins
+      description: List admins
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.listadmins
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listcontacts
+      description: List contacts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.listcontacts
+      with:
+        per_page: tools.per_page
+        starting_after: tools.starting_after
+      inputParameters:
+      - name: per_page
+        type: integer
+        description: per_page
+      - name: starting_after
+        type: string
+        description: starting_after
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createcontact
+      description: Create a contact
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom.createcontact
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getcontact
+      description: Retrieve a contact
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.getcontact
+      with:
+        contact_id: tools.contact_id
+      inputParameters:
+      - name: contact_id
+        type: string
+        description: contact_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listcompanies
+      description: List companies
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.listcompanies
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createorupdatecompany
+      description: Create or update a company
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom.createorupdatecompany
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listconversations
+      description: List conversations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.listconversations
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createconversation
+      description: Create a conversation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom.createconversation
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconversation
+      description: Retrieve a conversation
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.getconversation
+      with:
+        conversation_id: tools.conversation_id
+      inputParameters:
+      - name: conversation_id
+        type: string
+        description: conversation_id
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listarticles
+      description: List articles
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.listarticles
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createarticle
+      description: Create an article
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom.createarticle
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listsegments
+      description: List segments
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.listsegments
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createmessage
+      description: Create a message
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom.createmessage
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: submitevent
+      description: Submit a data event
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom.submitevent
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listevents
+      description: List data events
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.listevents
+      with:
+        type: tools.type
+        user_id: tools.user_id
+      inputParameters:
+      - name: type
+        type: string
+        description: type
+      - name: user_id
+        type: string
+        description: user_id
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listnewsitems
+      description: List news items
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom.listnewsitems
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createnewsitem
+      description: Create a news item
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom.createnewsitem
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    INTERCOM_TOKEN: INTERCOM_TOKEN
