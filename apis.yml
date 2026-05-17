@@ -30,7 +30,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developers.intercom.com/docs/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developers.intercom.com/docs/get-started/
       - type: Authentication
         url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
@@ -45,7 +45,7 @@ common:
     url: https://developers.intercom.com/docs/
   - type: Support
     url: https://www.intercom.com/help/
-  - type: Sign Up
+  - type: SignUp
     url: https://app.intercom.com/a/signup/
   - type: Features
     data:
