@@ -1,0 +1,80 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Intercom API — Messages
+  description: 'Intercom API — Messages. 1 operations. Lead operation: Create a message. Self-contained Naftiko capability
+    covering one Intercom business surface.'
+  tags:
+  - Intercom
+  - Messages
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    INTERCOM_API_KEY: INTERCOM_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: intercom-messages
+    baseUri: https://api.intercom.io
+    description: Intercom API — Messages business capability. Self-contained, no shared references.
+    resources:
+    - name: messages
+      path: /messages
+      operations:
+      - name: createmessage
+        method: POST
+        description: Create a message
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.INTERCOM_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: intercom-messages-rest
+    port: 8080
+    description: REST adapter for Intercom API — Messages. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/messages
+      name: messages
+      description: REST surface for messages.
+      operations:
+      - method: POST
+        name: createmessage
+        description: Create a message
+        call: intercom-messages.createmessage
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: intercom-messages-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Intercom API — Messages. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: create-message
+      description: Create a message
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom-messages.createmessage
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,105 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Intercom API — Companies
+  description: 'Intercom API — Companies. 2 operations. Lead operation: List companies. Self-contained Naftiko capability
+    covering one Intercom business surface.'
+  tags:
+  - Intercom
+  - Companies
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    INTERCOM_API_KEY: INTERCOM_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: intercom-companies
+    baseUri: https://api.intercom.io
+    description: Intercom API — Companies business capability. Self-contained, no shared references.
+    resources:
+    - name: companies
+      path: /companies
+      operations:
+      - name: listcompanies
+        method: GET
+        description: List companies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createorupdatecompany
+        method: POST
+        description: Create or update a company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.INTERCOM_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: intercom-companies-rest
+    port: 8080
+    description: REST adapter for Intercom API — Companies. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/companies
+      name: companies
+      description: REST surface for companies.
+      operations:
+      - method: GET
+        name: listcompanies
+        description: List companies
+        call: intercom-companies.listcompanies
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createorupdatecompany
+        description: Create or update a company
+        call: intercom-companies.createorupdatecompany
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: intercom-companies-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Intercom API — Companies. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: list-companies
+      description: List companies
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom-companies.listcompanies
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-update-company
+      description: Create or update a company
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom-companies.createorupdatecompany
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

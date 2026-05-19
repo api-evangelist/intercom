@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Intercom API — Segments
+  description: 'Intercom API — Segments. 1 operations. Lead operation: List segments. Self-contained Naftiko capability covering
+    one Intercom business surface.'
+  tags:
+  - Intercom
+  - Segments
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    INTERCOM_API_KEY: INTERCOM_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: intercom-segments
+    baseUri: https://api.intercom.io
+    description: Intercom API — Segments business capability. Self-contained, no shared references.
+    resources:
+    - name: segments
+      path: /segments
+      operations:
+      - name: listsegments
+        method: GET
+        description: List segments
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.INTERCOM_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: intercom-segments-rest
+    port: 8080
+    description: REST adapter for Intercom API — Segments. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/segments
+      name: segments
+      description: REST surface for segments.
+      operations:
+      - method: GET
+        name: listsegments
+        description: List segments
+        call: intercom-segments.listsegments
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: intercom-segments-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Intercom API — Segments. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: list-segments
+      description: List segments
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom-segments.listsegments
+      outputParameters:
+      - type: object
+        mapping: $.

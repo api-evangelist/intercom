@@ -1,0 +1,118 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Intercom API — Data Events
+  description: 'Intercom API — Data Events. 2 operations. Lead operation: Submit a data event. Self-contained Naftiko capability
+    covering one Intercom business surface.'
+  tags:
+  - Intercom
+  - Data Events
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    INTERCOM_API_KEY: INTERCOM_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: intercom-data-events
+    baseUri: https://api.intercom.io
+    description: Intercom API — Data Events business capability. Self-contained, no shared references.
+    resources:
+    - name: events
+      path: /events
+      operations:
+      - name: submitevent
+        method: POST
+        description: Submit a data event
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listevents
+        method: GET
+        description: List data events
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: type
+          in: query
+          type: string
+        - name: user_id
+          in: query
+          type: string
+    authentication:
+      type: bearer
+      token: '{{env.INTERCOM_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: intercom-data-events-rest
+    port: 8080
+    description: REST adapter for Intercom API — Data Events. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/events
+      name: events
+      description: REST surface for events.
+      operations:
+      - method: POST
+        name: submitevent
+        description: Submit a data event
+        call: intercom-data-events.submitevent
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listevents
+        description: List data events
+        call: intercom-data-events.listevents
+        with:
+          type: rest.type
+          user_id: rest.user_id
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: intercom-data-events-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Intercom API — Data Events. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: submit-data-event
+      description: Submit a data event
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: intercom-data-events.submitevent
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-data-events
+      description: List data events
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: intercom-data-events.listevents
+      with:
+        type: tools.type
+        user_id: tools.user_id
+      outputParameters:
+      - type: object
+        mapping: $.
