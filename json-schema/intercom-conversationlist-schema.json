@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/ConversationList",
+  "title": "ConversationList",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "conversations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Conversation"
+      }
+    },
+    "total_count": {
+      "type": "integer"
+    }
+  }
+}

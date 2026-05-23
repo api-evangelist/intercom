@@ -1,0 +1,23 @@
+name: Intercom Domain Vocabulary
+provider: Intercom
+providerId: intercom
+description: Tag-derived vocabulary for the Intercom API surface; sourced from openapi/ tags.
+terms:
+- term: Admins
+  description: Workspace teammates and admin information.
+- term: Contacts
+  description: Manage users and leads in your Intercom workspace.
+- term: Companies
+  description: Manage company records associated with contacts.
+- term: Conversations
+  description: Manage conversations between contacts and admins.
+- term: Articles
+  description: Manage Help Center articles.
+- term: Segments
+  description: Access user and company segments.
+- term: Messages
+  description: Send outbound messages from Intercom to contacts.
+- term: Data Events
+  description: Submit and retrieve user activity events.
+- term: News
+  description: Manage news items in the Help Desk.

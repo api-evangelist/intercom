@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/Admin",
+  "title": "Admin",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "away_mode_enabled": {
+      "type": "boolean"
+    },
+    "away_mode_reassign": {
+      "type": "boolean"
+    }
+  }
+}

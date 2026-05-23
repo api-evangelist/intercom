@@ -1,0 +1,228 @@
+{
+  "provider": "Intercom",
+  "providerId": "intercom",
+  "kind": "json-structure",
+  "description": "Structural overview of the Intercom API surface; extracted from openapi/.",
+  "schemaCount": 9,
+  "operationCount": 18,
+  "schemas": [
+    {
+      "name": "Admin",
+      "type": "object",
+      "propertyCount": 6,
+      "required": []
+    },
+    {
+      "name": "Contact",
+      "type": "object",
+      "propertyCount": 9,
+      "required": []
+    },
+    {
+      "name": "ContactList",
+      "type": "object",
+      "propertyCount": 3,
+      "required": []
+    },
+    {
+      "name": "Company",
+      "type": "object",
+      "propertyCount": 8,
+      "required": []
+    },
+    {
+      "name": "CompanyList",
+      "type": "object",
+      "propertyCount": 2,
+      "required": []
+    },
+    {
+      "name": "Conversation",
+      "type": "object",
+      "propertyCount": 8,
+      "required": []
+    },
+    {
+      "name": "ConversationList",
+      "type": "object",
+      "propertyCount": 3,
+      "required": []
+    },
+    {
+      "name": "Article",
+      "type": "object",
+      "propertyCount": 9,
+      "required": []
+    },
+    {
+      "name": "Segment",
+      "type": "object",
+      "propertyCount": 6,
+      "required": []
+    }
+  ],
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/me",
+      "operationId": "getMe",
+      "summary": "Identify an admin",
+      "tags": [
+        "Admins"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/admins",
+      "operationId": "listAdmins",
+      "summary": "List admins",
+      "tags": [
+        "Admins"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/contacts",
+      "operationId": "listContacts",
+      "summary": "List contacts",
+      "tags": [
+        "Contacts"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/contacts",
+      "operationId": "createContact",
+      "summary": "Create a contact",
+      "tags": [
+        "Contacts"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/contacts/{contact_id}",
+      "operationId": "getContact",
+      "summary": "Retrieve a contact",
+      "tags": [
+        "Contacts"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/companies",
+      "operationId": "listCompanies",
+      "summary": "List companies",
+      "tags": [
+        "Companies"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/companies",
+      "operationId": "createOrUpdateCompany",
+      "summary": "Create or update a company",
+      "tags": [
+        "Companies"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/conversations",
+      "operationId": "listConversations",
+      "summary": "List conversations",
+      "tags": [
+        "Conversations"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/conversations",
+      "operationId": "createConversation",
+      "summary": "Create a conversation",
+      "tags": [
+        "Conversations"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/conversations/{conversation_id}",
+      "operationId": "getConversation",
+      "summary": "Retrieve a conversation",
+      "tags": [
+        "Conversations"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/articles",
+      "operationId": "listArticles",
+      "summary": "List articles",
+      "tags": [
+        "Articles"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/articles",
+      "operationId": "createArticle",
+      "summary": "Create an article",
+      "tags": [
+        "Articles"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/segments",
+      "operationId": "listSegments",
+      "summary": "List segments",
+      "tags": [
+        "Segments"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/messages",
+      "operationId": "createMessage",
+      "summary": "Create a message",
+      "tags": [
+        "Messages"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/events",
+      "operationId": "listEvents",
+      "summary": "List data events",
+      "tags": [
+        "Data Events"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/events",
+      "operationId": "submitEvent",
+      "summary": "Submit a data event",
+      "tags": [
+        "Data Events"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/news/news_items",
+      "operationId": "listNewsItems",
+      "summary": "List news items",
+      "tags": [
+        "News"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/news/news_items",
+      "operationId": "createNewsItem",
+      "summary": "Create a news item",
+      "tags": [
+        "News"
+      ]
+    }
+  ]
+}

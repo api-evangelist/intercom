@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/Company",
+  "title": "Company",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "company_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "plan": {
+      "type": "object"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "integer"
+    }
+  }
+}
