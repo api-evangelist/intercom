@@ -1,0 +1,1586 @@
+asyncapi: 2.6.0
+info:
+  title: Intercom Webhooks
+  version: '1.0.0'
+  description: |-
+    AsyncAPI description of Intercom's outbound webhook surface. Intercom delivers
+    workspace events to a single subscriber URL configured per app under the
+    Developer Hub > Webhooks settings. Each delivery is a single HTTP POST whose
+    JSON body is a notification envelope of `type: notification_event`. The
+    `topic` field on the envelope identifies the event class (for example
+    `conversation.user.created`, `contact.user.updated`, `company.created`,
+    `ping`).
+
+    Source documentation:
+      - Webhook models reference: https://developers.intercom.com/docs/references/2.13/webhooks/webhook-models
+      - Webhook topics reference: https://developers.intercom.com/docs/references/2.13/webhooks/webhook-topics
+      - Build a webhook integration: https://developers.intercom.com/docs/build-an-integration/learn-more/webhooks/
+
+    Security and signing:
+      Intercom signs every outbound webhook request with the HMAC-SHA1
+      `X-Hub-Signature` header (RFC 2104). The signature is computed over the
+      raw JSON request body using the Intercom app's `client_secret` as the
+      shared key, and is delivered as the literal string `sha1=` followed by the
+      40-character hex-encoded digest. Subscribers should recompute the digest
+      with constant-time comparison to verify authenticity. Intercom also sets
+      `User-Agent: intercom-parrot-service-client/1.0`.
+  contact:
+    name: Intercom Developer Support
+    url: https://developers.intercom.com/
+  license:
+    name: Intercom Terms of Service
+    url: https://www.intercom.com/legal/terms-and-policies
+
+defaultContentType: application/json
+
+servers:
+  subscriber:
+    url: '{webhookUrl}'
+    protocol: https
+    description: |-
+      Customer-hosted HTTPS endpoint that receives webhook POSTs from Intercom.
+      The full URL is configured per app on the Developer Hub Webhooks page.
+    variables:
+      webhookUrl:
+        default: https://example.com/intercom/webhook
+        description: Fully-qualified HTTPS URL of the subscriber endpoint.
+    security:
+      - hubSignature: []
+
+channels:
+  /intercom/webhook:
+    description: |-
+      Single subscriber endpoint that receives every Intercom notification event
+      the app is subscribed to. The `topic` field on the JSON envelope identifies
+      the event class. Intercom sends one notification per HTTP POST and expects
+      a 2xx response; non-2xx responses are retried with exponential backoff
+      until `delivery_attempts` is exhausted.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: '0.3.0'
+    publish:
+      operationId: receiveIntercomNotification
+      summary: Receive an Intercom notification_event
+      description: |-
+        Intercom POSTs a `notification_event` envelope to the subscriber URL.
+        The envelope carries the topic and a `data.item` payload whose shape
+        depends on the topic. Subscribers MUST verify the `X-Hub-Signature`
+        header before processing the body.
+      message:
+        oneOf:
+          - $ref: '#/components/messages/Ping'
+          - $ref: '#/components/messages/AdminAddedToWorkspace'
+          - $ref: '#/components/messages/AdminAwayModeUpdated'
+          - $ref: '#/components/messages/AdminActivityLogEventCreated'
+          - $ref: '#/components/messages/AdminRemovedFromWorkspace'
+          - $ref: '#/components/messages/AdminLoggedIn'
+          - $ref: '#/components/messages/AdminLoggedOut'
+          - $ref: '#/components/messages/ArticleCreated'
+          - $ref: '#/components/messages/ArticleUpdated'
+          - $ref: '#/components/messages/ArticlePublished'
+          - $ref: '#/components/messages/ArticleUnpublished'
+          - $ref: '#/components/messages/ArticleDeleted'
+          - $ref: '#/components/messages/CompanyCreated'
+          - $ref: '#/components/messages/CompanyUpdated'
+          - $ref: '#/components/messages/CompanyDeleted'
+          - $ref: '#/components/messages/CompanyContactAttached'
+          - $ref: '#/components/messages/CompanyContactDetached'
+          - $ref: '#/components/messages/ContactArchived'
+          - $ref: '#/components/messages/ContactDeleted'
+          - $ref: '#/components/messages/ContactEmailUpdated'
+          - $ref: '#/components/messages/ContactLeadAddedEmail'
+          - $ref: '#/components/messages/ContactLeadCreated'
+          - $ref: '#/components/messages/ContactLeadSignedUp'
+          - $ref: '#/components/messages/ContactLeadTagCreated'
+          - $ref: '#/components/messages/ContactLeadTagDeleted'
+          - $ref: '#/components/messages/ContactLeadUpdated'
+          - $ref: '#/components/messages/ContactMerged'
+          - $ref: '#/components/messages/ContactSubscribed'
+          - $ref: '#/components/messages/ContactUnarchive'
+          - $ref: '#/components/messages/ContactUnsubscribed'
+          - $ref: '#/components/messages/ContactUserCreated'
+          - $ref: '#/components/messages/ContactUserTagCreated'
+          - $ref: '#/components/messages/ContactUserTagDeleted'
+          - $ref: '#/components/messages/ContactUserUpdated'
+          - $ref: '#/components/messages/ConversationAdminAssigned'
+          - $ref: '#/components/messages/ConversationAdminClosed'
+          - $ref: '#/components/messages/ConversationAdminNoted'
+          - $ref: '#/components/messages/ConversationAdminOpenAssigned'
+          - $ref: '#/components/messages/ConversationAdminOpened'
+          - $ref: '#/components/messages/ConversationAdminReplied'
+          - $ref: '#/components/messages/ConversationAdminSingleCreated'
+          - $ref: '#/components/messages/ConversationAdminSnoozed'
+          - $ref: '#/components/messages/ConversationAdminUnsnoozed'
+          - $ref: '#/components/messages/ConversationDeleted'
+          - $ref: '#/components/messages/ConversationPartRedacted'
+          - $ref: '#/components/messages/ConversationPartTagCreated'
+          - $ref: '#/components/messages/ConversationPriorityUpdated'
+          - $ref: '#/components/messages/ConversationRatingAdded'
+          - $ref: '#/components/messages/ConversationRead'
+          - $ref: '#/components/messages/ConversationUserCreated'
+          - $ref: '#/components/messages/ConversationUserReplied'
+          - $ref: '#/components/messages/ConversationContactAttached'
+          - $ref: '#/components/messages/ConversationContactDetached'
+          - $ref: '#/components/messages/EventCreated'
+          - $ref: '#/components/messages/TicketCreated'
+          - $ref: '#/components/messages/TicketStateUpdated'
+          - $ref: '#/components/messages/TicketNoteCreated'
+          - $ref: '#/components/messages/TicketAdminAssigned'
+          - $ref: '#/components/messages/TicketTeamAssigned'
+          - $ref: '#/components/messages/TicketContactAttached'
+          - $ref: '#/components/messages/TicketContactDetached'
+          - $ref: '#/components/messages/TicketAttributeUpdated'
+          - $ref: '#/components/messages/TicketAdminReplied'
+          - $ref: '#/components/messages/TicketContactReplied'
+          - $ref: '#/components/messages/TicketClosed'
+          - $ref: '#/components/messages/TicketRatingProvided'
+          - $ref: '#/components/messages/GranularSubscribe'
+          - $ref: '#/components/messages/GranularUnsubscribe'
+          - $ref: '#/components/messages/VisitorSignedUp'
+          - $ref: '#/components/messages/ContentStatBanner'
+          - $ref: '#/components/messages/ContentStatCarousel'
+          - $ref: '#/components/messages/ContentStatChat'
+          - $ref: '#/components/messages/ContentStatChecklist'
+          - $ref: '#/components/messages/ContentStatCustomBot'
+          - $ref: '#/components/messages/ContentStatEmail'
+          - $ref: '#/components/messages/ContentStatNewsItem'
+          - $ref: '#/components/messages/ContentStatPost'
+          - $ref: '#/components/messages/ContentStatPush'
+          - $ref: '#/components/messages/ContentStatSeries'
+          - $ref: '#/components/messages/ContentStatSeriesWebhook'
+          - $ref: '#/components/messages/ContentStatSms'
+          - $ref: '#/components/messages/ContentStatSurvey'
+          - $ref: '#/components/messages/ContentStatTooltipGroup'
+          - $ref: '#/components/messages/ContentStatTour'
+
+components:
+  securitySchemes:
+    hubSignature:
+      type: httpApiKey
+      description: |-
+        HMAC-SHA1 signature delivered as `X-Hub-Signature: sha1=<hex digest>`.
+        The digest is computed over the raw JSON request body using the
+        Intercom app's `client_secret` as the shared secret (RFC 2104).
+        Subscribers MUST recompute and compare in constant time before
+        trusting the payload.
+      name: X-Hub-Signature
+      in: header
+
+  messageTraits:
+    NotificationHeaders:
+      headers:
+        type: object
+        required:
+          - Content-Type
+          - X-Hub-Signature
+          - User-Agent
+        properties:
+          Content-Type:
+            type: string
+            const: application/json
+          Accept:
+            type: string
+            const: application/json
+          User-Agent:
+            type: string
+            const: intercom-parrot-service-client/1.0
+          X-Hub-Signature:
+            type: string
+            description: HMAC-SHA1 signature of the raw request body, prefixed with `sha1=`.
+            pattern: '^sha1=[0-9a-f]{40}$'
+            example: sha1=21ff2e149e0fdcac6f947740f6177f6434bda921
+      bindings:
+        http:
+          bindingVersion: '0.3.0'
+
+  messages:
+    Ping:
+      name: PingNotification
+      title: ping
+      summary: Sent when an admin manually pings the subscription or Intercom periodically validates it.
+      traits:
+        - $ref: '#/components/messageTraits/NotificationHeaders'
+      contentType: application/json
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/NotificationEvent'
+          - type: object
+            properties:
+              topic: { const: ping }
+              data:
+                type: object
+                properties:
+                  item:
+                    type: object
+                    description: Ping payload. Intercom does not publish a schema for this item.
+                    additionalProperties: true
+
+    AdminAddedToWorkspace:
+      name: AdminAddedToWorkspaceNotification
+      title: admin.added_to_workspace
+      summary: A new admin (teammate) joined the workspace.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/AdminEnvelope' }
+    AdminAwayModeUpdated:
+      name: AdminAwayModeUpdatedNotification
+      title: admin.away_mode_updated
+      summary: An admin toggled away mode or updated their reassignment setting.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/AdminEnvelope' }
+    AdminActivityLogEventCreated:
+      name: AdminActivityLogEventCreatedNotification
+      title: admin.activity_log_event.created
+      summary: An admin activity log entry was created.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ActivityLogEventEnvelope' }
+    AdminRemovedFromWorkspace:
+      name: AdminRemovedFromWorkspaceNotification
+      title: admin.removed_from_workspace
+      summary: An admin (teammate) was removed from the workspace.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/AdminEnvelope' }
+    AdminLoggedIn:
+      name: AdminLoggedInNotification
+      title: admin.logged_in
+      summary: An admin signed in to the workspace.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/AdminEnvelope' }
+    AdminLoggedOut:
+      name: AdminLoggedOutNotification
+      title: admin.logged_out
+      summary: An admin signed out of the workspace.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/AdminEnvelope' }
+
+    ArticleCreated:
+      name: ArticleCreatedNotification
+      title: article.created
+      summary: A help center article was created.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ArticleEnvelope' }
+    ArticleUpdated:
+      name: ArticleUpdatedNotification
+      title: article.updated
+      summary: A help center article was updated.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ArticleEnvelope' }
+    ArticlePublished:
+      name: ArticlePublishedNotification
+      title: article.published
+      summary: A help center article was published.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ArticleEnvelope' }
+    ArticleUnpublished:
+      name: ArticleUnpublishedNotification
+      title: article.unpublished
+      summary: A help center article was unpublished.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ArticleEnvelope' }
+    ArticleDeleted:
+      name: ArticleDeletedNotification
+      title: article.deleted
+      summary: A help center article was deleted.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ArticleEnvelope' }
+
+    CompanyCreated:
+      name: CompanyCreatedNotification
+      title: company.created
+      summary: A new company was created in the workspace.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/CompanyEnvelope' }
+    CompanyUpdated:
+      name: CompanyUpdatedNotification
+      title: company.updated
+      summary: A company's attributes were updated.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/CompanyEnvelope' }
+    CompanyDeleted:
+      name: CompanyDeletedNotification
+      title: company.deleted
+      summary: A company was deleted.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/CompanyEnvelope' }
+    CompanyContactAttached:
+      name: CompanyContactAttachedNotification
+      title: company.contact.attached
+      summary: A contact was attached to a company.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/CompanyContactRelationEnvelope' }
+    CompanyContactDetached:
+      name: CompanyContactDetachedNotification
+      title: company.contact.detached
+      summary: A contact was detached from a company.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/CompanyContactRelationEnvelope' }
+
+    ContactArchived:
+      name: ContactArchivedNotification
+      title: contact.archived
+      summary: A contact was archived.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactDeleted:
+      name: ContactDeletedNotification
+      title: contact.deleted
+      summary: A contact was deleted.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactEmailUpdated:
+      name: ContactEmailUpdatedNotification
+      title: contact.email.updated
+      summary: A contact's email address was changed.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactLeadAddedEmail:
+      name: ContactLeadAddedEmailNotification
+      title: contact.lead.added_email
+      summary: A lead added an email address (without converting to a user).
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactLeadCreated:
+      name: ContactLeadCreatedNotification
+      title: contact.lead.created
+      summary: A new lead contact was created.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactLeadSignedUp:
+      name: ContactLeadSignedUpNotification
+      title: contact.lead.signed_up
+      summary: A lead converted into a user by signing up.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactLeadTagCreated:
+      name: ContactLeadTagCreatedNotification
+      title: contact.lead.tag.created
+      summary: A tag was applied to a lead contact.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactTagEnvelope' }
+    ContactLeadTagDeleted:
+      name: ContactLeadTagDeletedNotification
+      title: contact.lead.tag.deleted
+      summary: A tag was removed from a lead contact.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactTagEnvelope' }
+    ContactLeadUpdated:
+      name: ContactLeadUpdatedNotification
+      title: contact.lead.updated
+      summary: A lead's attributes were updated.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactMerged:
+      name: ContactMergedNotification
+      title: contact.merged
+      summary: Two contacts were merged.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactSubscribed:
+      name: ContactSubscribedNotification
+      title: contact.subscribed
+      summary: A contact opted in to messaging.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactUnarchive:
+      name: ContactUnarchiveNotification
+      title: contact.unarchive
+      summary: A previously archived contact was restored.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactUnsubscribed:
+      name: ContactUnsubscribedNotification
+      title: contact.unsubscribed
+      summary: A contact opted out of messaging.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactUserCreated:
+      name: ContactUserCreatedNotification
+      title: contact.user.created
+      summary: A new user contact was created.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+    ContactUserTagCreated:
+      name: ContactUserTagCreatedNotification
+      title: contact.user.tag.created
+      summary: A tag was applied to a user contact.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactTagEnvelope' }
+    ContactUserTagDeleted:
+      name: ContactUserTagDeletedNotification
+      title: contact.user.tag.deleted
+      summary: A tag was removed from a user contact.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactTagEnvelope' }
+    ContactUserUpdated:
+      name: ContactUserUpdatedNotification
+      title: contact.user.updated
+      summary: A user contact's attributes were updated.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+
+    ConversationAdminAssigned:
+      name: ConversationAdminAssignedNotification
+      title: conversation.admin.assigned
+      summary: An admin or team was assigned to a conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationAdminClosed:
+      name: ConversationAdminClosedNotification
+      title: conversation.admin.closed
+      summary: An admin closed a conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationAdminNoted:
+      name: ConversationAdminNotedNotification
+      title: conversation.admin.noted
+      summary: An admin added a private note to a conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationAdminOpenAssigned:
+      name: ConversationAdminOpenAssignedNotification
+      title: conversation.admin.open.assigned
+      summary: An admin reopened and reassigned a conversation in a single action.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationAdminOpened:
+      name: ConversationAdminOpenedNotification
+      title: conversation.admin.opened
+      summary: An admin reopened a closed conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationAdminReplied:
+      name: ConversationAdminRepliedNotification
+      title: conversation.admin.replied
+      summary: An admin posted a reply on a conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationAdminSingleCreated:
+      name: ConversationAdminSingleCreatedNotification
+      title: conversation.admin.single.created
+      summary: An admin started a one-to-one conversation with a contact.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationAdminSnoozed:
+      name: ConversationAdminSnoozedNotification
+      title: conversation.admin.snoozed
+      summary: An admin snoozed a conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationAdminUnsnoozed:
+      name: ConversationAdminUnsnoozedNotification
+      title: conversation.admin.unsnoozed
+      summary: A snoozed conversation woke up or was manually unsnoozed.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationDeleted:
+      name: ConversationDeletedNotification
+      title: conversation.deleted
+      summary: A conversation was deleted.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationPartRedacted:
+      name: ConversationPartRedactedNotification
+      title: conversation_part.redacted
+      summary: A conversation part was redacted.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationPartTagCreated:
+      name: ConversationPartTagCreatedNotification
+      title: conversation_part.tag.created
+      summary: A tag was applied to a conversation part.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationPriorityUpdated:
+      name: ConversationPriorityUpdatedNotification
+      title: conversation.priority.updated
+      summary: A conversation's priority flag changed.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationRatingAdded:
+      name: ConversationRatingAddedNotification
+      title: conversation.rating.added
+      summary: A conversation rating was submitted by a contact.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationRead:
+      name: ConversationReadNotification
+      title: conversation.read
+      summary: A conversation was marked as read.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationUserCreated:
+      name: ConversationUserCreatedNotification
+      title: conversation.user.created
+      summary: A contact (user or lead) started a new conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationUserReplied:
+      name: ConversationUserRepliedNotification
+      title: conversation.user.replied
+      summary: A contact replied on an existing conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationContactAttached:
+      name: ConversationContactAttachedNotification
+      title: conversation.contact.attached
+      summary: A contact was attached as a participant on a conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+    ConversationContactDetached:
+      name: ConversationContactDetachedNotification
+      title: conversation.contact.detached
+      summary: A contact was detached from a conversation.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ConversationEnvelope' }
+
+    EventCreated:
+      name: EventCreatedNotification
+      title: event.created
+      summary: A data event was tracked against a contact.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/DataEventEnvelope' }
+
+    TicketCreated:
+      name: TicketCreatedNotification
+      title: ticket.created
+      summary: A ticket was created.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketStateUpdated:
+      name: TicketStateUpdatedNotification
+      title: ticket.state.updated
+      summary: A ticket's state changed.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketNoteCreated:
+      name: TicketNoteCreatedNotification
+      title: ticket.note.created
+      summary: A private note was added to a ticket.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketAdminAssigned:
+      name: TicketAdminAssignedNotification
+      title: ticket.admin.assigned
+      summary: A ticket was assigned to an admin.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketTeamAssigned:
+      name: TicketTeamAssignedNotification
+      title: ticket.team.assigned
+      summary: A ticket was assigned to a team.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketContactAttached:
+      name: TicketContactAttachedNotification
+      title: ticket.contact.attached
+      summary: A contact was attached to a ticket.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketContactDetached:
+      name: TicketContactDetachedNotification
+      title: ticket.contact.detached
+      summary: A contact was detached from a ticket.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketAttributeUpdated:
+      name: TicketAttributeUpdatedNotification
+      title: ticket.attribute.updated
+      summary: A custom or system ticket attribute was updated.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketAdminReplied:
+      name: TicketAdminRepliedNotification
+      title: ticket.admin.replied
+      summary: An admin replied on a ticket.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketContactReplied:
+      name: TicketContactRepliedNotification
+      title: ticket.contact.replied
+      summary: A contact replied on a ticket.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketClosed:
+      name: TicketClosedNotification
+      title: ticket.closed
+      summary: A ticket was closed.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+    TicketRatingProvided:
+      name: TicketRatingProvidedNotification
+      title: ticket.rating.provided
+      summary: A rating was submitted on a ticket.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/TicketEnvelope' }
+
+    GranularSubscribe:
+      name: GranularSubscribeNotification
+      title: granular.subscribe
+      summary: A contact opted in to a granular subscription type.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/SubscriptionEnvelope' }
+    GranularUnsubscribe:
+      name: GranularUnsubscribeNotification
+      title: granular.unsubscribe
+      summary: A contact opted out of a granular subscription type.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/SubscriptionEnvelope' }
+
+    VisitorSignedUp:
+      name: VisitorSignedUpNotification
+      title: visitor.signed_up
+      summary: An anonymous visitor signed up and became an identified user.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContactEnvelope' }
+
+    ContentStatBanner:
+      name: ContentStatBannerNotification
+      title: content_stat.banner
+      summary: A delivery or engagement stat fired for a banner.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatCarousel:
+      name: ContentStatCarouselNotification
+      title: content_stat.carousel
+      summary: A delivery or engagement stat fired for a carousel.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatChat:
+      name: ContentStatChatNotification
+      title: content_stat.chat
+      summary: A delivery or engagement stat fired for a chat message.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatChecklist:
+      name: ContentStatChecklistNotification
+      title: content_stat.checklist
+      summary: A delivery or engagement stat fired for a checklist.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatCustomBot:
+      name: ContentStatCustomBotNotification
+      title: content_stat.custom_bot
+      summary: A delivery or engagement stat fired for a custom bot.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatEmail:
+      name: ContentStatEmailNotification
+      title: content_stat.email
+      summary: A delivery or engagement stat fired for an email.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatNewsItem:
+      name: ContentStatNewsItemNotification
+      title: content_stat.news_item
+      summary: A delivery or engagement stat fired for a news item.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatPost:
+      name: ContentStatPostNotification
+      title: content_stat.post
+      summary: A delivery or engagement stat fired for a post.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatPush:
+      name: ContentStatPushNotification
+      title: content_stat.push
+      summary: A delivery or engagement stat fired for a push notification.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatSeries:
+      name: ContentStatSeriesNotification
+      title: content_stat.series
+      summary: A delivery or engagement stat fired for a series.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatSeriesWebhook:
+      name: ContentStatSeriesWebhookNotification
+      title: content_stat.series.webhook
+      summary: A webhook step inside a series fired.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatSms:
+      name: ContentStatSmsNotification
+      title: content_stat.sms
+      summary: A delivery or engagement stat fired for an SMS message.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatSurvey:
+      name: ContentStatSurveyNotification
+      title: content_stat.survey
+      summary: A delivery or engagement stat fired for a survey.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatTooltipGroup:
+      name: ContentStatTooltipGroupNotification
+      title: content_stat.tooltip_group
+      summary: A delivery or engagement stat fired for a tooltip group.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+    ContentStatTour:
+      name: ContentStatTourNotification
+      title: content_stat.tour
+      summary: A delivery or engagement stat fired for a product tour.
+      traits: [{ $ref: '#/components/messageTraits/NotificationHeaders' }]
+      contentType: application/json
+      payload: { $ref: '#/components/schemas/ContentStatEnvelope' }
+
+  schemas:
+    NotificationEvent:
+      type: object
+      description: |-
+        Common Intercom notification envelope. Every webhook delivery is a
+        `notification_event` object with the topic-specific payload under
+        `data.item`.
+      required:
+        - type
+        - id
+        - topic
+        - app_id
+        - data
+      properties:
+        type:
+          type: string
+          const: notification_event
+        id:
+          type: string
+          description: Unique identifier of this notification (e.g. `notif_ccd8a4d0-...`).
+        topic:
+          type: string
+          description: The webhook topic that triggered this delivery.
+        app_id:
+          type: string
+          description: Intercom app identifier the subscription belongs to.
+        created_at:
+          type: integer
+          format: int64
+          description: Unix epoch seconds when Intercom produced the notification.
+        delivery_attempts:
+          type: integer
+          minimum: 1
+          description: Number of HTTP delivery attempts (starts at 1).
+        first_sent_at:
+          type: integer
+          format: int64
+          description: Unix epoch seconds of the first delivery attempt.
+        self:
+          type: string
+          nullable: true
+          description: Optional canonical URL for the notification, when present.
+        delivery_status:
+          type: string
+          description: Delivery status reported by Intercom (e.g. `retry`).
+          nullable: true
+        links:
+          type: object
+          description: Optional related links object.
+          additionalProperties: true
+        data:
+          type: object
+          required: [item]
+          properties:
+            item:
+              type: object
+              description: Topic-specific payload object.
+              additionalProperties: true
+      additionalProperties: true
+
+    AdminEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/Admin'
+
+    ActivityLogEventEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/ActivityLogEvent'
+
+    ArticleEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/Article'
+
+    CompanyEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/Company'
+
+    CompanyContactRelationEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/CompanyContactRelation'
+
+    ContactEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/Contact'
+
+    ContactTagEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/ContactTagAssignment'
+
+    ConversationEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/Conversation'
+
+    DataEventEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/DataEvent'
+
+    TicketEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/Ticket'
+
+    SubscriptionEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/SubscriptionChange'
+
+    ContentStatEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/NotificationEvent'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                item:
+                  $ref: '#/components/schemas/ContentStat'
+
+    Admin:
+      type: object
+      description: Intercom admin (teammate). Field set mirrors the Admin REST object.
+      properties:
+        type: { type: string, const: admin }
+        id: { type: string }
+        name: { type: string }
+        email: { type: string, format: email }
+        job_title: { type: string }
+        away_mode_enabled: { type: boolean }
+        away_mode_reassign: { type: boolean }
+        has_inbox_seat: { type: boolean }
+        team_ids:
+          type: array
+          items: { type: integer }
+      additionalProperties: true
+
+    ActivityLogEvent:
+      type: object
+      description: Admin activity log entry as published in the workspace audit log.
+      properties:
+        type: { type: string, const: activity_log_event }
+        id: { type: string }
+        performed_by:
+          type: object
+          properties:
+            id: { type: string }
+            email: { type: string, format: email }
+            ip: { type: string }
+        created_at: { type: integer, format: int64 }
+        activity_type: { type: string }
+        activity_description: { type: string }
+        metadata:
+          type: object
+          additionalProperties: true
+      additionalProperties: true
+
+    Article:
+      type: object
+      description: Help center article object.
+      properties:
+        type: { type: string, const: article }
+        id: { type: string }
+        workspace_id: { type: string }
+        title: { type: string }
+        description: { type: string }
+        body: { type: string }
+        author_id: { type: integer }
+        state:
+          type: string
+          enum: [published, draft]
+        created_at: { type: integer, format: int64 }
+        updated_at: { type: integer, format: int64 }
+        url: { type: string, format: uri }
+        parent_id:
+          type: integer
+          nullable: true
+        parent_ids:
+          type: array
+          items: { type: integer }
+        parent_type:
+          type: string
+          nullable: true
+      additionalProperties: true
+
+    Company:
+      type: object
+      description: Company object representing an organisation of contacts.
+      properties:
+        type: { type: string, const: company }
+        id: { type: string }
+        company_id: { type: string }
+        name: { type: string }
+        created_at: { type: integer, format: int64 }
+        updated_at: { type: integer, format: int64 }
+        last_request_at: { type: integer, format: int64, nullable: true }
+        size: { type: integer, nullable: true }
+        website: { type: string, nullable: true }
+        industry: { type: string, nullable: true }
+        monthly_spend: { type: number, nullable: true }
+        session_count: { type: integer }
+        user_count: { type: integer }
+        plan:
+          type: object
+          properties:
+            type: { type: string, const: plan }
+            id: { type: string }
+            name: { type: string }
+        custom_attributes:
+          type: object
+          additionalProperties: true
+        tags:
+          type: object
+          properties:
+            type: { type: string, const: tag.list }
+            tags:
+              type: array
+              items: { $ref: '#/components/schemas/Tag' }
+        segments:
+          type: object
+          properties:
+            type: { type: string, const: segment.list }
+            segments:
+              type: array
+              items: { $ref: '#/components/schemas/Segment' }
+      additionalProperties: true
+
+    CompanyContactRelation:
+      type: object
+      description: Payload delivered with company.contact.attached and company.contact.detached.
+      properties:
+        type: { type: string, const: company }
+        company: { $ref: '#/components/schemas/Company' }
+        contact: { $ref: '#/components/schemas/Contact' }
+      additionalProperties: true
+
+    Contact:
+      type: object
+      description: |-
+        Intercom contact. The `role` field distinguishes between user and lead
+        contacts. Visitors and leads use the same shape with `role: lead`.
+      properties:
+        type: { type: string, enum: [contact, user, lead, visitor] }
+        id: { type: string }
+        external_id:
+          type: string
+          nullable: true
+        workspace_id: { type: string }
+        role:
+          type: string
+          enum: [user, lead, visitor]
+        email:
+          type: string
+          format: email
+          nullable: true
+        phone:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        avatar:
+          type: object
+          nullable: true
+          properties:
+            type: { type: string, const: avatar }
+            image_url:
+              type: string
+              format: uri
+              nullable: true
+        owner_id:
+          type: integer
+          nullable: true
+        social_profiles:
+          type: object
+          properties:
+            type: { type: string, const: list }
+            data:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+        has_hard_bounced: { type: boolean }
+        marked_email_as_spam: { type: boolean }
+        unsubscribed_from_emails: { type: boolean }
+        created_at: { type: integer, format: int64 }
+        updated_at: { type: integer, format: int64 }
+        signed_up_at: { type: integer, format: int64, nullable: true }
+        last_seen_at: { type: integer, format: int64, nullable: true }
+        last_replied_at: { type: integer, format: int64, nullable: true }
+        last_contacted_at: { type: integer, format: int64, nullable: true }
+        last_email_opened_at: { type: integer, format: int64, nullable: true }
+        last_email_clicked_at: { type: integer, format: int64, nullable: true }
+        language_override:
+          type: string
+          nullable: true
+        browser:
+          type: string
+          nullable: true
+        browser_version:
+          type: string
+          nullable: true
+        browser_language:
+          type: string
+          nullable: true
+        os:
+          type: string
+          nullable: true
+        location:
+          type: object
+          additionalProperties: true
+        android_app_name:
+          type: string
+          nullable: true
+        android_app_version:
+          type: string
+          nullable: true
+        ios_app_name:
+          type: string
+          nullable: true
+        ios_app_version:
+          type: string
+          nullable: true
+        custom_attributes:
+          type: object
+          additionalProperties: true
+        tags:
+          type: object
+          properties:
+            type: { type: string, const: list }
+            data:
+              type: array
+              items: { $ref: '#/components/schemas/Tag' }
+        companies:
+          type: object
+          properties:
+            type: { type: string, const: list }
+            data:
+              type: array
+              items: { $ref: '#/components/schemas/Company' }
+        notes:
+          type: object
+          properties:
+            type: { type: string, const: list }
+            data:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+      additionalProperties: true
+
+    ContactTagAssignment:
+      type: object
+      description: Payload delivered with contact tag created/deleted topics.
+      properties:
+        type:
+          type: string
+          enum: [user_tag, lead_tag, tag]
+        tag: { $ref: '#/components/schemas/Tag' }
+        user:
+          $ref: '#/components/schemas/Contact'
+          description: Tagged contact (present when role=user).
+        lead:
+          $ref: '#/components/schemas/Contact'
+          description: Tagged contact (present when role=lead).
+      additionalProperties: true
+
+    Tag:
+      type: object
+      properties:
+        type: { type: string, const: tag }
+        id: { type: string }
+        name: { type: string }
+      additionalProperties: true
+
+    Segment:
+      type: object
+      properties:
+        type: { type: string, const: segment }
+        id: { type: string }
+        name: { type: string }
+        created_at: { type: integer, format: int64 }
+        updated_at: { type: integer, format: int64 }
+        person_type:
+          type: string
+          enum: [user, lead]
+      additionalProperties: true
+
+    Conversation:
+      type: object
+      description: Intercom conversation object as delivered on conversation.* webhooks.
+      properties:
+        type: { type: string, const: conversation }
+        id: { type: string }
+        title:
+          type: string
+          nullable: true
+        created_at: { type: integer, format: int64 }
+        updated_at: { type: integer, format: int64 }
+        waiting_since:
+          type: integer
+          format: int64
+          nullable: true
+        snoozed_until:
+          type: integer
+          format: int64
+          nullable: true
+        open: { type: boolean }
+        state:
+          type: string
+          enum: [open, closed, snoozed]
+        read: { type: boolean }
+        priority:
+          type: string
+          enum: [priority, not_priority]
+        admin_assignee_id:
+          type: integer
+          nullable: true
+        team_assignee_id:
+          type: integer
+          nullable: true
+        source:
+          type: object
+          description: The originating message of the conversation.
+          properties:
+            type: { type: string }
+            id: { type: string }
+            delivered_as: { type: string }
+            subject: { type: string }
+            body: { type: string }
+            author:
+              type: object
+              properties:
+                type: { type: string, enum: [admin, user, lead, bot, contact] }
+                id: { type: string }
+                name:
+                  type: string
+                  nullable: true
+                email:
+                  type: string
+                  format: email
+                  nullable: true
+            attachments:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+            url:
+              type: string
+              format: uri
+              nullable: true
+          additionalProperties: true
+        contacts:
+          type: object
+          properties:
+            type: { type: string, const: contact.list }
+            contacts:
+              type: array
+              items:
+                type: object
+                properties:
+                  type: { type: string, const: contact }
+                  id: { type: string }
+                  external_id:
+                    type: string
+                    nullable: true
+        teammates:
+          type: object
+          nullable: true
+          properties:
+            type: { type: string, const: admin.list }
+            admins:
+              type: array
+              items:
+                type: object
+                properties:
+                  type: { type: string, const: admin }
+                  id: { type: string }
+        conversation_parts:
+          type: object
+          properties:
+            type: { type: string, const: conversation_part.list }
+            total_count: { type: integer }
+            conversation_parts:
+              type: array
+              items: { $ref: '#/components/schemas/ConversationPart' }
+        tags:
+          type: object
+          properties:
+            type: { type: string, const: tag.list }
+            tags:
+              type: array
+              items: { $ref: '#/components/schemas/Tag' }
+        statistics:
+          type: object
+          additionalProperties: true
+          nullable: true
+        conversation_rating:
+          type: object
+          nullable: true
+          properties:
+            rating:
+              type: integer
+              minimum: 1
+              maximum: 5
+            remark:
+              type: string
+              nullable: true
+            created_at: { type: integer, format: int64 }
+            contact:
+              type: object
+              properties:
+                type: { type: string }
+                id: { type: string }
+            teammate:
+              type: object
+              properties:
+                type: { type: string, const: admin }
+                id: { type: string }
+      additionalProperties: true
+
+    ConversationPart:
+      type: object
+      properties:
+        type: { type: string, const: conversation_part }
+        id: { type: string }
+        part_type:
+          type: string
+          description: Kind of part (comment, note, assignment, close, open, etc.).
+        body:
+          type: string
+          nullable: true
+        created_at: { type: integer, format: int64 }
+        updated_at: { type: integer, format: int64 }
+        notified_at: { type: integer, format: int64 }
+        assigned_to:
+          type: object
+          nullable: true
+          properties:
+            type: { type: string }
+            id: { type: string }
+        author:
+          type: object
+          properties:
+            type: { type: string, enum: [admin, user, lead, bot, contact] }
+            id: { type: string }
+            name:
+              type: string
+              nullable: true
+            email:
+              type: string
+              format: email
+              nullable: true
+        attachments:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        external_id:
+          type: string
+          nullable: true
+        redacted: { type: boolean }
+      additionalProperties: true
+
+    DataEvent:
+      type: object
+      description: Custom data event tracked against a contact.
+      properties:
+        type: { type: string, const: event }
+        event_name: { type: string }
+        created_at: { type: integer, format: int64 }
+        user_id:
+          type: string
+          nullable: true
+        email:
+          type: string
+          format: email
+          nullable: true
+        id:
+          type: string
+          nullable: true
+        intercom_user_id:
+          type: string
+          nullable: true
+        metadata:
+          type: object
+          additionalProperties: true
+      additionalProperties: true
+
+    Ticket:
+      type: object
+      description: Intercom ticket object delivered on ticket.* webhooks.
+      properties:
+        type: { type: string, const: ticket }
+        id: { type: string }
+        ticket_id: { type: string }
+        ticket_attributes:
+          type: object
+          additionalProperties: true
+        ticket_state:
+          type: string
+          enum: [submitted, in_progress, waiting_on_customer, resolved]
+        ticket_state_internal_label:
+          type: string
+        ticket_state_external_label:
+          type: string
+        category:
+          type: string
+          nullable: true
+        ticket_type:
+          type: object
+          properties:
+            type: { type: string, const: ticket_type }
+            id: { type: string }
+            name: { type: string }
+            description: { type: string }
+            category:
+              type: string
+              nullable: true
+            icon: { type: string }
+        contacts:
+          type: object
+          properties:
+            type: { type: string, const: contact.list }
+            contacts:
+              type: array
+              items:
+                type: object
+                properties:
+                  type: { type: string, const: contact }
+                  id: { type: string }
+        admin_assignee_id:
+          type: integer
+          nullable: true
+        team_assignee_id:
+          type: integer
+          nullable: true
+        created_at: { type: integer, format: int64 }
+        updated_at: { type: integer, format: int64 }
+        open: { type: boolean }
+        is_shared: { type: boolean }
+        snoozed_until:
+          type: integer
+          format: int64
+          nullable: true
+        linked_objects:
+          type: object
+          additionalProperties: true
+        ticket_parts:
+          type: object
+          properties:
+            type: { type: string, const: ticket_part.list }
+            total_count: { type: integer }
+            ticket_parts:
+              type: array
+              items: { $ref: '#/components/schemas/ConversationPart' }
+      additionalProperties: true
+
+    SubscriptionChange:
+      type: object
+      description: Payload delivered with granular.subscribe and granular.unsubscribe topics.
+      properties:
+        type: { type: string }
+        id: { type: string }
+        subscription_id:
+          type: string
+          description: Identifier of the granular subscription type being changed.
+        contact:
+          $ref: '#/components/schemas/Contact'
+      additionalProperties: true
+
+    ContentStat:
+      type: object
+      description: |-
+        Engagement statistic delivered on content_stat.* topics. The shape varies
+        by content type but always identifies the content, the contact, and the
+        stat that fired.
+      properties:
+        type:
+          type: string
+          description: Identifies the content stat type (e.g. email_stat, post_stat).
+        id: { type: string }
+        content_id:
+          type: string
+          description: Identifier of the originating content (email, post, tour, ...).
+        content_type:
+          type: string
+          description: Content kind (e.g. email, post, banner, tour, survey, sms).
+        stat:
+          type: string
+          description: The engagement event (e.g. delivered, opened, clicked, completed, replied, dismissed).
+        receipt:
+          type: string
+          nullable: true
+        created_at: { type: integer, format: int64 }
+        user:
+          $ref: '#/components/schemas/Contact'
+        company:
+          $ref: '#/components/schemas/Company'
+          nullable: true
+        metadata:
+          type: object
+          additionalProperties: true
+      additionalProperties: true
