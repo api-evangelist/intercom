@@ -1,0 +1,991 @@
+"""
+Intercom GraphQL Schema (Conceptual)
+Source: Derived from Intercom REST API OpenAPI specification and public documentation.
+Intercom does not expose a public GraphQL endpoint; this SDL represents the data model
+as a GraphQL schema for tooling and interoperability purposes.
+Reference: https://developers.intercom.com/docs/
+"""
+
+# ---------------------------------------------------------------------------
+# Scalars
+# ---------------------------------------------------------------------------
+
+"""Unix epoch timestamp (seconds since 1970-01-01T00:00:00Z)."""
+scalar Timestamp
+
+"""Arbitrary JSON object (custom attributes, metadata)."""
+scalar JSON
+
+# ---------------------------------------------------------------------------
+# Enums
+# ---------------------------------------------------------------------------
+
+enum ContactRole {
+  user
+  lead
+}
+
+enum ConversationState {
+  open
+  closed
+  snoozed
+  pending
+}
+
+enum ConversationPriority {
+  priority
+  not_priority
+}
+
+enum ArticleState {
+  draft
+  published
+}
+
+enum SegmentPersonType {
+  user
+  lead
+}
+
+enum MessageType {
+  inapp
+  email
+}
+
+enum DataAttributeModelType {
+  contact
+  company
+}
+
+enum DataAttributeDataType {
+  string
+  integer
+  float
+  boolean
+  date
+  list
+}
+
+enum WebhookTopic {
+  contact_created
+  contact_signed_up
+  contact_tag_created
+  contact_tag_deleted
+  conversation_created
+  conversation_replied
+  conversation_closed
+  conversation_reopened
+  conversation_assigned
+  conversation_snoozed
+  conversation_note_created
+  contact_added_to_company
+  contact_removed_from_company
+}
+
+enum SubscriptionState {
+  live
+  inactive
+}
+
+# ---------------------------------------------------------------------------
+# Pagination
+# ---------------------------------------------------------------------------
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+# ---------------------------------------------------------------------------
+# Admin (teammate / agent)
+# ---------------------------------------------------------------------------
+
+"""An Intercom workspace admin (teammate or agent)."""
+type Admin {
+  """Unique identifier for the admin."""
+  id: ID!
+
+  """Always 'admin'."""
+  type: String!
+
+  """Display name of the admin."""
+  name: String
+
+  """Email address of the admin."""
+  email: String
+
+  """Whether the admin is currently in away mode."""
+  awayModeEnabled: Boolean!
+
+  """Whether conversations are reassigned when the admin enters away mode."""
+  awayModeReassign: Boolean!
+
+  """Team memberships for this admin."""
+  teams: [Team!]
+}
+
+type AdminEdge {
+  cursor: String!
+  node: Admin!
+}
+
+type AdminConnection {
+  edges: [AdminEdge!]!
+  nodes: [Admin!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+# ---------------------------------------------------------------------------
+# Team
+# ---------------------------------------------------------------------------
+
+"""A team within an Intercom workspace."""
+type Team {
+  """Unique identifier for the team."""
+  id: ID!
+
+  """Always 'team'."""
+  type: String!
+
+  """Display name of the team."""
+  name: String!
+
+  """Admin members of this team."""
+  admins: [Admin!]
+}
+
+# ---------------------------------------------------------------------------
+# Tag
+# ---------------------------------------------------------------------------
+
+"""A tag that can be applied to contacts or conversations."""
+type Tag {
+  """Unique identifier for the tag."""
+  id: ID!
+
+  """Always 'tag'."""
+  type: String!
+
+  """Display name of the tag."""
+  name: String!
+}
+
+# ---------------------------------------------------------------------------
+# Segment
+# ---------------------------------------------------------------------------
+
+"""A saved filter segment grouping contacts or leads."""
+type Segment {
+  """Unique identifier for the segment."""
+  id: ID!
+
+  """Always 'segment'."""
+  type: String!
+
+  """Display name of the segment."""
+  name: String!
+
+  """Whether the segment targets users or leads."""
+  personType: SegmentPersonType
+
+  """When the segment was created."""
+  createdAt: Timestamp!
+
+  """When the segment was last modified."""
+  updatedAt: Timestamp!
+}
+
+type SegmentEdge {
+  cursor: String!
+  node: Segment!
+}
+
+type SegmentConnection {
+  edges: [SegmentEdge!]!
+  nodes: [Segment!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+# ---------------------------------------------------------------------------
+# Company
+# ---------------------------------------------------------------------------
+
+"""A company (account) record in Intercom."""
+type Company {
+  """Unique Intercom-assigned identifier."""
+  id: ID!
+
+  """Always 'company'."""
+  type: String!
+
+  """External company identifier supplied by the integrating application."""
+  companyId: String
+
+  """Display name of the company."""
+  name: String
+
+  """Current subscription plan for the company."""
+  plan: CompanyPlan
+
+  """Number of employees."""
+  size: Int
+
+  """Industry vertical."""
+  industry: String
+
+  """Website URL."""
+  website: String
+
+  """Monthly spend tracked for the company."""
+  monthlySpend: Float
+
+  """Number of active users associated with the company."""
+  sessionCount: Int
+
+  """User-defined attributes for this company."""
+  customAttributes: JSON
+
+  """Tags applied to this company."""
+  tags: [Tag!]
+
+  """Segments this company belongs to."""
+  segments: [Segment!]
+
+  """When the company was created in Intercom."""
+  createdAt: Timestamp!
+
+  """When the company record was last updated."""
+  updatedAt: Timestamp!
+}
+
+"""Subscription plan information for a company."""
+type CompanyPlan {
+  id: ID!
+  type: String!
+  name: String!
+}
+
+type CompanyEdge {
+  cursor: String!
+  node: Company!
+}
+
+type CompanyConnection {
+  edges: [CompanyEdge!]!
+  nodes: [Company!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+# ---------------------------------------------------------------------------
+# Contact
+# ---------------------------------------------------------------------------
+
+"""A contact (user or lead) in Intercom."""
+type Contact {
+  """Unique Intercom-assigned identifier."""
+  id: ID!
+
+  """Always 'contact'."""
+  type: String!
+
+  """External identifier supplied by the integrating application."""
+  externalId: String
+
+  """Whether this contact is a registered user or an anonymous lead."""
+  role: ContactRole!
+
+  """Email address of the contact."""
+  email: String
+
+  """Full name of the contact."""
+  name: String
+
+  """Phone number of the contact."""
+  phone: String
+
+  """Avatar / profile image URL."""
+  avatar: String
+
+  """Browser or device locale."""
+  locale: String
+
+  """Timezone string (e.g. America/New_York)."""
+  timezone: String
+
+  """User-defined attributes for this contact."""
+  customAttributes: JSON
+
+  """Tags applied to this contact."""
+  tags: [Tag!]
+
+  """Segments this contact belongs to."""
+  segments: [Segment!]
+
+  """Companies this contact is associated with."""
+  companies: [Company!]
+
+  """Notes written about this contact."""
+  notes: [Note!]
+
+  """Data events recorded for this contact."""
+  events: [Event!]
+
+  """When the contact was created in Intercom."""
+  createdAt: Timestamp!
+
+  """When the contact record was last updated."""
+  updatedAt: Timestamp!
+
+  """When the contact last signed up."""
+  signedUpAt: Timestamp
+
+  """When the contact was last seen."""
+  lastSeenAt: Timestamp
+
+  """When the contact last made a request."""
+  lastRequestAt: Timestamp
+}
+
+type ContactEdge {
+  cursor: String!
+  node: Contact!
+}
+
+type ContactConnection {
+  edges: [ContactEdge!]!
+  nodes: [Contact!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+# ---------------------------------------------------------------------------
+# Note
+# ---------------------------------------------------------------------------
+
+"""An internal note written by an admin about a contact."""
+type Note {
+  """Unique identifier for the note."""
+  id: ID!
+
+  """Always 'note'."""
+  type: String!
+
+  """HTML body of the note."""
+  body: String!
+
+  """Admin who authored the note."""
+  author: Admin
+
+  """Contact this note is about."""
+  contact: Contact
+
+  """When the note was created."""
+  createdAt: Timestamp!
+}
+
+# ---------------------------------------------------------------------------
+# Event
+# ---------------------------------------------------------------------------
+
+"""A data event recording user activity."""
+type Event {
+  """Name of the event (e.g. 'purchased-plan')."""
+  eventName: String!
+
+  """Contact who triggered the event."""
+  userId: String
+
+  """External identifier for the contact."""
+  externalId: String
+
+  """When the event occurred."""
+  createdAt: Timestamp!
+
+  """Arbitrary metadata associated with the event."""
+  metadata: JSON
+}
+
+# ---------------------------------------------------------------------------
+# ConversationPart
+# ---------------------------------------------------------------------------
+
+"""A single message, note, or action within a conversation."""
+type ConversationPart {
+  """Unique identifier for the conversation part."""
+  id: ID!
+
+  """
+  Part type: comment, note, assignment, open, close, snoozed, unsnoozed,
+  away_mode_assignment, conversation_rating_changed, etc.
+  """
+  partType: String!
+
+  """HTML body of the part (may be null for action parts)."""
+  body: String
+
+  """Author of this part — an admin, bot, or contact."""
+  author: ConversationPartAuthor
+
+  """Attachments included in this part."""
+  attachments: [Attachment!]
+
+  """When this part was created."""
+  createdAt: Timestamp!
+
+  """When this part was last updated."""
+  updatedAt: Timestamp!
+}
+
+"""Union-style author for a conversation part (admin or contact)."""
+type ConversationPartAuthor {
+  id: ID!
+  type: String!
+  name: String
+  email: String
+}
+
+"""File or media attachment on a conversation part."""
+type Attachment {
+  name: String!
+  url: String!
+  contentType: String
+  filesize: Int
+  width: Int
+  height: Int
+}
+
+# ---------------------------------------------------------------------------
+# Conversation
+# ---------------------------------------------------------------------------
+
+"""A conversation thread between contacts and admins."""
+type Conversation {
+  """Unique identifier for the conversation."""
+  id: ID!
+
+  """Always 'conversation'."""
+  type: String!
+
+  """Short title or subject of the conversation."""
+  title: String
+
+  """Current state of the conversation."""
+  state: ConversationState!
+
+  """Whether the conversation is currently open."""
+  open: Boolean!
+
+  """Priority level of the conversation."""
+  priority: ConversationPriority!
+
+  """Admin or team currently assigned to this conversation."""
+  assignee: ConversationAssignee
+
+  """Contact (user or lead) who initiated the conversation."""
+  source: ConversationSource
+
+  """All parts (messages, notes, actions) in this conversation."""
+  conversationParts: [ConversationPart!]
+
+  """Tags applied to this conversation."""
+  tags: [Tag!]
+
+  """When the conversation was created."""
+  createdAt: Timestamp!
+
+  """When the conversation was last updated."""
+  updatedAt: Timestamp!
+
+  """When the conversation was first responded to."""
+  firstContactReply: ConversationFirstReply
+
+  """Statistical summary for this conversation."""
+  statistics: ConversationStatistics
+}
+
+"""Assignee of a conversation (admin or team)."""
+type ConversationAssignee {
+  id: ID!
+  type: String!
+  name: String
+  email: String
+}
+
+"""The originating contact and channel for a conversation."""
+type ConversationSource {
+  id: ID!
+  type: String!
+  deliveredAs: String
+  subject: String
+  body: String
+  author: ConversationPartAuthor
+  attachments: [Attachment!]
+  url: String
+}
+
+"""Timing of the first reply in a conversation."""
+type ConversationFirstReply {
+  createdAt: Timestamp
+  type: String
+  url: String
+}
+
+"""Response-time and engagement statistics for a conversation."""
+type ConversationStatistics {
+  timeToAssignment: Int
+  timeToAdminReply: Int
+  timeToFirstClose: Int
+  timeToLastClose: Int
+  medianTimeToReply: Int
+  firstContactReplyAt: Timestamp
+  firstAssignmentAt: Timestamp
+  firstAdminReplyAt: Timestamp
+  firstCloseAt: Timestamp
+  lastAssignmentAt: Timestamp
+  lastAssignmentAdminReplyAt: Timestamp
+  lastContactReplyAt: Timestamp
+  lastAdminReplyAt: Timestamp
+  lastCloseAt: Timestamp
+  lastClosingAdminId: ID
+  countReopens: Int
+  countAssignments: Int
+  countConversationParts: Int
+}
+
+type ConversationEdge {
+  cursor: String!
+  node: Conversation!
+}
+
+type ConversationConnection {
+  edges: [ConversationEdge!]!
+  nodes: [Conversation!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+# ---------------------------------------------------------------------------
+# Help Center — Collection / Section / Article
+# ---------------------------------------------------------------------------
+
+"""A top-level collection in the Intercom Help Center."""
+type Collection {
+  """Unique identifier for the collection."""
+  id: ID!
+
+  """Always 'collection'."""
+  type: String!
+
+  """Title of the collection."""
+  name: String!
+
+  """Short description of the collection."""
+  description: String
+
+  """Locale of the collection content."""
+  locale: String
+
+  """URL-friendly slug for the collection."""
+  url: String
+
+  """Icon representing the collection."""
+  icon: String
+
+  """Sections nested within this collection."""
+  sections: [Section!]
+
+  """When the collection was created."""
+  createdAt: Timestamp!
+
+  """When the collection was last updated."""
+  updatedAt: Timestamp!
+}
+
+"""A section nested within a Help Center collection."""
+type Section {
+  """Unique identifier for the section."""
+  id: ID!
+
+  """Always 'section'."""
+  type: String!
+
+  """Title of the section."""
+  name: String!
+
+  """Parent collection."""
+  parentId: ID
+
+  """Articles contained in this section."""
+  articles: [Article!]
+
+  """When the section was created."""
+  createdAt: Timestamp!
+
+  """When the section was last updated."""
+  updatedAt: Timestamp!
+}
+
+"""A Help Center article."""
+type Article {
+  """Unique identifier for the article."""
+  id: ID!
+
+  """Always 'article'."""
+  type: String!
+
+  """Title of the article."""
+  title: String!
+
+  """Short summary of the article content."""
+  description: String
+
+  """Full HTML body of the article."""
+  body: String
+
+  """Admin ID of the article author."""
+  authorId: ID
+
+  """Author admin record."""
+  author: Admin
+
+  """Publication state of the article."""
+  state: ArticleState!
+
+  """Parent section or collection identifier."""
+  parentId: ID
+
+  """Locale for this article's content."""
+  locale: String
+
+  """Public URL of the article in the Help Center."""
+  url: String
+
+  """When the article was created."""
+  createdAt: Timestamp!
+
+  """When the article was last updated."""
+  updatedAt: Timestamp!
+}
+
+type ArticleEdge {
+  cursor: String!
+  node: Article!
+}
+
+type ArticleConnection {
+  edges: [ArticleEdge!]!
+  nodes: [Article!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+# ---------------------------------------------------------------------------
+# DataAttribute
+# ---------------------------------------------------------------------------
+
+"""A custom data attribute definition for contacts or companies."""
+type DataAttribute {
+  """Unique identifier for the data attribute."""
+  id: ID!
+
+  """Always 'data_attribute'."""
+  type: String!
+
+  """API name used when sending data (snake_case)."""
+  name: String!
+
+  """Human-readable label."""
+  label: String
+
+  """Description of the attribute's purpose."""
+  description: String
+
+  """Whether the attribute applies to contacts or companies."""
+  model: DataAttributeModelType!
+
+  """Data type of the attribute value."""
+  dataType: DataAttributeDataType!
+
+  """Allowed values when dataType is list."""
+  options: [String!]
+
+  """Whether the attribute is archived (hidden from UI)."""
+  archived: Boolean!
+
+  """Whether the attribute was created by Intercom (not custom)."""
+  customized: Boolean!
+}
+
+# ---------------------------------------------------------------------------
+# Webhook / Subscription
+# ---------------------------------------------------------------------------
+
+"""A registered webhook subscription."""
+type Webhook {
+  """Unique identifier for the webhook."""
+  id: ID!
+
+  """Always 'notification_subscription'."""
+  type: String!
+
+  """URL that receives webhook POST payloads."""
+  url: String!
+
+  """Topics this webhook is subscribed to."""
+  topics: [WebhookTopic!]!
+
+  """Whether the webhook is active."""
+  active: Boolean!
+
+  """When the webhook was registered."""
+  createdAt: Timestamp!
+
+  """When the webhook was last updated."""
+  updatedAt: Timestamp!
+}
+
+"""A contact's email or SMS notification subscription preference."""
+type Subscription {
+  """Unique identifier for the subscription type."""
+  id: ID!
+
+  """Always 'subscription'."""
+  type: String!
+
+  """Display name for the subscription type."""
+  name: String!
+
+  """Whether this subscription is live or inactive."""
+  state: SubscriptionState!
+
+  """Default opt-in state for new contacts."""
+  defaultSubscriptionState: String
+
+  """Consent type: opt_in or opt_out."""
+  consentType: String
+
+  """Content types this subscription covers: email, sms."""
+  contentTypes: [String!]
+}
+
+# ---------------------------------------------------------------------------
+# Inputs
+# ---------------------------------------------------------------------------
+
+input ContactInput {
+  role: ContactRole!
+  email: String
+  externalId: String
+  name: String
+  phone: String
+  avatar: String
+  customAttributes: JSON
+}
+
+input CompanyInput {
+  companyId: String!
+  name: String
+  plan: String
+  size: Int
+  industry: String
+  website: String
+  monthlySpend: Float
+  customAttributes: JSON
+}
+
+input ConversationInput {
+  """Contact ID who initiates the conversation."""
+  from: ID!
+  body: String!
+}
+
+input ArticleInput {
+  title: String!
+  description: String
+  body: String
+  authorId: ID!
+  state: ArticleState
+  parentId: ID
+}
+
+input DataAttributeInput {
+  name: String!
+  model: DataAttributeModelType!
+  dataType: DataAttributeDataType!
+  label: String
+  description: String
+  options: [String!]
+}
+
+# ---------------------------------------------------------------------------
+# Query
+# ---------------------------------------------------------------------------
+
+type Query {
+  """Identify the currently authenticated admin."""
+  me: Admin
+
+  """List all admins in the workspace."""
+  admins: AdminConnection!
+
+  """Retrieve a specific admin by ID."""
+  admin(id: ID!): Admin
+
+  """List all teams in the workspace."""
+  teams: [Team!]!
+
+  """Retrieve a specific team by ID."""
+  team(id: ID!): Team
+
+  """List all tags in the workspace."""
+  tags: [Tag!]!
+
+  """List all segments in the workspace."""
+  segments(personType: SegmentPersonType): SegmentConnection!
+
+  """Retrieve a specific segment by ID."""
+  segment(id: ID!): Segment
+
+  """List contacts with optional pagination."""
+  contacts(first: Int, after: String, last: Int, before: String): ContactConnection!
+
+  """Retrieve a specific contact by Intercom ID."""
+  contact(id: ID!): Contact
+
+  """Search contacts by email, name, or external ID."""
+  searchContacts(query: String!, first: Int, after: String): ContactConnection!
+
+  """List companies with optional pagination."""
+  companies(first: Int, after: String): CompanyConnection!
+
+  """Retrieve a specific company by Intercom ID."""
+  company(id: ID!): Company
+
+  """Retrieve a company by its external company_id."""
+  companyByExternalId(companyId: String!): Company
+
+  """List conversations with optional pagination."""
+  conversations(
+    first: Int
+    after: String
+    state: ConversationState
+    adminId: ID
+    teamId: ID
+  ): ConversationConnection!
+
+  """Retrieve a specific conversation by ID."""
+  conversation(id: ID!): Conversation
+
+  """List Help Center articles."""
+  articles(first: Int, after: String, state: ArticleState): ArticleConnection!
+
+  """Retrieve a specific article by ID."""
+  article(id: ID!): Article
+
+  """List Help Center collections."""
+  collections: [Collection!]!
+
+  """Retrieve a specific collection by ID."""
+  collection(id: ID!): Collection
+
+  """List custom data attribute definitions."""
+  dataAttributes(model: DataAttributeModelType): [DataAttribute!]!
+
+  """List registered webhook subscriptions."""
+  webhooks: [Webhook!]!
+
+  """Retrieve a specific webhook by ID."""
+  webhook(id: ID!): Webhook
+
+  """List notification subscription types."""
+  subscriptions: [Subscription!]!
+}
+
+# ---------------------------------------------------------------------------
+# Mutation
+# ---------------------------------------------------------------------------
+
+type Mutation {
+  """Create a new contact (user or lead)."""
+  createContact(input: ContactInput!): Contact!
+
+  """Update an existing contact."""
+  updateContact(id: ID!, input: ContactInput!): Contact!
+
+  """Archive (soft-delete) a contact."""
+  archiveContact(id: ID!): Contact!
+
+  """Attach a tag to a contact."""
+  tagContact(contactId: ID!, tagName: String!): Contact!
+
+  """Remove a tag from a contact."""
+  untagContact(contactId: ID!, tagName: String!): Contact!
+
+  """Add a contact to a company."""
+  attachContactToCompany(contactId: ID!, companyId: ID!): Contact!
+
+  """Remove a contact from a company."""
+  detachContactFromCompany(contactId: ID!, companyId: ID!): Contact!
+
+  """Create or update a company."""
+  createOrUpdateCompany(input: CompanyInput!): Company!
+
+  """Create a new conversation."""
+  createConversation(input: ConversationInput!): Conversation!
+
+  """Reply to a conversation."""
+  replyToConversation(conversationId: ID!, body: String!, authorId: ID!): ConversationPart!
+
+  """Add an internal note to a conversation."""
+  addNoteToConversation(conversationId: ID!, body: String!, authorId: ID!): ConversationPart!
+
+  """Assign a conversation to an admin or team."""
+  assignConversation(conversationId: ID!, assigneeId: ID!, adminId: ID!): Conversation!
+
+  """Close a conversation."""
+  closeConversation(conversationId: ID!, adminId: ID!): Conversation!
+
+  """Reopen a closed conversation."""
+  reopenConversation(conversationId: ID!, adminId: ID!): Conversation!
+
+  """Snooze a conversation until a specified time."""
+  snoozeConversation(conversationId: ID!, snoozedUntil: Timestamp!, adminId: ID!): Conversation!
+
+  """Attach a tag to a conversation."""
+  tagConversation(conversationId: ID!, tagName: String!): Conversation!
+
+  """Create or update a Help Center article."""
+  createArticle(input: ArticleInput!): Article!
+
+  """Update an existing article."""
+  updateArticle(id: ID!, input: ArticleInput!): Article!
+
+  """Delete an article."""
+  deleteArticle(id: ID!): Boolean!
+
+  """Create a custom data attribute."""
+  createDataAttribute(input: DataAttributeInput!): DataAttribute!
+
+  """Update a custom data attribute."""
+  updateDataAttribute(id: ID!, input: DataAttributeInput!): DataAttribute!
+
+  """Archive a custom data attribute."""
+  archiveDataAttribute(id: ID!): DataAttribute!
+
+  """Create a note for a contact."""
+  createNote(contactId: ID!, body: String!, adminId: ID!): Note!
+
+  """Register a new webhook subscription."""
+  createWebhook(url: String!, topics: [WebhookTopic!]!): Webhook!
+
+  """Update a webhook subscription."""
+  updateWebhook(id: ID!, url: String, topics: [WebhookTopic!]): Webhook!
+
+  """Delete a webhook subscription."""
+  deleteWebhook(id: ID!): Boolean!
+}
