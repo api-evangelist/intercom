@@ -1,0 +1,352 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Intercom API",
+    "version": "2.15"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Admins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Identify an admin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/me"
+          },
+          "docs": "Returns information about the admin user authenticated by the access token used in the request."
+        },
+        {
+          "info": {
+            "name": "List admins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/admins"
+          },
+          "docs": "Retrieves a paginated list of admins in your Intercom workspace."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Contacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/contacts",
+            "params": [
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "starting_after",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieves a paginated list of contacts."
+        },
+        {
+          "info": {
+            "name": "Create a contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/contacts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new contact (user or lead) in your Intercom workspace."
+        },
+        {
+          "info": {
+            "name": "Retrieve a contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/contacts/:contact_id",
+            "params": [
+              {
+                "name": "contact_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a single contact by ID."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Companies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/companies"
+          },
+          "docs": "Retrieves a paginated list of companies."
+        },
+        {
+          "info": {
+            "name": "Create or update a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/companies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates or updates a company record by company_id."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Conversations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List conversations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/conversations"
+          },
+          "docs": "Retrieves a paginated list of conversations."
+        },
+        {
+          "info": {
+            "name": "Create a conversation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/conversations",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new user-initiated conversation."
+        },
+        {
+          "info": {
+            "name": "Retrieve a conversation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/conversations/:conversation_id",
+            "params": [
+              {
+                "name": "conversation_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a conversation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Articles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List articles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/articles"
+          },
+          "docs": "List articles"
+        },
+        {
+          "info": {
+            "name": "Create an article",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/articles",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an article"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Segments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List segments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/segments"
+          },
+          "docs": "List segments"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Messages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/messages",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sends an outbound message to a contact."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Data Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List data events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/events",
+            "params": [
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "user_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List data events"
+        },
+        {
+          "info": {
+            "name": "Submit a data event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/events",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submits a custom data event tracking user activity."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "News",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List news items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/news/news_items"
+          },
+          "docs": "List news items"
+        },
+        {
+          "info": {
+            "name": "Create a news item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/news/news_items",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a news item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
