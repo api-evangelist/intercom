@@ -55,7 +55,7 @@ common:
   url: https://developers.intercom.com/docs/
 - type: Support
   url: https://www.intercom.com/help/
-- type: SignUp
+- type: Signup
   url: https://app.intercom.com/a/signup/
 - type: Features
   data:
@@ -78,7 +78,7 @@ common:
   sources:
   - https://www.intercom.com/pricing
   updated: '2026-05-04'
-- type: LLMsTxt
+- type: LlmsText
   url: https://developers.intercom.com/llms.txt
 maintainers:
 - FN: Kin Lane
