@@ -43,6 +43,12 @@ apis:
   - url: graphql/intercom-graphql.md
     type: GraphQL
 common:
+- type: VulnerabilityDisclosure
+  url: security/intercom-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/intercom-domain-security.yml
+- type: Authentication
+  url: authentication/intercom-authentication.yml
 - type: GitHubOrganization
   url: https://github.com/intercom
 - type: LinkedIn
@@ -51,6 +57,8 @@ common:
   url: https://developers.intercom.com/
 - type: Website
   url: https://www.intercom.com/
+- type: Blog
+  url: https://www.intercom.com/blog/feed/
 - type: Documentation
   url: https://developers.intercom.com/docs/
 - type: Support
