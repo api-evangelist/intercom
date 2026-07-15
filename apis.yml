@@ -43,6 +43,8 @@ apis:
   - url: graphql/intercom-graphql.md
     type: GraphQL
 common:
+- type: AgenticAccess
+  url: agentic-access/intercom-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/intercom-vulnerability-disclosure.yml
 - type: DomainSecurity
