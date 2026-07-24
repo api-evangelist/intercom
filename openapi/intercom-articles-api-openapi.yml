@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: Intercom Admins Articles API
+  description: The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.
+  version: '2.15'
+  contact:
+    name: Intercom Developer Support
+    url: https://developers.intercom.com/
+servers:
+- url: https://api.intercom.io
+  description: Production (US)
+- url: https://api.eu.intercom.io
+  description: Europe
+- url: https://api.au.intercom.io
+  description: Australia
+security:
+- bearerAuth: []
+tags:
+- name: Articles
+  description: Manage Help Center articles.
+paths:
+  /articles:
+    get:
+      operationId: listArticles
+      summary: List articles
+      tags:
+      - Articles
+      responses:
+        '200':
+          description: Articles list returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Article'
+    post:
+      operationId: createArticle
+      summary: Create an article
+      tags:
+      - Articles
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Article'
+      responses:
+        '200':
+          description: Article created successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Article'
+components:
+  schemas:
+    Article:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        body:
+          type: string
+        author_id:
+          type: integer
+        state:
+          type: string
+        created_at:
+          type: integer
+        updated_at:
+          type: integer
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Intercom Developer Documentation
+  url: https://developers.intercom.com/docs/

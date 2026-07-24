@@ -1,0 +1,74 @@
+openapi: 3.1.0
+info:
+  title: Intercom Admins Data Events API
+  description: The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.
+  version: '2.15'
+  contact:
+    name: Intercom Developer Support
+    url: https://developers.intercom.com/
+servers:
+- url: https://api.intercom.io
+  description: Production (US)
+- url: https://api.eu.intercom.io
+  description: Europe
+- url: https://api.au.intercom.io
+  description: Australia
+security:
+- bearerAuth: []
+tags:
+- name: Data Events
+  description: Submit and retrieve user activity events.
+paths:
+  /events:
+    post:
+      operationId: submitEvent
+      summary: Submit a data event
+      description: Submits a custom data event tracking user activity.
+      tags:
+      - Data Events
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                event_name:
+                  type: string
+                created_at:
+                  type: integer
+                user_id:
+                  type: string
+                email:
+                  type: string
+                metadata:
+                  type: object
+      responses:
+        '202':
+          description: Event accepted.
+    get:
+      operationId: listEvents
+      summary: List data events
+      tags:
+      - Data Events
+      parameters:
+      - name: type
+        in: query
+        schema:
+          type: string
+      - name: user_id
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Events list returned successfully.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Intercom Developer Documentation
+  url: https://developers.intercom.com/docs/

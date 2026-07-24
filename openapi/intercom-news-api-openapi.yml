@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: Intercom Admins News API
+  description: The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.
+  version: '2.15'
+  contact:
+    name: Intercom Developer Support
+    url: https://developers.intercom.com/
+servers:
+- url: https://api.intercom.io
+  description: Production (US)
+- url: https://api.eu.intercom.io
+  description: Europe
+- url: https://api.au.intercom.io
+  description: Australia
+security:
+- bearerAuth: []
+tags:
+- name: News
+  description: Manage news items in the Help Desk.
+paths:
+  /news/news_items:
+    get:
+      operationId: listNewsItems
+      summary: List news items
+      tags:
+      - News
+      responses:
+        '200':
+          description: News items list returned successfully.
+    post:
+      operationId: createNewsItem
+      summary: Create a news item
+      tags:
+      - News
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                body:
+                  type: string
+                sender_id:
+                  type: integer
+                state:
+                  type: string
+      responses:
+        '200':
+          description: News item created successfully.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Intercom Developer Documentation
+  url: https://developers.intercom.com/docs/

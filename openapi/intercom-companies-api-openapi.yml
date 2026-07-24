@@ -1,0 +1,92 @@
+openapi: 3.1.0
+info:
+  title: Intercom Admins Companies API
+  description: The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.
+  version: '2.15'
+  contact:
+    name: Intercom Developer Support
+    url: https://developers.intercom.com/
+servers:
+- url: https://api.intercom.io
+  description: Production (US)
+- url: https://api.eu.intercom.io
+  description: Europe
+- url: https://api.au.intercom.io
+  description: Australia
+security:
+- bearerAuth: []
+tags:
+- name: Companies
+  description: Manage company records associated with contacts.
+paths:
+  /companies:
+    get:
+      operationId: listCompanies
+      summary: List companies
+      description: Retrieves a paginated list of companies.
+      tags:
+      - Companies
+      responses:
+        '200':
+          description: Companies list returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompanyList'
+    post:
+      operationId: createOrUpdateCompany
+      summary: Create or update a company
+      description: Creates or updates a company record by company_id.
+      tags:
+      - Companies
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Company'
+      responses:
+        '200':
+          description: Company created or updated successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Company'
+components:
+  schemas:
+    Company:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        company_id:
+          type: string
+        name:
+          type: string
+        plan:
+          type: object
+        size:
+          type: integer
+        industry:
+          type: string
+        created_at:
+          type: integer
+    CompanyList:
+      type: object
+      properties:
+        type:
+          type: string
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Company'
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Intercom Developer Documentation
+  url: https://developers.intercom.com/docs/

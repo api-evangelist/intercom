@@ -1,0 +1,59 @@
+openapi: 3.1.0
+info:
+  title: Intercom Admins Messages API
+  description: The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.
+  version: '2.15'
+  contact:
+    name: Intercom Developer Support
+    url: https://developers.intercom.com/
+servers:
+- url: https://api.intercom.io
+  description: Production (US)
+- url: https://api.eu.intercom.io
+  description: Europe
+- url: https://api.au.intercom.io
+  description: Australia
+security:
+- bearerAuth: []
+tags:
+- name: Messages
+  description: Send outbound messages from Intercom to contacts.
+paths:
+  /messages:
+    post:
+      operationId: createMessage
+      summary: Create a message
+      description: Sends an outbound message to a contact.
+      tags:
+      - Messages
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message_type:
+                  type: string
+                subject:
+                  type: string
+                body:
+                  type: string
+                template:
+                  type: string
+                from:
+                  type: object
+                to:
+                  type: object
+      responses:
+        '200':
+          description: Message dispatched successfully.
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Intercom Developer Documentation
+  url: https://developers.intercom.com/docs/

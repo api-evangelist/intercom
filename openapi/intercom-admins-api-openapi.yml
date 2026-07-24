@@ -1,0 +1,81 @@
+openapi: 3.1.0
+info:
+  title: Intercom Admins API
+  description: The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.
+  version: '2.15'
+  contact:
+    name: Intercom Developer Support
+    url: https://developers.intercom.com/
+servers:
+- url: https://api.intercom.io
+  description: Production (US)
+- url: https://api.eu.intercom.io
+  description: Europe
+- url: https://api.au.intercom.io
+  description: Australia
+security:
+- bearerAuth: []
+tags:
+- name: Admins
+  description: Workspace teammates and admin information.
+paths:
+  /me:
+    get:
+      operationId: getMe
+      summary: Identify an admin
+      description: Returns information about the admin user authenticated by the access token used in the request.
+      tags:
+      - Admins
+      responses:
+        '200':
+          description: Admin record returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Admin'
+  /admins:
+    get:
+      operationId: listAdmins
+      summary: List admins
+      description: Retrieves a paginated list of admins in your Intercom workspace.
+      tags:
+      - Admins
+      responses:
+        '200':
+          description: Admin list returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  admins:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Admin'
+components:
+  schemas:
+    Admin:
+      type: object
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        away_mode_enabled:
+          type: boolean
+        away_mode_reassign:
+          type: boolean
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Intercom Developer Documentation
+  url: https://developers.intercom.com/docs/
