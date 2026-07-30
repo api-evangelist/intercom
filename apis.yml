@@ -5,7 +5,20 @@ description: Intercom is an AI-powered customer service platform that enables bu
   Intercom API allows developers to integrate with the Intercom platform using RESTful
   APIs and SDKs.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/intercom.png
 tags:
 - AI
 - Customer Service
@@ -16,32 +29,186 @@ created: '2024-07-02'
 modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
-- aid: intercom:intercom-api
-  name: Intercom API
-  description: The Intercom API provides programmatic access to the Intercom customer
-    service platform. Build apps on the complete AI customer service platform and
-    create seamless customized experiences in the Intercom Help Desk and Messenger
-    using APIs and SDKs.
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+- aid: intercom:intercom-admins-api
+  name: Intercom Admins API
+  description: Workspace teammates and admin information.
   humanURL: https://developers.intercom.com/
   baseURL: https://api.intercom.io
   tags:
-  - Customer Service
-  - Messaging
-  - REST
+  - Admins
   properties:
+  - type: OpenAPI
+    url: openapi/intercom-admins-api-openapi.yml
   - type: Documentation
     url: https://developers.intercom.com/docs/
   - type: GettingStarted
     url: https://developers.intercom.com/docs/get-started/
   - type: Authentication
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
-  - type: OpenAPI
-    url: openapi/intercom-openapi.yml
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - url: graphql/intercom-graphql.md
-    type: GraphQL
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
+- aid: intercom:intercom-articles-api
+  name: Intercom Articles API
+  description: Manage Help Center articles.
+  humanURL: https://developers.intercom.com/
+  baseURL: https://api.intercom.io
+  tags:
+  - Articles
+  properties:
+  - type: OpenAPI
+    url: openapi/intercom-articles-api-openapi.yml
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: GettingStarted
+    url: https://developers.intercom.com/docs/get-started/
+  - type: Authentication
+    url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+  - type: AsyncAPI
+    url: asyncapi/intercom-webhooks-asyncapi.yml
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
+- aid: intercom:intercom-companies-api
+  name: Intercom Companies API
+  description: Manage company records associated with contacts.
+  humanURL: https://developers.intercom.com/
+  baseURL: https://api.intercom.io
+  tags:
+  - Companies
+  properties:
+  - type: OpenAPI
+    url: openapi/intercom-companies-api-openapi.yml
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: GettingStarted
+    url: https://developers.intercom.com/docs/get-started/
+  - type: Authentication
+    url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+  - type: AsyncAPI
+    url: asyncapi/intercom-webhooks-asyncapi.yml
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
+- aid: intercom:intercom-contacts-api
+  name: Intercom Contacts API
+  description: Manage users and leads in your Intercom workspace.
+  humanURL: https://developers.intercom.com/
+  baseURL: https://api.intercom.io
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/intercom-contacts-api-openapi.yml
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: GettingStarted
+    url: https://developers.intercom.com/docs/get-started/
+  - type: Authentication
+    url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+  - type: AsyncAPI
+    url: asyncapi/intercom-webhooks-asyncapi.yml
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
+- aid: intercom:intercom-conversations-api
+  name: Intercom Conversations API
+  description: Manage conversations between contacts and admins.
+  humanURL: https://developers.intercom.com/
+  baseURL: https://api.intercom.io
+  tags:
+  - Conversations
+  properties:
+  - type: OpenAPI
+    url: openapi/intercom-conversations-api-openapi.yml
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: GettingStarted
+    url: https://developers.intercom.com/docs/get-started/
+  - type: Authentication
+    url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+  - type: AsyncAPI
+    url: asyncapi/intercom-webhooks-asyncapi.yml
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
+- aid: intercom:intercom-data-events-api
+  name: Intercom Data Events API
+  description: Submit and retrieve user activity events.
+  humanURL: https://developers.intercom.com/
+  baseURL: https://api.intercom.io
+  tags:
+  - Data Events
+  properties:
+  - type: OpenAPI
+    url: openapi/intercom-data-events-api-openapi.yml
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: GettingStarted
+    url: https://developers.intercom.com/docs/get-started/
+  - type: Authentication
+    url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+  - type: AsyncAPI
+    url: asyncapi/intercom-webhooks-asyncapi.yml
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
+- aid: intercom:intercom-messages-api
+  name: Intercom Messages API
+  description: Send outbound messages from Intercom to contacts.
+  humanURL: https://developers.intercom.com/
+  baseURL: https://api.intercom.io
+  tags:
+  - Messages
+  properties:
+  - type: OpenAPI
+    url: openapi/intercom-messages-api-openapi.yml
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: GettingStarted
+    url: https://developers.intercom.com/docs/get-started/
+  - type: Authentication
+    url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+  - type: AsyncAPI
+    url: asyncapi/intercom-webhooks-asyncapi.yml
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
+- aid: intercom:intercom-news-api
+  name: Intercom News API
+  description: Manage news items in the Help Desk.
+  humanURL: https://developers.intercom.com/
+  baseURL: https://api.intercom.io
+  tags:
+  - News
+  properties:
+  - type: OpenAPI
+    url: openapi/intercom-news-api-openapi.yml
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: GettingStarted
+    url: https://developers.intercom.com/docs/get-started/
+  - type: Authentication
+    url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+  - type: AsyncAPI
+    url: asyncapi/intercom-webhooks-asyncapi.yml
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
+- aid: intercom:intercom-segments-api
+  name: Intercom Segments API
+  description: Access user and company segments.
+  humanURL: https://developers.intercom.com/
+  baseURL: https://api.intercom.io
+  tags:
+  - Segments
+  properties:
+  - type: OpenAPI
+    url: openapi/intercom-segments-api-openapi.yml
+  - type: Documentation
+    url: https://developers.intercom.com/docs/
+  - type: GettingStarted
+    url: https://developers.intercom.com/docs/get-started/
+  - type: Authentication
+    url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
+  - type: AsyncAPI
+    url: asyncapi/intercom-webhooks-asyncapi.yml
+  - type: GraphQL
+    url: graphql/intercom-graphql.md
 common:
 - type: AgenticAccess
   url: agentic-access/intercom-agentic-access.yml
