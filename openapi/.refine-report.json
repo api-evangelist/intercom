@@ -1,0 +1,30 @@
+{
+  "provider": "intercom",
+  "sources": [
+    "intercom-admins-api-openapi.yml",
+    "intercom-articles-api-openapi.yml",
+    "intercom-companies-api-openapi.yml",
+    "intercom-contacts-api-openapi.yml",
+    "intercom-conversations-api-openapi.yml",
+    "intercom-data-events-api-openapi.yml",
+    "intercom-messages-api-openapi.yml",
+    "intercom-news-api-openapi.yml",
+    "intercom-segments-api-openapi.yml"
+  ],
+  "outputs": [
+    "intercom-admins-api-openapi.yml",
+    "intercom-articles-api-openapi.yml",
+    "intercom-companies-api-openapi.yml",
+    "intercom-contacts-api-openapi.yml",
+    "intercom-conversations-api-openapi.yml",
+    "intercom-data-events-api-openapi.yml",
+    "intercom-messages-api-openapi.yml",
+    "intercom-news-api-openapi.yml",
+    "intercom-segments-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
