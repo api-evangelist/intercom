@@ -1,0 +1,218 @@
+{
+  "item": [
+    {
+      "id": "1e7f2a3d-3b5f-4dd6-91e1-b24b712e86e2",
+      "name": "Companies",
+      "description": {
+        "content": "Manage company records associated with contacts.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "58b72d8d-a75d-4699-a433-f7608606583b",
+          "name": "List companies",
+          "request": {
+            "name": "List companies",
+            "description": {
+              "content": "Retrieves a paginated list of companies.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b722385c-fc25-4a42-a5d6-79d0c1812196",
+              "name": "Companies list returned successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"data\": [\n    {\n      \"type\": \"string\",\n      \"id\": \"string\",\n      \"company_id\": \"string\",\n      \"name\": \"string\",\n      \"plan\": {},\n      \"size\": 6253,\n      \"industry\": \"string\",\n      \"created_at\": 9864\n    },\n    {\n      \"type\": \"string\",\n      \"id\": \"string\",\n      \"company_id\": \"string\",\n      \"name\": \"string\",\n      \"plan\": {},\n      \"size\": 749,\n      \"industry\": \"string\",\n      \"created_at\": 3794\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a31577bd-f99d-48e9-84e4-9ca296ab7727",
+          "name": "Create or update a company",
+          "request": {
+            "name": "Create or update a company",
+            "description": {
+              "content": "Creates or updates a company record by company_id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"<string>\",\n  \"id\": \"<string>\",\n  \"company_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"plan\": \"<object>\",\n  \"size\": \"<integer>\",\n  \"industry\": \"<string>\",\n  \"created_at\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "80e7aed9-10ae-4d1c-afa5-50dacd5948b4",
+              "name": "Company created or updated successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"<string>\",\n  \"id\": \"<string>\",\n  \"company_id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"plan\": \"<object>\",\n  \"size\": \"<integer>\",\n  \"industry\": \"<string>\",\n  \"created_at\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"id\": \"string\",\n  \"company_id\": \"string\",\n  \"name\": \"string\",\n  \"plan\": {},\n  \"size\": 6680,\n  \"industry\": \"string\",\n  \"created_at\": 7659\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.intercom.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "21a47f66-f008-4c5c-8292-32e02ca17332",
+    "name": "Intercom Admins Companies API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.\n\nContact Support:\n Name: Intercom Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Intercom Admins Articles API",
+    "version": "2.15"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Articles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List articles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/articles"
+          },
+          "docs": "List articles"
+        },
+        {
+          "info": {
+            "name": "Create an article",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/articles",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an article"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Intercom Admins News API",
+    "version": "2.15"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "News",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List news items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/news/news_items"
+          },
+          "docs": "List news items"
+        },
+        {
+          "info": {
+            "name": "Create a news item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/news/news_items",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a news item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

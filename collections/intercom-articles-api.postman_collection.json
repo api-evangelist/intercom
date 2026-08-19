@@ -1,0 +1,212 @@
+{
+  "item": [
+    {
+      "id": "28744e27-6534-4c4a-a9cd-d4040e9eea71",
+      "name": "Articles",
+      "description": {
+        "content": "Manage Help Center articles.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eddf8a3f-4238-4c26-a58a-6719e4ad6393",
+          "name": "List articles",
+          "request": {
+            "name": "List articles",
+            "description": {},
+            "url": {
+              "path": [
+                "articles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bd7be2ca-a810-4612-aba7-b8531ff00b54",
+              "name": "Articles list returned successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "articles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"data\": [\n    {\n      \"type\": \"string\",\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"body\": \"string\",\n      \"author_id\": 2903,\n      \"state\": \"string\",\n      \"created_at\": 7962,\n      \"updated_at\": 1938\n    },\n    {\n      \"type\": \"string\",\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"body\": \"string\",\n      \"author_id\": 6434,\n      \"state\": \"string\",\n      \"created_at\": 995,\n      \"updated_at\": 5275\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "54f98326-5600-49da-862d-407559d21d31",
+          "name": "Create an article",
+          "request": {
+            "name": "Create an article",
+            "description": {},
+            "url": {
+              "path": [
+                "articles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"<string>\",\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"body\": \"<string>\",\n  \"author_id\": \"<integer>\",\n  \"state\": \"<string>\",\n  \"created_at\": \"<integer>\",\n  \"updated_at\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a0400a92-15bb-437e-ad0f-f7cee52d0a58",
+              "name": "Article created successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "articles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"type\": \"<string>\",\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"body\": \"<string>\",\n  \"author_id\": \"<integer>\",\n  \"state\": \"<string>\",\n  \"created_at\": \"<integer>\",\n  \"updated_at\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"id\": \"string\",\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"body\": \"string\",\n  \"author_id\": 7911,\n  \"state\": \"string\",\n  \"created_at\": 2560,\n  \"updated_at\": 3734\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.intercom.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7937f3e4-81b6-49bf-9052-6ddc84173f7f",
+    "name": "Intercom Admins Articles API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.\n\nContact Support:\n Name: Intercom Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

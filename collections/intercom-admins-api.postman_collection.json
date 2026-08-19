@@ -1,0 +1,197 @@
+{
+  "item": [
+    {
+      "id": "5dec836b-35a4-4b8a-951b-2cca55ef1653",
+      "name": "Admins",
+      "description": {
+        "content": "Workspace teammates and admin information.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "272e3c65-1a15-4ad6-9893-8d3175f2a02b",
+          "name": "Identify an admin",
+          "request": {
+            "name": "Identify an admin",
+            "description": {
+              "content": "Returns information about the admin user authenticated by the access token used in the request.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "44d049b0-b15f-49f2-a94a-ffb7be0f0430",
+              "name": "Admin record returned successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"away_mode_enabled\": true,\n  \"away_mode_reassign\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2315e198-4fdb-4ecd-8707-b9424d85c31c",
+          "name": "List admins",
+          "request": {
+            "name": "List admins",
+            "description": {
+              "content": "Retrieves a paginated list of admins in your Intercom workspace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "admins"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "47c83e24-92e7-4c8c-aefb-ccef667779ec",
+              "name": "Admin list returned successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "admins"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"string\",\n  \"admins\": [\n    {\n      \"type\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"away_mode_enabled\": true,\n      \"away_mode_reassign\": false\n    },\n    {\n      \"type\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"away_mode_enabled\": true,\n      \"away_mode_reassign\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.intercom.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "354acc7b-0af4-4bb8-bc8d-3797d43ae00b",
+    "name": "Intercom Admins API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Intercom API provides programmatic access to the Intercom AI-powered customer service platform. It enables developers to manage contacts, companies, conversations, articles, segments, messages, and data events, and to build seamless integrations with the Intercom Help Desk and Messenger.\n\nContact Support:\n Name: Intercom Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

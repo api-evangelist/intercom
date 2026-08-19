@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Intercom Admins Companies API",
+    "version": "2.15"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Companies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/companies"
+          },
+          "docs": "Retrieves a paginated list of companies."
+        },
+        {
+          "info": {
+            "name": "Create or update a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/companies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates or updates a company record by company_id."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

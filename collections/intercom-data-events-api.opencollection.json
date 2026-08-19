@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Intercom Admins Data Events API",
+    "version": "2.15"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Data Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List data events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/events",
+            "params": [
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "user_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List data events"
+        },
+        {
+          "info": {
+            "name": "Submit a data event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.intercom.io/events",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submits a custom data event tracking user activity."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

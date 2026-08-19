@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Intercom Admins API",
+    "version": "2.15"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Admins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Identify an admin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/me"
+          },
+          "docs": "Returns information about the admin user authenticated by the access token used in the request."
+        },
+        {
+          "info": {
+            "name": "List admins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.intercom.io/admins"
+          },
+          "docs": "Retrieves a paginated list of admins in your Intercom workspace."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
