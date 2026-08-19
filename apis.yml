@@ -27,7 +27,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/intercom/refs/heads/main/apis.yml
 created: '2024-07-02'
 modified: '2026-05-30'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: intercom:intercom-admins-api
   name: Intercom Admins API
