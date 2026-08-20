@@ -20,6 +20,11 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/intercom.png
 tags:
+- Artificial Intelligence
+- Customer Service
+- Customer-Support
+- Messaging
+tags_raw:
 - AI
 - Customer Service
 - Customer Support
@@ -155,6 +160,8 @@ apis:
   humanURL: https://developers.intercom.com/
   baseURL: https://api.intercom.io
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
