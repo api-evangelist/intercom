@@ -5,7 +5,7 @@
       "source": "https://www.intercom.com/blog/feed/",
       "feed_url": "https://www.intercom.com/blog/feed/",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "feed"
     },
     {
@@ -16,6 +16,6 @@
       "method": "discovered"
     }
   ],
-  "fetched": "2026-08-15T12:11:08Z",
+  "fetched": "2026-08-22T20:20:02Z",
   "post_count": 22
 }
