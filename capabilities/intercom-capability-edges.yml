@@ -1,0 +1,63 @@
+slug: intercom
+provider: Intercom
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 5
+edges:
+- tag: Contacts
+  spec_file: intercom-contacts-api-openapi.yml
+  capability_id: BC-420.10
+  capability_id_l1: BC-420
+  capability_name: Customer Data Management
+  confidence: 0.8
+  evidence: POST /contacts  createContact  Create a contact; GET /contacts/{contact_id}  getContact  Retrieve
+    a contact
+  reason: Create/retrieve/list of customer contact records on a customer service platform is customer
+    master data management.
+- tag: Conversations
+  spec_file: intercom-conversations-api-openapi.yml
+  capability_id: BC-430.10
+  capability_id_l1: BC-430
+  capability_name: Customer Inquiry Management
+  confidence: 0.8
+  evidence: GET /conversations  listConversations; POST /conversations  createConversation
+  reason: Conversations on an AI-powered customer service Help Desk/Messenger are inbound customer support
+    contacts, matching Customer Inquiry Management.
+- tag: Segments
+  spec_file: intercom-segments-api-openapi.yml
+  capability_id: BC-420.20
+  capability_id_l1: BC-420
+  capability_name: Customer Segmentation Management
+  confidence: 0.8
+  evidence: 'GET /segments  listSegments; schema: Segment'
+  reason: Segments in Intercom are defined groupings of contacts/companies, which is customer segmentation;
+    only read access is exposed, hence not full confidence.
+- tag: Companies
+  spec_file: intercom-companies-api-openapi.yml
+  capability_id: BC-420.10
+  capability_id_l1: BC-420
+  capability_name: Customer Data Management
+  confidence: 0.75
+  evidence: GET /companies  listCompanies; POST /companies  createOrUpdateCompany  Create or update a
+    company
+  reason: Company records in Intercom are customer account master records maintained for support and engagement,
+    i.e. customer data management.
+- tag: Articles
+  spec_file: intercom-articles-api-openapi.yml
+  capability_id: BC-430.40
+  capability_id_l1: BC-430
+  capability_name: Self-Service Management
+  confidence: 0.72
+  evidence: GET /articles  listArticles  List articles; POST /articles  createArticle  Create an article
+  reason: Intercom articles are Help Center content published for customer self-service on the Help Desk
+    platform, matching Self-Service Management (knowledge base). Could alternatively be read as knowledge
+    management, hence moderate confidence.

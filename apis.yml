@@ -229,6 +229,9 @@ apis:
   - type: GraphQL
     url: graphql/intercom-graphql.md
 common:
+- type: CapabilityMap
+  url: capabilities/intercom-capability-edges.yml
+  name: Intercom Business Capability Map
 - type: AgenticAccess
   url: agentic-access/intercom-agentic-access.yml
 - type: VulnerabilityDisclosure
