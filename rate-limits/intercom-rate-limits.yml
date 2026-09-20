@@ -1,41 +1,48 @@
-specification: API Commons Rate Limits
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
-provider: Intercom
-providerId: intercom
-created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
-reconciled: true
-tags:
-  - Rate Limiting
-  - Customer Support
-description: Intercom REST API per-app rate limits.
+# Rate limits transcribed from the provider's own documentation — see provenance. Quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting
 sources:
-  - https://www.intercom.com/pricing
-  - https://developers.intercom.com/docs/build-an-integration/learn-more/rate-limiting/
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-responseCodes:
-  throttled: 429
+- https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting
+provenance:
+  tool: planning/api-economics/harvest_ratelimits.py
+  run: 20260920T133210
+  grounding: every limit_text was found verbatim in the fetched page text
+published: true
+note: Limits apply only to REST API calls, not Canvas Kit webhook requests. Example mentions a default
+  of 1000 per minute equating to 166 operations per 10 second period.
+limit_count: 5
 limits:
-  - name: Standard REST API
-    scope: app
-    metric: requests_per_10s
-    limit: 166
-    timeFrame: 10 seconds
-    notes: Equivalent to ~1000 req/min.
-  - name: Search API
-    scope: app
-    metric: requests_per_10s
-    limit: 33
-    timeFrame: 10 seconds
-  - name: Bulk API
-    scope: app
-    metric: requests_per_10s
-    limit: 16
-    timeFrame: 10 seconds
+- name: Private app default rate limit
+  limit_text: 10,000 API calls per minute per app
+  limit: 10000
+  window: minute
+  scope: account
+  plan: Private
+- name: Private workspace rate limit
+  limit_text: 25,000 API calls per minute per workspace
+  limit: 25000
+  window: minute
+  scope: account
+  plan: Private
+- name: Public app default rate limit
+  limit_text: 10,000 API calls per minute for each app
+  limit: 10000
+  window: minute
+  scope: account
+  plan: Public
+- name: Public workspace rate limit
+  limit_text: 25,000 API calls per minute per workspace
+  limit: 25000
+  window: minute
+  scope: account
+  plan: Public
+- name: 10 second window distribution
+  limit_text: we evenly distribute this into 10 second windows
+  scope: account
+  kind: burst
+headers:
+- X-RateLimit-Limit
+- X-RateLimit-Remaining
+- X-RateLimit-Reset
+exceeded_status: 429

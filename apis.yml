@@ -230,6 +230,8 @@ apis:
   - type: GraphQL
     url: graphql/intercom-graphql.md
 common:
+- type: RateLimits
+  url: rate-limits/intercom-rate-limits.yml
 - type: Pricing
   url: https://www.intercom.com/pricing
 - type: Plans
