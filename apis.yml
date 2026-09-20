@@ -230,6 +230,10 @@ apis:
   - type: GraphQL
     url: graphql/intercom-graphql.md
 common:
+- type: Pricing
+  url: https://www.intercom.com/pricing
+- type: Plans
+  url: plans/intercom-plans-pricing.yml
 - type: CapabilityMap
   url: capabilities/intercom-capability-edges.yml
   name: Intercom Business Capability Map
