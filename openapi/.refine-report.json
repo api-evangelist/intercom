@@ -1,15 +1,7 @@
 {
   "provider": "intercom",
   "sources": [
-    "intercom-admins-api-openapi.yml",
-    "intercom-articles-api-openapi.yml",
-    "intercom-companies-api-openapi.yml",
-    "intercom-contacts-api-openapi.yml",
-    "intercom-conversations-api-openapi.yml",
-    "intercom-data-events-api-openapi.yml",
-    "intercom-messages-api-openapi.yml",
-    "intercom-news-api-openapi.yml",
-    "intercom-segments-api-openapi.yml"
+    "_original/intercom-openapi.yml"
   ],
   "outputs": [
     "intercom-admins-api-openapi.yml",
@@ -25,6 +17,20 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "intercom-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "intercom-admins-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "intercom-articles-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "intercom-companies-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "intercom-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "intercom-conversations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "intercom-data-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "intercom-messages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "intercom-news-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "intercom-segments-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
