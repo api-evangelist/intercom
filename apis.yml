@@ -35,13 +35,20 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/intercom.p
 tags:
 - Artificial Intelligence
 - Customer Service
-- Customer-Support
+- Customer Support
 - Messaging
+- Conversational AI
+- Help Desk
+- Chatbots
 tags_raw:
 - AI
 - Customer Service
 - Customer Support
 - Messaging
+- Customer-Support
+- Conversational AI
+- Help Desk
+- Chatbots
 url: https://raw.githubusercontent.com/api-evangelist/intercom/refs/heads/main/apis.yml
 created: '2024-07-02'
 modified: '2026-05-30'
@@ -65,8 +72,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 - aid: intercom:intercom-articles-api
   name: Intercom Articles API
   description: Manage Help Center articles.
@@ -85,8 +90,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 - aid: intercom:intercom-companies-api
   name: Intercom Companies API
   description: Manage company records associated with contacts.
@@ -105,8 +108,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 - aid: intercom:intercom-contacts-api
   name: Intercom Contacts API
   description: Manage users and leads in your Intercom workspace.
@@ -125,8 +126,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 - aid: intercom:intercom-conversations-api
   name: Intercom Conversations API
   description: Manage conversations between contacts and admins.
@@ -145,8 +144,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 - aid: intercom:intercom-data-events-api
   name: Intercom Data Events API
   description: Submit and retrieve user activity events.
@@ -165,8 +162,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 - aid: intercom:intercom-messages-api
   name: Intercom Messages API
   description: Send outbound messages from Intercom to contacts.
@@ -187,8 +182,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 - aid: intercom:intercom-news-api
   name: Intercom News API
   description: Manage news items in the Help Desk.
@@ -207,8 +200,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 - aid: intercom:intercom-segments-api
   name: Intercom Segments API
   description: Access user and company segments.
@@ -227,8 +218,6 @@ apis:
     url: https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
-  - type: GraphQL
-    url: graphql/intercom-graphql.md
 common:
 - type: RateLimits
   url: rate-limits/intercom-rate-limits.yml
