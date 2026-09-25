@@ -219,6 +219,8 @@ apis:
   - type: AsyncAPI
     url: asyncapi/intercom-webhooks-asyncapi.yml
 common:
+- type: VendorFacets
+  url: vendor-facets/intercom-vendor-facets.yml
 - type: RateLimits
   url: rate-limits/intercom-rate-limits.yml
 - type: Pricing
