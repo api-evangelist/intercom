@@ -83,17 +83,6 @@ paths:
                 $ref: '#/components/schemas/Contact'
 components:
   schemas:
-    ContactList:
-      type: object
-      properties:
-        type:
-          type: string
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/Contact'
-        total_count:
-          type: integer
     Contact:
       type: object
       properties:
@@ -114,6 +103,17 @@ components:
         created_at:
           type: integer
         updated_at:
+          type: integer
+    ContactList:
+      type: object
+      properties:
+        type:
+          type: string
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Contact'
+        total_count:
           type: integer
   securitySchemes:
     bearerAuth:
