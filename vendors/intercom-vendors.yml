@@ -1,0 +1,13 @@
+generated: '2026-09-25'
+method: probed
+source: 'reconcile-ptr-only.py: an MCP server the provider serves through a vendor implementation'
+registry: all/0-working/vendors.yml
+vendors:
+- vendor: redocly
+  area: mcp-hosting
+  host: developers.intercom.com
+  evidence: mcp:https://developers.intercom.com/mcp
+  signal: mcp-handshake
+  confidence: high
+  kin_score:
+  - mcp_server
