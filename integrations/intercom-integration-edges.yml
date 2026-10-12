@@ -1,0 +1,1120 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/intercom/integrations
+- https://n8n.io/integrations/intercom/
+- https://composio.dev/toolkits/intercom
+checked:
+- https://composio.dev/toolkits/intercom
+- https://monid.ai/tools/intercom
+- https://n8n.io/integrations/intercom/
+- https://zapier.com/apps/intercom/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: intercom
+  url: https://zapier.com/apps/intercom/integrations
+  external_url: https://www.intercom.com/welcome-to-intercom?utm_source=external-website&utm_medium=partner&utm_campaign=20220503_all_oc_all_global_gl_all_all_par_extmktplc&utm_term=zapier
+  partner_tier: PLATINUM
+  triggers:
+  - key: contact_added_email_v2
+    label: Lead Added Email
+  - key: contact_created
+    label: Lead Converted to User
+  - key: contact_new_v2
+    label: New Lead
+  - key: contact_replied
+    label: Contact Replied
+  - key: contact_tagged
+    label: Tag Added to Lead
+  - key: conversation_rating_added
+    label: New Conversation Rating
+  - key: new_ai_summary
+    label: New AI Summary
+  - key: new_closed_conversation_v2
+    label: New Closed Conversation
+  - key: new_company
+    label: New Company
+  - key: new_conversation
+    label: New Conversation
+  - key: new_ticket
+    label: New Ticket
+  - key: new_user_created
+    label: New User
+  - key: tag_added_to_conversation
+    label: Tag Added to Conversation
+  - key: updated_company
+    label: Updated Company
+  - key: updated_contact
+    label: Updated Contact
+  - key: updated_ticket
+    label: Updated Ticket
+  - key: user_tag
+    label: Tag Added to User
+  - key: user_unsubscribed
+    label: New Unsubscription
+  actions:
+  - key: add_note
+    label: Add Note
+  - key: add_tag_to_contact
+    label: Add Tag to Contact
+  - key: create_article
+    label: Create Article
+  - key: create_conversation
+    label: Create Conversation
+  - key: create_data_event
+    label: Create Data Event
+  - key: create_or_update_company_v_2
+    label: Create or Update Company
+  - key: create_ticket
+    label: Create Ticket
+  - key: remove_tag_from_contact
+    label: Remove Tag From Contact
+  - key: reply_to_conversation
+    label: Reply to Conversation
+  - key: send_message
+    label: Send Incoming Message
+  - key: send_message_to_contact
+    label: Send Message to Contact
+  - key: tag_company
+    label: Add/Remove Tag on Company
+  - key: update_lead
+    label: Create/Update Lead
+  - key: update_ticket
+    label: Update Ticket
+  - key: update_user
+    label: Create/Update User
+  - key: user
+    label: Create User
+  - key: _zap_raw_request
+    label: API Request (Beta)
+  searches:
+  - key: find_company
+    label: Find Company
+  - key: find_conversation
+    label: Find Conversation
+  - key: find_lead
+    label: Find Lead
+  - key: find_ticket
+    label: Find Ticket
+  - key: find_user
+    label: Find User
+  - key: retrieve_conversation
+    label: Retrieve a Conversation
+- marketplace: n8n
+  channel: open-source-node
+  app: intercom
+  url: https://n8n.io/integrations/intercom/
+  identity: title
+  pair_pages: 430
+  pairs:
+  - invoice-ninja
+  - invoiced
+  - ip2location
+  - ipinfo
+  - ipregistry
+  - iris-dfir
+  - isn
+  - iterable
+  - jama
+  - jasper
+  - jenkins
+  - jina-ai
+  - jira-software
+  - jwt
+  - kadoa
+  - kafka
+  - kaggle
+  - kanban-tool
+  - karbon
+  - keap
+  - keygen
+  - keyzy
+  - kibana
+  - kitemaker
+  - klaviyo
+  - klazify
+  - knack
+  - knowbe4
+  - kobotoolbox
+  - kraftful
+  - lagrowthmachine
+  - lambdatest
+  - landbot
+  - laposta
+  - launch27
+  - launchdarkly
+  - ldap
+  - leadboxer
+  - leadpops
+  - lemlist
+  - lets-enhance
+  - libraria
+  - lighthouse
+  - lime-go
+  - line
+  - linear
+  - lingvanex
+  - linkedin
+  - linkish
+  - linode
+  - liveagent
+  - localazy
+  - loginradius
+  - lokalise
+  - lonescale
+  - lucidchart
+  - magento-2
+  - mailcheck
+  - mailchimp
+  - mailerlite
+  - mailersend
+  - mailgun
+  - mailify
+  - mailjet
+  - mailmodo
+  - malcore
+  - mandrill
+  - marcom-robot
+  - marketing-master-io
+  - marketplacer
+  - marketstack
+  - mastodon
+  - matrix
+  - mattermost
+  - mautic
+  - mav
+  - maverick
+  - medium
+  - mem
+  - messagebird
+  - metabase
+  - metatextai-inference-api
+  - mews
+  - microsoft-azure-monitor
+  - microsoft-dynamics-365-business-central-api
+  - microsoft-dynamics-crm
+  - microsoft-entra-id
+  - microsoft-entra-id-azure-active-directory
+  - microsoft-excel
+  - microsoft-graph-security
+  - microsoft-onedrive
+  - microsoft-outlook
+  - microsoft-sharepoint
+  - microsoft-sql
+  - microsoft-teams
+  - microsoft-teams-admin
+  - microsoft-to-do
+  - miestro
+  - mindee
+  - miro
+  - misp
+  - missive
+  - mist
+  - mistral-ai
+  - mixpanel
+  - mocean
+  - mondaycom
+  - mongodb
+  - monica-crm
+  - moonclerk
+  - moonmail
+  - morph
+  - mqtt
+  - msg91
+  - mux
+  - mx-toolbox
+  - my-askai
+  - myphoner
+  - mysql
+  - nanonets-ocr
+  - nasa
+  - ncscale
+  - netlify
+  - nextcloud
+  - nightfallai
+  - ninox
+  - nmkr
+  - nocodb
+  - notion
+  - nozbe-teams
+  - npm
+  - nuclia
+  - nusii-proposals
+  - nyckel
+  - nyota
+  - occasion
+  - ocrspace
+  - odoo
+  - offalerts
+  - okta
+  - omeda
+  - omniconvert
+  - omnimind
+  - on2air
+  - one-ai
+  - one-simple-api
+  - onfleet
+  - openai
+  - opencti
+  - openthesaurus
+  - openweathermap
+  - opn-formerly-omise
+  - oracle-database
+  - orbit
+  - order-desk
+  - ortto
+  - oura
+  - paddle
+  - pagerduty
+  - paperform
+  - papyrs
+  - parsehub
+  - parseprompt
+  - passcreator
+  - passslot
+  - patreon
+  - paymo
+  - paypal
+  - peekalink
+  - perplexity
+  - persio
+  - personal-ai
+  - phantombuster
+  - philips-hue
+  - phrase
+  - pinata
+  - pinboard
+  - pinterest
+  - pipedrive
+  - pipefy
+  - pirate-weather
+  - pitchly
+  - pivotal-tracker
+  - planview-leankit
+  - planyo-online-booking
+  - platformly
+  - plecto
+  - plivo
+  - postbin
+  - postgres
+  - posthog
+  - practitest
+  - predisai
+  - prodia
+  - product-hunt
+  - profitwell
+  - project-bubble-proprofs-project
+  - prompthub
+  - prospe-ai
+  - pushbullet
+  - pushcut
+  - pusher
+  - pushover
+  - qradar
+  - qualaroo
+  - qualys
+  - quentn
+  - questdb
+  - quick-base
+  - quickbooks-online
+  - quickchart
+  - quintadb
+  - rabbitmq
+  - radar
+  - raindrop
+  - rapid7-insightvm
+  - raven-tools
+  - rawg-video-games-database
+  - read-ai
+  - realphonevalidation
+  - recharge
+  - recorded-future
+  - redash
+  - reddit
+  - redis
+  - relevance-ai
+  - relink-url-shortener
+  - relysia
+  - replyio
+  - retable
+  - reverse-contact
+  - rewardful
+  - ritekit
+  - roboflow
+  - robolytix
+  - roboresponseai
+  - rocketchat
+  - rollbar
+  - rootly
+  - route4me
+  - rundeck
+  - s3
+  - sales-simplify
+  - salesforce
+  - salesmaa
+  - salesmate
+  - salesmsg
+  - salesrocks
+  - samsung-smartthings
+  - scrape-itcloud
+  - scrapeninja
+  - seamless-ai
+  - search-and-save
+  - seatable
+  - securityscorecard
+  - segment
+  - sekoia
+  - sellix
+  - sembly-ai
+  - sendgrid
+  - sendy
+  - sentryio
+  - servicenow
+  - sharly-ai
+  - shiphero
+  - shipstation
+  - shopify
+  - shortio
+  - shuffler
+  - sierra-interactive
+  - sifter
+  - signaturit
+  - signl4
+  - signrequest
+  - simpleem
+  - simplehash
+  - simplekpi
+  - simplelocalize
+  - simplero
+  - simpletexting
+  - sitecreatorio
+  - sitespeakai
+  - slack
+  - smaily
+  - smartreach
+  - smartsuite
+  - sms-it
+  - sms-magic
+  - sms77
+  - snapdocs
+  - snatchbot
+  - snipcart
+  - snowflake
+  - solve-data
+  - specter
+  - splunk
+  - spondyr
+  - spontit
+  - sportsdata
+  - spotify
+  - spydra
+  - sslmate-cert-spotter-api
+  - stackby
+  - stammerai
+  - starton
+  - statuscake
+  - storyblok
+  - strapi
+  - strava
+  - stripe
+  - studio-by-ai21-labs
+  - suitedash
+  - supabase
+  - supernormal
+  - superpowered
+  - supportivekoala
+  - survicate
+  - swagup
+  - switchboard
+  - syncly
+  - syncromsp
+  - synthesia
+  - taiga
+  - talentlms
+  - talknotes
+  - tapfiliate
+  - td-ameritrade
+  - teachable
+  - team-up
+  - teamdeck
+  - teamgate
+  - teknoir
+  - telegram
+  - testmonitor
+  - textcortex-ai
+  - textgain
+  - textkit
+  - textmagic
+  - thankster
+  - the-customer-factor
+  - the-leap
+  - thehive
+  - thehive-5
+  - thoughtfulgpt
+  - thrivecart
+  - tidb-cloud
+  - tierion
+  - tilda
+  - timescaledb
+  - timetonic
+  - tinyurl
+  - tisane-labs
+  - todoist
+  - token-metrics
+  - toket
+  - totango
+  - trackvia
+  - transifex
+  - travisci
+  - trellix-epo
+  - trello
+  - trengo
+  - trevorio
+  - turbohire
+  - tuskr
+  - tuulio
+  - twake
+  - twilio
+  - twist
+  - twitter
+  - unbounce
+  - unisender
+  - unleashed-software
+  - upkeep
+  - uplead
+  - uproc
+  - uptimerobot
+  - uptimetoolbox
+  - urlscanio
+  - uservoice
+  - venafi-tls-protect-cloud
+  - venafi-tls-protect-datacenter
+  - venly
+  - verifalia
+  - vero
+  - vimeo
+  - virustotal
+  - vivifyscrum
+  - voicit
+  - vonage
+  - vowel
+  - watchsignals
+  - waveline-extract
+  - webex-by-cisco
+  - webflow
+  - webscraperio
+  - wekan
+  - whal3s
+  - whatconverts
+  - whatsapp-business-cloud
+  - wise
+  - wizychat
+  - wonderchat
+  - wondercraft
+  - woocommerce
+  - woodpeckerco
+  - wordpress
+  - workast
+  - workboard
+  - woxo
+  - writesonic
+  - wubook-ratechecker
+  - xero
+  - xtractly
+  - ybug
+  - ycode
+  - yodiz
+  - yourls
+  - youtube
+  - zabbix
+  - zammad
+  - zendesk
+  - zenrows
+  - zoho-books
+  - zoho-crm
+  - zoho-desk
+  - zonka-feedback
+  - zoom
+  - zscaler-zia
+  - zulip
+- marketplace: composio
+  channel: agent-gateway
+  app: intercom
+  url: https://composio.dev/toolkits/intercom
+  identity: action-prefix
+  actions:
+  - key: INTERCOM_ADD_SUBSCRIPTION_TO_A_CONTACT
+  - key: INTERCOM_ADD_TAG_TO_A_CONTACT
+  - key: INTERCOM_ADD_TAG_TO_CONTACT
+  - key: INTERCOM_ARCHIVE_CONTACT
+  - key: INTERCOM_ASSIGN_CONVERSATION
+  - key: INTERCOM_ATTACH_A_CONTACT_TO_A_COMPANY
+  - key: INTERCOM_ATTACH_CONTACT_TO_COMPANY
+  - key: INTERCOM_ATTACH_CONTACT_TO_CONVERSATION
+  - key: INTERCOM_ATTACH_TAG_TO_CONVERSATION
+  - key: INTERCOM_ATTACH_TAG_TO_TICKET
+  - key: INTERCOM_BLOCK_CONTACT
+  - key: INTERCOM_CANCEL_DATA_EXPORT
+  - key: INTERCOM_CLOSE_CONVERSATION
+  - key: INTERCOM_CREATE_AN_ARTICLE
+  - key: INTERCOM_CREATE_A_COLLECTION
+  - key: INTERCOM_CREATE_A_NOTE
+  - key: INTERCOM_CREATE_CONTACT
+  - key: INTERCOM_CREATE_CONTENT_IMPORT_SOURCE
+  - key: INTERCOM_CREATE_CONVERSATION
+  - key: INTERCOM_CREATE_DATA_ATTRIBUTE
+  - key: INTERCOM_CREATE_DATA_EVENT
+  - key: INTERCOM_CREATE_DATA_EXPORT
+  - key: INTERCOM_CREATE_EXTERNAL_PAGE
+  - key: INTERCOM_CREATE_HELP_CENTER_SECTION
+  - key: INTERCOM_CREATE_INTERNAL_ARTICLE
+  - key: INTERCOM_CREATE_OR_UPDATE_A_COMPANY
+  - key: INTERCOM_CREATE_TAG
+  - key: INTERCOM_CREATE_TICKET
+  - key: INTERCOM_CREATE_TICKET_TYPE
+  - key: INTERCOM_CREATE_TICKET_TYPE_ATTRIBUTE
+  - key: INTERCOM_DATA_EVENT_SUMMARIES
+  - key: INTERCOM_DELETE_AN_ARTICLE
+  - key: INTERCOM_DELETE_A_COLLECTION
+  - key: INTERCOM_DELETE_A_COMPANY
+  - key: INTERCOM_DELETE_A_TAG_DELETE_TAG
+  - key: INTERCOM_DELETE_A_VISITOR
+  - key: INTERCOM_DELETE_CONTACT
+  - key: INTERCOM_DELETE_CONTENT_IMPORT_SOURCE
+  - key: INTERCOM_DELETE_EXTERNAL_PAGE
+  - key: INTERCOM_DELETE_INTERNAL_ARTICLE
+  - key: INTERCOM_DELETE_TICKET
+  - key: INTERCOM_DETACH_A_CONTACT
+  - key: INTERCOM_DETACH_CONTACT_FROM_COMPANY
+  - key: INTERCOM_DETACH_TAG_FROM_CONVERSATION
+  - key: INTERCOM_DETACH_TAG_FROM_TICKET
+  - key: INTERCOM_DOWNLOAD_DATA_EXPORT
+  - key: INTERCOM_ENQUEUE_CREATE_TICKET
+  - key: INTERCOM_FIND_TAG
+  - key: INTERCOM_GET_A_CONTACT
+  - key: INTERCOM_GET_CONTENT_IMPORT_SOURCE
+  - key: INTERCOM_GET_CONVERSATION
+  - key: INTERCOM_GET_COUNTS
+  - key: INTERCOM_GET_CUSTOM_OBJECT_INSTANCE_BY_EXTERNAL_ID
+  - key: INTERCOM_GET_EXTERNAL_PAGE
+  - key: INTERCOM_GET_TICKET
+  - key: INTERCOM_GET_TICKET_TYPE
+  - key: INTERCOM_IDENTIFY_AN_ADMIN
+  - key: INTERCOM_JOBS_STATUS
+  - key: INTERCOM_LIST_ALL_ACTIVITY_LOGS
+  - key: INTERCOM_LIST_ALL_ADMINS
+  - key: INTERCOM_LIST_ALL_ARTICLES
+  - key: INTERCOM_LIST_ALL_COLLECTIONS
+  - key: INTERCOM_LIST_ALL_COMPANIES
+  - key: INTERCOM_LIST_ALL_HELP_CENTERS
+  - key: INTERCOM_LIST_ALL_MACROS
+  - key: INTERCOM_LIST_ALL_NOTES
+  - key: INTERCOM_LIST_ATTACHED_COMPANIES_FOR_CONTACT
+  - key: INTERCOM_LIST_ATTACHED_CONTACTS
+  - key: INTERCOM_LIST_ATTACHED_SEGMENTS_FOR_COMPANIES
+  - key: INTERCOM_LIST_ATTACHED_SEGMENTS_FOR_CONTACT
+  - key: INTERCOM_LIST_AWAY_STATUS_REASONS
+  - key: INTERCOM_LIST_CALLS
+  - key: INTERCOM_LIST_CALLS_WITH_TRANSCRIPTS
+  - key: INTERCOM_LIST_COMPANY_NOTES
+  - key: INTERCOM_LIST_CONTACTS
+  - key: INTERCOM_LIST_CONTENT_IMPORT_SOURCES
+  - key: INTERCOM_LIST_CONVERSATIONS
+  - key: INTERCOM_LIST_DATA_ATTRIBUTES
+  - key: INTERCOM_LIST_DATA_EVENTS
+  - key: INTERCOM_LIST_EXTERNAL_PAGES
+  - key: INTERCOM_LIST_HELP_CENTER_SECTIONS
+  - key: INTERCOM_LIST_INTERNAL_ARTICLES
+  - key: INTERCOM_LIST_NEWS_ITEMS
+  - key: INTERCOM_LIST_SEGMENTS
+  - key: INTERCOM_LIST_SUBSCRIPTIONS_FOR_A_CONTACT
+  - key: INTERCOM_LIST_SUBSCRIPTION_TYPES
+  - key: INTERCOM_LIST_TAGS
+  - key: INTERCOM_LIST_TAGS_ATTACHED_TO_A_CONTACT
+  - key: INTERCOM_LIST_TEAMS
+  - key: INTERCOM_LIST_TICKET_STATES
+  - key: INTERCOM_LIST_TICKET_TYPES
+  - key: INTERCOM_MERGE_A_LEAD_AND_A_USER
+  - key: INTERCOM_REGISTER_FIN_VOICE_CALL
+  - key: INTERCOM_REMOVE_SUBSCRIPTION_FROM_A_CONTACT
+  - key: INTERCOM_REMOVE_TAG_FROM_A_CONTACT
+  - key: INTERCOM_REOPEN_CONVERSATION
+  - key: INTERCOM_REPLY_TICKET
+  - key: INTERCOM_REPLY_TO_CONVERSATION
+  - key: INTERCOM_RETRIEVE_AN_ADMIN
+  - key: INTERCOM_RETRIEVE_AN_ARTICLE
+  - key: INTERCOM_RETRIEVE_A_COLLECTION
+  - key: INTERCOM_RETRIEVE_A_COMPANY_BY_ID
+  - key: INTERCOM_RETRIEVE_A_HELP_CENTER
+  - key: INTERCOM_RETRIEVE_A_JOB_STATUS
+  - key: INTERCOM_RETRIEVE_A_MACRO
+  - key: INTERCOM_RETRIEVE_A_SEGMENT
+  - key: INTERCOM_RETRIEVE_COMPANIES
+  - key: INTERCOM_RETRIEVE_INTERNAL_ARTICLE
+  - key: INTERCOM_RETRIEVE_NOTE
+  - key: INTERCOM_RETRIEVE_TEAM
+  - key: INTERCOM_RETRIEVE_VISITOR_WITH_USER_ID
+  - key: INTERCOM_SCROLL_OVER_ALL_COMPANIES
+  - key: INTERCOM_SEARCH_CONTACTS
+  - key: INTERCOM_SEARCH_CONVERSATIONS
+  - key: INTERCOM_SEARCH_FOR_ARTICLES
+  - key: INTERCOM_SEARCH_INTERNAL_ARTICLES
+  - key: INTERCOM_SEARCH_TICKETS
+  - key: INTERCOM_SET_ADMIN_TO_AWAY
+  - key: INTERCOM_SET_AN_ADMIN_TO_AWAY
+  - key: INTERCOM_SHOW_CALL
+  - key: INTERCOM_SHOW_CALL_TRANSCRIPT
+  - key: INTERCOM_SHOW_CONTACT_BY_EXTERNAL_ID
+  - key: INTERCOM_UNARCHIVE_CONTACT
+  - key: INTERCOM_UPDATE_AN_ARTICLE
+  - key: INTERCOM_UPDATE_A_COLLECTION
+  - key: INTERCOM_UPDATE_A_COMPANY
+  - key: INTERCOM_UPDATE_A_CONTACT
+  - key: INTERCOM_UPDATE_CONTACT
+  - key: INTERCOM_UPDATE_CONTENT_IMPORT_SOURCE
+  - key: INTERCOM_UPDATE_DATA_ATTRIBUTE
+  - key: INTERCOM_UPDATE_EXTERNAL_PAGE
+  - key: INTERCOM_UPDATE_INTERNAL_ARTICLE
+  - key: INTERCOM_UPDATE_TICKET
+  - key: INTERCOM_UPDATE_TICKET_TYPE
+  - key: INTERCOM_UPDATE_TICKET_TYPE_ATTRIBUTE
+edges:
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: Typeform
+  partner: typeform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/typeform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.typeform.com/signup?utm_medium=referral&utm_source=zapier&utm_campaign=zapier_integration&utm_content=marketplace
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Pipedrive
+  partner: pipedrive
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/pipedrive
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://pipedrive.com/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: Twilio
+  partner: twilio
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/twilio
+  direction: third-party
+  category: Phone & SMS
+  partner_url: https://www.twilio.com/
+- partner_name: Unbounce
+  partner: unbounce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/unbounce
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://unbounce.com/
+- partner_name: Notion
+  partner: notion
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/notion
+  direction: third-party
+  category: Task Management
+  partner_url: https://www.notion.so/
+- partner_name: monday.com
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/monday
+  direction: third-party
+  category: Project Management
+  partner_url: https://monday.com/
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+- partner_name: ActiveCampaign
+  partner: activecampaign
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/activecampaign
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.activecampaign.com/?utm_source=unpaid_syndication_website&utm_medium=referral&utm_campaign=zapier_listing
+- partner_name: Copper
+  partner: copper
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/copper
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://copper.com/?utm_source=zapier&utm_medium=zapier
+- partner_name: Jira Software Cloud
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/jira-software-cloud
+  direction: third-party
+  category: Project Management
+  partner_url: https://www.atlassian.com/software/jira
+- partner_name: Zoom
+  partner: zoom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/zoom
+  direction: third-party
+  category: Video Conferencing
+  partner_url: https://www.zoom.us/
+- partner_name: Chargebee
+  partner: chargebee
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/chargebee
+  direction: third-party
+  category: Payment Processing
+  partner_url: http://www.chargebee.com/
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: Pointerpro
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/pointerpro
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://pointerpro.com/
+- partner_name: Trello
+  partner: trello
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/trello
+  direction: third-party
+  category: Project Management
+  partner_url: https://trello.com/
+- partner_name: Gmail
+  partner: gmail
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/gmail
+  direction: third-party
+  category: Email
+  partner_url: https://mail.google.com/
+- partner_name: Google Ads
+  partner: google-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/google-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://ads.google.com/
+- partner_name: Close
+  partner: close
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/close
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.close.com/?utm_source=Partner&utm_medium=Integration_Listing&utm_campaign=2025_Partnerships&utm_content=Home
+- partner_name: Instapage
+  partner: instapage
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/instapage
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://instapage.com/
+- partner_name: Trustpilot
+  partner: trustpilot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/trustpilot
+  direction: third-party
+  category: Reviews
+  partner_url: https://marketing.trustpilot.com/partner-success?utm_source=zapier&utm_medium=partner&utm_campaign=partner_partner-tracked-link_requestdemo_all_0519&partner_id=0010N0000473yhtQAA
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: Attio
+  partner: attio
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/attio
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://attio.com/
+- partner_name: Marketo
+  partner: marketo
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/marketo
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://marketo.com/
+- partner_name: Landbot
+  partner: landbot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/landbot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://landbot.io/
+- partner_name: PostgreSQL
+  partner: postgresql
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/postgresql
+  direction: third-party
+  category: Databases
+  partner_url: http://www.postgresql.org/
+- partner_name: bonjoro
+  partner: bonjoro
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/bonjoro/blob/main/openapi/bonjoro-integrations-api-openapi.yml
+  contract_reference:
+    repo: bonjoro
+    spec_file: bonjoro-integrations-api-openapi.yml
+    value: intercom
+    property: schemas.integration.provider
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+- partner_name: front
+  partner: front
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/front/blob/main/openapi/front-contacts-api-openapi.yml
+  contract_reference:
+    repo: front
+    spec_file: front-contacts-api-openapi.yml
+    value: intercom
+    property: schemas.ContactHandle.source
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+- partner_name: supaglue
+  partner: supaglue
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/supaglue/blob/main/openapi/supaglue-magic-links-api-openapi.yml
+  contract_reference:
+    repo: supaglue
+    spec_file: supaglue-magic-links-api-openapi.yml
+    value: intercom
+    property: components.schemas.provider_name
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+templates:
+- title: Send new Intercom conversations as Slack channel messages
+  url: https://zapier.com/apps/intercom/integrations/slack/60874/send-new-intercom-conversations-as-slack-channel-messages
+  apps:
+  - intercom
+  - slack
+- title: Add new Intercom users to Mailchimp
+  url: https://zapier.com/apps/intercom/integrations/mailchimp/4257/add-new-intercom-users-to-mailchimp
+  apps:
+  - intercom
+  - mailchimp
+- title: Post Slack messages for new Intercom users
+  url: https://zapier.com/apps/intercom/integrations/slack/4258/post-slack-messages-for-new-intercom-users
+  apps:
+  - intercom
+  - slack
+- title: Add new rows on Google Sheets for new users on Intercom
+  url: https://zapier.com/apps/google-sheets/integrations/intercom/77/add-new-rows-on-google-sheets-for-new-users-on-intercom
+  apps:
+  - intercom
+  - google-sheets
+- title: Add Klaviyo subscribers for new emails added to Intercom leads
+  url: https://zapier.com/apps/intercom/integrations/klaviyo/231338/add-klaviyo-subscribers-for-new-emails-added-to-intercom-leads
+  apps:
+  - intercom
+  - klaviyo
+- title: Create or update Intercom users from new Unbounce form submissions
+  url: https://zapier.com/apps/intercom/integrations/unbounce/3006/create-or-update-intercom-users-from-new-unbounce-form-submissions
+  apps:
+  - unbounce
+  - intercom
+- title: Send Slack messages when contacts reply on Intercom
+  url: https://zapier.com/apps/intercom/integrations/slack/1749604/send-slack-messages-when-contacts-reply-on-intercom
+  apps:
+  - intercom
+  - slack
+- title: Create Trustpilot invitations when new tags are added to Intercom users
+  url: https://zapier.com/apps/intercom/integrations/trustpilot/1735587/create-trustpilot-invitations-when-new-tags-are-added-to-intercom-users
+  apps:
+  - intercom
+  - trustpilot
+- title: Update or create Intercom contacts with new HubSpot contact property changes
+  url: https://zapier.com/apps/hubspot/integrations/intercom/11737/update-or-create-intercom-contacts-with-new-hubspot-contact-property-changes
+  apps:
+  - hubspot
+  - intercom
+- title: Create ActiveCampaign contacts for newly added lead emails in Intercom
+  url: https://zapier.com/apps/activecampaign/integrations/intercom/67692/create-activecampaign-contacts-for-newly-added-lead-emails-in-intercom
+  apps:
+  - intercom
+  - activecampaign
+- title: Create new HubSpot tickets when tags are added to Intercom conversations
+  url: https://zapier.com/apps/hubspot/integrations/intercom/1731071/create-new-hubspot-tickets-when-tags-are-added-to-intercom-conversations
+  apps:
+  - intercom
+  - hubspot
+- title: Tag Intercom users when they schedule a Calendly appointment
+  url: https://zapier.com/apps/calendly/integrations/intercom/18003/tag-intercom-users-when-they-schedule-a-calendly-appointment
+  apps:
+  - calendly
+  - intercom
+template_total: 1354
