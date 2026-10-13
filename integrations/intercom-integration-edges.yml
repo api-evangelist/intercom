@@ -5,6 +5,7 @@ source:
 - https://n8n.io/integrations/intercom/
 - https://composio.dev/toolkits/intercom
 checked:
+- https://aws.amazon.com/marketplace/
 - https://composio.dev/toolkits/intercom
 - https://monid.ai/tools/intercom
 - https://n8n.io/integrations/intercom/
@@ -1056,6 +1057,22 @@ edges:
     property: components.schemas.provider_name
     detected_by: detect-payment-method-edges.py
     detected: '2026-10-12'
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=seller-j6a7azbuwdavw
+  listing_count: 2
+  apps:
+  - Fin Customer Service Suite (UK & EU & Canada & Rest of World)
+  - Fin Customer Service Suite (Ireland)
+  seller_name: Intercom
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
 templates:
 - title: Send new Intercom conversations as Slack channel messages
   url: https://zapier.com/apps/intercom/integrations/slack/60874/send-new-intercom-conversations-as-slack-channel-messages

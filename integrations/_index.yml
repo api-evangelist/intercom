@@ -205,7 +205,6 @@
   arazzo: null
 - slug: intercom-monday-com
   label: monday.com
-  partner: monday-com
   partner_name: monday.com
   category: Project Management
   type: marketplace
@@ -213,7 +212,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/intercom/integrations/monday
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: intercom-clickup
   label: ClickUp
@@ -469,5 +468,17 @@
     property: components.schemas.provider_name
     detected_by: detect-payment-method-edges.py
     detected: '2026-10-12'
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-aws-marketplace
+  label: AWS Marketplace
+  partner: amazon-web-services
+  partner_name: AWS Marketplace
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=seller-j6a7azbuwdavw
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
