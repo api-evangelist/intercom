@@ -554,7 +554,7 @@
     app_slug: intercom
     beta: false
     builder: unknown (not in the directory record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: intercom-pipedream
   label: Pipedream
@@ -580,5 +580,5 @@
     actions: true
     sources: true
     builder: Pipedream repo (component)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
