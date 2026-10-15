@@ -13,6 +13,7 @@ checked:
 - https://n8n.io/integrations/intercom/
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-intercom-cloud
 - https://zapier.com/apps/intercom/integrations
+- stripe/integrations/stripe-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -1167,6 +1168,25 @@ edges:
       - upsert
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
+- partner_name: Stripe (own)
+  partner: stripe
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.stripe.com/apps/intercom
+  mirror_of: stripe/integrations/stripe-integration-edges.yml
+  apps:
+  - Intercom
+  - Intercom Australia
+  - Intercom Europe
+  listing_count: 3
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
+  category: support
 templates:
 - title: Send new Intercom conversations as Slack channel messages
   url: https://zapier.com/apps/intercom/integrations/slack/60874/send-new-intercom-conversations-as-slack-channel-messages
