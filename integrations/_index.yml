@@ -616,7 +616,7 @@
       type: source
       lapsed: false
       cloud: true
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: intercom-fivetran
   label: Fivetran
@@ -642,7 +642,7 @@
     - connectors/applications/intercom
     vendor_link: https://www.intercom.com/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: intercom-meltano
   label: Meltano
@@ -678,7 +678,7 @@
     - silver
     - unknown
     builder: 'community (Meltano Hub variant maintainers: airbyte, bytecodeio, singer-io, ticketswap)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: intercom-microsoft-teams-own
   label: Microsoft Teams (own)
