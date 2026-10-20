@@ -15,6 +15,7 @@
   evidence: https://zapier.com/apps/intercom/integrations/slack/60874/send-new-intercom-conversations-as-slack-channel-messages
   template: https://zapier.com/apps/intercom/integrations/slack/60874/send-new-intercom-conversations-as-slack-channel-messages
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-add-new-intercom-users-to-mailchimp
@@ -29,6 +30,7 @@
   evidence: https://zapier.com/apps/intercom/integrations/mailchimp/4257/add-new-intercom-users-to-mailchimp
   template: https://zapier.com/apps/intercom/integrations/mailchimp/4257/add-new-intercom-users-to-mailchimp
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-post-slack-messages-for-new-intercom-users
@@ -43,6 +45,7 @@
   evidence: https://zapier.com/apps/intercom/integrations/slack/4258/post-slack-messages-for-new-intercom-users
   template: https://zapier.com/apps/intercom/integrations/slack/4258/post-slack-messages-for-new-intercom-users
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-add-new-rows-on-google-sheets-for-new-users-on-intercom
@@ -57,6 +60,7 @@
   evidence: https://zapier.com/apps/google-sheets/integrations/intercom/77/add-new-rows-on-google-sheets-for-new-users-on-intercom
   template: https://zapier.com/apps/google-sheets/integrations/intercom/77/add-new-rows-on-google-sheets-for-new-users-on-intercom
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-create-or-update-intercom-users-from-new-unbounce-form-submissions
@@ -71,6 +75,7 @@
   evidence: https://zapier.com/apps/intercom/integrations/unbounce/3006/create-or-update-intercom-users-from-new-unbounce-form-submissions
   template: https://zapier.com/apps/intercom/integrations/unbounce/3006/create-or-update-intercom-users-from-new-unbounce-form-submissions
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-send-slack-messages-when-contacts-reply-on-intercom
@@ -85,6 +90,7 @@
   evidence: https://zapier.com/apps/intercom/integrations/slack/1749604/send-slack-messages-when-contacts-reply-on-intercom
   template: https://zapier.com/apps/intercom/integrations/slack/1749604/send-slack-messages-when-contacts-reply-on-intercom
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-create-trustpilot-invitations-when-new-tags-are-added-to-intercom-users
@@ -99,6 +105,7 @@
   evidence: https://zapier.com/apps/intercom/integrations/trustpilot/1735587/create-trustpilot-invitations-when-new-tags-are-added-to-intercom-users
   template: https://zapier.com/apps/intercom/integrations/trustpilot/1735587/create-trustpilot-invitations-when-new-tags-are-added-to-intercom-users
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-update-or-create-intercom-contacts-with-new-hubspot-contact-property-changes
@@ -113,6 +120,7 @@
   evidence: https://zapier.com/apps/hubspot/integrations/intercom/11737/update-or-create-intercom-contacts-with-new-hubspot-contact-property-changes
   template: https://zapier.com/apps/hubspot/integrations/intercom/11737/update-or-create-intercom-contacts-with-new-hubspot-contact-property-changes
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-create-activecampaign-contacts-for-newly-added-lead-emails-in-intercom
@@ -127,6 +135,7 @@
   evidence: https://zapier.com/apps/activecampaign/integrations/intercom/67692/create-activecampaign-contacts-for-newly-added-lead-emails-in-intercom
   template: https://zapier.com/apps/activecampaign/integrations/intercom/67692/create-activecampaign-contacts-for-newly-added-lead-emails-in-intercom
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: intercom-create-new-hubspot-tickets-when-tags-are-added-to-intercom-conversations
@@ -141,280 +150,8 @@
   evidence: https://zapier.com/apps/hubspot/integrations/intercom/1731071/create-new-hubspot-tickets-when-tags-are-added-to-intercom-conversations
   template: https://zapier.com/apps/hubspot/integrations/intercom/1731071/create-new-hubspot-tickets-when-tags-are-added-to-intercom-conversations
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
-  arazzo: null
-- slug: intercom-typeform
-  label: Typeform
-  partner: typeform
-  partner_name: Typeform
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/typeform
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-pipedrive
-  label: Pipedrive
-  partner: pipedrive
-  partner_name: Pipedrive
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/pipedrive
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-airtable
-  label: Airtable
-  partner: airtable
-  partner_name: Airtable
-  category: Databases
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/airtable
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-twilio
-  label: Twilio
-  partner: twilio
-  partner_name: Twilio
-  category: Phone & SMS
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/twilio
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-notion
-  label: Notion
-  partner: notion
-  partner_name: Notion
-  category: Task Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/notion
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-monday-com
-  label: monday.com
-  partner_name: monday.com
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/monday
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: intercom-clickup
-  label: ClickUp
-  partner: clickup
-  partner_name: ClickUp
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/clickup
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-copper
-  label: Copper
-  partner: copper
-  partner_name: Copper
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/copper
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-jira-software-cloud
-  label: Jira Software Cloud
-  partner_name: Jira Software Cloud
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/jira-software-cloud
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: intercom-zoom
-  label: Zoom
-  partner: zoom
-  partner_name: Zoom
-  category: Video Conferencing
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/zoom
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-chargebee
-  label: Chargebee
-  partner: chargebee
-  partner_name: Chargebee
-  category: Payment Processing
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/chargebee
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-gravity-forms
-  label: Gravity Forms
-  partner: gravity-forms
-  partner_name: Gravity Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/gravity-forms
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-pointerpro
-  label: Pointerpro
-  partner_name: Pointerpro
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/pointerpro
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: intercom-trello
-  label: Trello
-  partner: trello
-  partner_name: Trello
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/trello
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-gmail
-  label: Gmail
-  partner: gmail
-  partner_name: Gmail
-  category: Email
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/gmail
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: intercom-google-ads
-  label: Google Ads
-  partner: google-ads
-  partner_name: Google Ads
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/google-ads
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-close
-  label: Close
-  partner: close
-  partner_name: Close
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/close
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-instapage
-  label: Instapage
-  partner: instapage
-  partner_name: Instapage
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/instapage
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-google-forms
-  label: Google Forms
-  partner: google-forms
-  partner_name: Google Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/google-forms
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-attio
-  label: Attio
-  partner: attio
-  partner_name: Attio
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/attio
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-marketo
-  label: Marketo
-  partner: marketo
-  partner_name: Marketo
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/marketo
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: intercom-landbot
-  label: Landbot
-  partner: landbot
-  partner_name: Landbot
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/landbot
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: intercom-postgresql
-  label: PostgreSQL
-  partner: postgresql
-  partner_name: PostgreSQL
-  category: Databases
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/intercom/integrations/postgresql
-  source: edge
-  status: pending-partner-spec
   arazzo: null
 - slug: intercom-bonjoro
   label: bonjoro
@@ -705,4 +442,302 @@
     sources: true
     builder: Pipedream repo (component)
   status: not-a-workflow
+  arazzo: null
+- slug: intercom-typeform
+  label: Typeform
+  partner: typeform
+  partner_name: Typeform
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/typeform
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-airtable
+  label: Airtable
+  partner: airtable
+  partner_name: Airtable
+  category: Databases
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/airtable
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-twilio
+  label: Twilio
+  partner: twilio
+  partner_name: Twilio
+  category: Phone & SMS
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/twilio
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-notion
+  label: Notion
+  partner: notion
+  partner_name: Notion
+  category: Task Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/notion
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-pipedrive
+  label: Pipedrive
+  partner: pipedrive
+  partner_name: Pipedrive
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/pipedrive
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-clickup
+  label: ClickUp
+  partner: clickup
+  partner_name: ClickUp
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/clickup
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-monday-com
+  label: monday.com
+  partner: monday-com
+  partner_name: monday.com
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/monday
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-copper
+  label: Copper
+  partner: copper
+  partner_name: Copper
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/copper
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-jira-software-cloud
+  label: Jira Software Cloud
+  partner: jira
+  partner_name: Jira Software Cloud
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/jira-software-cloud
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-zoom
+  label: Zoom
+  partner: zoom
+  partner_name: Zoom
+  category: Video Conferencing
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/zoom
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-chargebee
+  label: Chargebee
+  partner: chargebee
+  partner_name: Chargebee
+  category: Payment Processing
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/chargebee
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-gravity-forms
+  label: Gravity Forms
+  partner: gravity-forms
+  partner_name: Gravity Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/gravity-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-pointerpro
+  label: Pointerpro
+  partner_name: Pointerpro
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/pointerpro
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: intercom-trello
+  label: Trello
+  partner: trello
+  partner_name: Trello
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/trello
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-gmail
+  label: Gmail
+  partner: gmail
+  partner_name: Gmail
+  category: Email
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/gmail
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: intercom-google-ads
+  label: Google Ads
+  partner: google-ads
+  partner_name: Google Ads
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/google-ads
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-close
+  label: Close
+  partner: close
+  partner_name: Close
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/close
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-instapage
+  label: Instapage
+  partner: instapage
+  partner_name: Instapage
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/instapage
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-google-forms
+  label: Google Forms
+  partner: google-forms
+  partner_name: Google Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/google-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-attio
+  label: Attio
+  partner: attio
+  partner_name: Attio
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/attio
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-marketo
+  label: Marketo
+  partner: marketo
+  partner_name: Marketo
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/marketo
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: intercom-landbot
+  label: Landbot
+  partner: landbot
+  partner_name: Landbot
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/landbot
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: intercom-postgresql
+  label: PostgreSQL
+  partner: postgresql
+  partner_name: PostgreSQL
+  category: Databases
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/intercom/integrations/postgresql
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
   arazzo: null
