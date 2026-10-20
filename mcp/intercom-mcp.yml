@@ -29,3 +29,28 @@ vendor:
   vendor: redocly
   implementation: a generic server (docs mcp server) the same vendor serves for 3+ providers
   ruling: 'Kin 2026-09-25: a vendor implementation counts for the provider'
+tool_quality:
+  tool_count: 2
+  tokens_total: 740
+  tokens_per_tool_median: 370
+  heavy_tools: []
+  heavy_tool_count: 0
+  params_total: 3
+  params_undescribed: 0
+  params_described_pct: 100.0
+  tools_with_undescribed_params: 0
+  tools_annotated: 1
+  annotated_pct: 50.0
+  state_changing_unhinted: []
+  tools_missing_schema: 0
+  short_descriptions: 0
+  duplicate_descriptions: 0
+  duplicate_names: 0
+  nonportable_names: []
+  output_schema_count: 0
+  token_estimate: chars/3.6 of each compact tool definition
+  source: mcp/intercom-mcp-tools.json
+  measured: '2026-10-20'
+  scored: false
+  note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
+    from Glimind's agent-readiness audit.

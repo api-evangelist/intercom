@@ -1,0 +1,70 @@
+{
+  "endpoint": "https://developers.intercom.com/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "Docs MCP server",
+    "version": "2026-10-20"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "execute",
+        "description": "Run JavaScript in a sandbox against the documentation tools on the global `tools` object.\nThe only extra global is `tools` - there is no `fetch`, `console`, `setTimeout`, `require`, or Node.js API; all I/O goes through `tools`.\n\nWorkflow - minimize round-trips; one `describe-tools` call plus one `execute` call covers most requests:\n1. Analyze the request and decide which sandbox tools it needs.\n2. Call `describe-tools` with those names to get their exact TypeScript signatures - inputs, result shapes, and a worked example. NEVER call `execute` with guessed method names, parameter names, enum values, or result field names: read fields off the declared return types, not from assumptions.\n3. Batch everything into a SINGLE script: chain tool calls, pass one call's output into the next, process results in plain JavaScript, and `return` only what the request needs.\n\nAvailable tools (exact signatures come from `describe-tools`):\n- listApis — Lists available APIs with their context and purpose\n- getEndpoints — Get all endpoints for a specific API\n- getEndpointInfo — Get comprehensive information about specific endpoint inclu…\n- getSecuritySchemes — Get the security schemes for a specific API\n- getFullApiDescription — Get the complete OpenAPI description\n- search — Search across the documentation to fetch relevant content f…",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "code",
+            "description"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": "string",
+              "description": "JavaScript to run in the sandbox. Return a value to receive it as the result.",
+              "minLength": 1
+            },
+            "description": {
+              "type": "string",
+              "description": "A short, human-readable summary of what this code does.",
+              "minLength": 1
+            }
+          }
+        },
+        "annotations": {
+          "title": "Execute code",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "describe-tools",
+        "description": "Get the exact TypeScript signatures of the sandbox tools available to `execute`.\nAnalyze the user request first, then pass `tools` with only the tool names the request needs (every name is listed in this input schema / description); omit `tools` only when you cannot tell which tools apply.\nAlways call this before your first `execute` and never guess signatures. Request every tool the task may need in ONE call instead of calling this repeatedly.",
+        "inputSchema": {
+          "type": "object",
+          "required": [],
+          "additionalProperties": false,
+          "properties": {
+            "tools": {
+              "type": "array",
+              "description": "Tool names to describe: listApis, getEndpoints, getEndpointInfo, getSecuritySchemes, getFullApiDescription, search. Omit to describe everything.",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "listApis",
+                  "getEndpoints",
+                  "getEndpointInfo",
+                  "getSecuritySchemes",
+                  "getFullApiDescription",
+                  "search"
+                ]
+              },
+              "nullable": true
+            }
+          }
+        }
+      }
+    ]
+  }
+}
