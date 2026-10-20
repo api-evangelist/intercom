@@ -54,3 +54,46 @@ tool_quality:
   scored: false
   note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
     from Glimind's agent-readiness audit.
+tools:
+- name: execute
+  description: 'Run JavaScript in a sandbox against the documentation tools on the global `tools` object.
+
+    The only extra global is `tools` - there is no `fetch`, `console`, `setTimeout`, `require`, or Node.js
+    API; all I/O goes through `tools`.
+
+
+    Workflow - minimize round-trips; one `describe-tools` call plus one `execute` call covers most requests:
+
+    1. Analyze the request and decide which sandbox tools it needs.
+
+    2. Call `describe-tools` with those names to get their exact TypeScript signatures - inputs, result
+    shapes, and a worked example. NEVER call `execute` with guessed method names, parameter names, enum
+    values, or result field names: read fields off the declared return types, not from assumptions.
+
+    3. Batch everything into a SINGLE script: chain tool calls, pass one call''s output into the next,
+    process results in plain JavaScript, and `return` only what the request needs.
+
+
+    Available tools (exact signatures come from `describe-tools`):
+
+    - listApis — Lists available APIs with their context and purpose
+
+    - getEndpoints — Get all endpoints for a specific API
+
+    - getEndpointInfo — Get comprehensive information about specific endpoint inclu…
+
+    - getSecuritySchemes — Get the security schemes for a specific API
+
+    - getFullApiDescription — Get the complete OpenAPI description
+
+    - search — Search across the documentation to fetch relevant content f…'
+- name: describe-tools
+  description: 'Get the exact TypeScript signatures of the sandbox tools available to `execute`.
+
+    Analyze the user request first, then pass `tools` with only the tool names the request needs (every
+    name is listed in this input schema / description); omit `tools` only when you cannot tell which tools
+    apply.
+
+    Always call this before your first `execute` and never guess signatures. Request every tool the task
+    may need in ONE call instead of calling this repeatedly.'
+tools_count: 2
