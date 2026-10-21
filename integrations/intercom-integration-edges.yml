@@ -24,6 +24,11 @@ checked:
 - microsoft-teams/integrations/microsoft-teams-integration-edges.yml
 - slack/integrations/slack-integration-edges.yml
 - stripe/integrations/stripe-integration-edges.yml
+- https://500.co/api/startups
+- https://500.co/companies
+- https://www.antler.co/portfolio
+- https://www.techstars.com/portfolio
+- https://www.ycombinator.com/companies
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -990,6 +995,34 @@ edges:
   direction: third-party
   category: Databases
   partner_url: http://www.postgresql.org/
+- partner_name: 500 Global
+  partner: 500-global
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://500.co/companies
+  category: accelerator portfolio participation
+  contract_reference:
+    register: 500 Global portfolio (500.co/companies; the page's own JSON 500.co/api/startups)
+    standard: null
+    spec_file: null
+    role: accelerator-portfolio-company
+    registered_name: Intercom
+    register_id: https://500.co/companies
+    register_country: United States
+    register_website: www.intercom.com
+    matched_domain: intercom.com
+    matched_by: domain
+    signal_note: 'participation only: the accelerator''s own portfolio register lists the company (cohort / investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-accelerator-portfolios.py
+    detected: '2026-10-21'
+    batch: GA 3
+    year: '2011'
+  detected_by: sweep-accelerator-portfolios.py
+  first_seen: '2026-10-21'
 templates:
 - title: Send new Intercom conversations as Slack channel messages
   url: https://zapier.com/apps/intercom/integrations/slack/60874/send-new-intercom-conversations-as-slack-channel-messages
