@@ -845,3 +845,1846 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: intercom-zoho-corporation
+  label: Zoho Corporation
+  partner: zoho
+  partner_name: Zoho Corporation
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zoho-page-sense
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-aircall
+  label: Aircall
+  partner: aircall
+  partner_name: Aircall
+  category: Phone & Video
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=aircall-now-v2-prod-4jyz
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-amplitude
+  label: Amplitude
+  partner: amplitude
+  partner_name: Amplitude
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=amplitude
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-chartmogul
+  label: ChartMogul
+  partner: chartmogul
+  partner_name: ChartMogul
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chartmogul-data-sync
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-fivetran-inc
+  label: Fivetran Inc.
+  partner: fivetran
+  partner_name: Fivetran Inc.
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=fivetran-6z0a
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-heap
+  label: Heap
+  partner: heap
+  partner_name: Heap
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=heap-data-out
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-pendo
+  label: Pendo
+  partner: pendoio
+  partner_name: Pendo
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=pendo-agent-toolkit
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-rudderstack
+  label: Rudderstack
+  partner: rudderstack
+  partner_name: Rudderstack
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=rudderstack-dwrn
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-saas-labs
+  label: SaaS Labs
+  partner: justcall
+  partner_name: SaaS Labs
+  category: Phone & Video
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=justcall-direct
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-actiondesk
+  label: Actiondesk
+  partner_name: Actiondesk
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=newtestintegration
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-adespresso
+  label: AdEspresso
+  partner: adespresso
+  partner_name: AdEspresso
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=adespresso
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-aftership
+  label: AfterShip
+  partner_name: AfterShip
+  category: Ecommerce & Payments
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=aftership-tracking-test
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-aiurlabs
+  label: AiurLabs
+  partner: archbee
+  partner_name: AiurLabs
+  category: Knowledge sources
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=archbee
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-announcekit
+  label: AnnounceKit
+  partner: announcekit
+  partner_name: AnnounceKit
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=announcekit
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-asana
+  label: Asana
+  partner_name: Asana
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=asana-integration-fh0h
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-asknicely
+  label: AskNicely
+  partner: asknicely
+  partner_name: AskNicely
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=asknicely-nps-chat
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-assembled
+  label: Assembled
+  partner: assembled
+  partner_name: Assembled
+  category: Inbox tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=assembled
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-baremetrics
+  label: Baremetrics
+  partner: baremetrics
+  partner_name: Baremetrics
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=baremetrics-9cu9
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-better-stack
+  label: Better Stack
+  partner: betterstack
+  partner_name: Better Stack
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=betterstack-status-pages
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-bettermode-inc
+  label: Bettermode Inc.
+  partner: bettermode
+  partner_name: Bettermode Inc.
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=tribe-new
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-bonjoro
+  label: Bonjoro
+  partner: bonjoro
+  partner_name: Bonjoro
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=bonjoro
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-botpress
+  label: Botpress
+  partner: botpress
+  partner_name: Botpress
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=desk-oauth-staging
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-brainfish
+  label: Brainfish
+  partner: brainfish
+  partner_name: Brainfish
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=brainfish-prod
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-breakout-platforms-inc
+  label: Breakout Platforms Inc.
+  partner: cobalt
+  partner_name: Breakout Platforms Inc.
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cobalt-nui6
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-cal-com-inc
+  label: Cal.com, Inc.
+  partner: cal-com
+  partner_name: Cal.com, Inc.
+  category: Scheduling tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cal-com-dont
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-calendly
+  label: Calendly
+  partner: calendly
+  partner_name: Calendly
+  category: Scheduling tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=calendly
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-canny
+  label: Canny
+  partner: canny
+  partner_name: Canny
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=canny-ullv
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-census
+  label: Census
+  partner: getcensus
+  partner_name: Census
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=census-qapb
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-chameleon
+  label: Chameleon
+  partner: chameleon
+  partner_name: Chameleon
+  category: Knowledge sources
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chameleon
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-chargedesk-pty-ltd
+  label: ChargeDesk Pty Ltd
+  partner: chargedesk
+  partner_name: ChargeDesk Pty Ltd
+  category: Ecommerce & Payments
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chargedesk
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-chili-piper
+  label: Chili Piper
+  partner: chili-piper
+  partner_name: Chili Piper
+  category: Scheduling tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chili-piper-aj5s
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-closedloop-labs-llc
+  label: ClosedLoop Labs LLC
+  partner: closedloop
+  partner_name: ClosedLoop Labs LLC
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=closedloop-ai
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-cloudeagle
+  label: CloudEagle
+  partner_name: CloudEagle
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=testapp-vr2a
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-cloudtalk
+  label: CloudTalk
+  partner: cloudtalk
+  partner_name: CloudTalk
+  category: Phone & Video
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cloudtalk-integration
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-companyhub-it-solution-pvt-ltd
+  label: CompanyHub IT Solution Pvt Ltd
+  partner: integrately
+  partner_name: CompanyHub IT Solution Pvt Ltd
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=test_integrately
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-createshift
+  label: CreateShift
+  partner: prodpad
+  partner_name: CreateShift
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=prodpad
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-crowdin
+  label: Crowdin
+  partner: crowdin
+  partner_name: Crowdin
+  category: Knowledge sources
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=crowdin
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-daily-co
+  label: Daily.co
+  partner: daily-co
+  partner_name: Daily.co
+  category: Phone & Video
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=daily-co
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-datagrail-inc
+  label: DataGrail, Inc.
+  partner_name: DataGrail, Inc.
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=datagrail-intercom-integration
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-deep-bluedot
+  label: Deep BlueDot
+  partner: syncly
+  partner_name: Deep BlueDot
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=syncly
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-delighted
+  label: Delighted
+  partner: delighted
+  partner_name: Delighted
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=delighted-inc
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-devart
+  label: Devart
+  partner: skyvia
+  partner_name: Devart
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=skyvia
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-dialpad
+  label: Dialpad
+  partner: dialpad
+  partner_name: Dialpad
+  category: Phone & Video
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=uberconference-app
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-dovetail
+  label: Dovetail
+  partner: dovetail
+  partner_name: Dovetail
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=dovetail-prod
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-dreamdata
+  label: Dreamdata
+  partner: dreamdata
+  partner_name: Dreamdata
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=dreamdata-io-i8oi
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-dub-technologies-inc
+  label: Dub Technologies, Inc.
+  partner: dub
+  partner_name: Dub Technologies, Inc.
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=dub-ejgb
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-encharge
+  label: Encharge
+  partner: encharge
+  partner_name: Encharge
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=encharge
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-enterpret
+  label: Enterpret
+  partner: enterpret
+  partner_name: Enterpret
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=enterpret-mw31
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-equals
+  label: Equals
+  partner: equals
+  partner_name: Equals
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=equals-app-store
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-estuary
+  label: Estuary
+  partner: estuary
+  partner_name: Estuary
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=estuary
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-fini-inc
+  label: Fini Inc.
+  partner: fini
+  partner_name: Fini Inc.
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=ask-fini-ai
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-forethought
+  label: Forethought
+  partner: forethought
+  partner_name: Forethought
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=forethought-10nv
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-front
+  label: Front
+  partner: front
+  partner_name: Front
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=front
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-fullstory
+  label: Fullstory
+  partner: fullstory
+  partner_name: Fullstory
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=fullstory
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-fullview
+  label: Fullview
+  partner: fullview
+  partner_name: Fullview
+  category: Inbox tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=fullview
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-geckoboard
+  label: Geckoboard
+  partner_name: Geckoboard
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=geckoboard-production-app
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-general-intelligence-company
+  label: General Intelligence Company
+  partner: general-intelligence
+  partner_name: General Intelligence Company
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cofounder
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-gradient-labs
+  label: Gradient Labs
+  partner: gradient-labs
+  partner_name: Gradient Labs
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=gradient-labs-ithd
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-gumloop
+  label: Gumloop
+  partner: gumloop
+  partner_name: Gumloop
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=gumloop-4nw6
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-guru
+  label: Guru
+  partner: guru
+  partner_name: Guru
+  category: Knowledge sources
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=intercom-articles-guru
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-hockeystack-inc
+  label: HockeyStack, Inc.
+  partner: hockeystack
+  partner_name: HockeyStack, Inc.
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=hockeystack
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-hull
+  label: Hull
+  partner: hull
+  partner_name: Hull
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=hull
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-ibm-watson
+  label: IBM Watson
+  partner_name: IBM Watson
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=watson-assist
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-ifttt
+  label: IFTTT
+  partner: ifttt
+  partner_name: IFTTT
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=ifttt-90as
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-instatus
+  label: Instatus
+  partner_name: Instatus
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=instatus-77y
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-integry
+  label: Integry
+  partner: integry
+  partner_name: Integry
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=integry-b0q1
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-jam
+  label: Jam
+  partner_name: Jam
+  category: Inbox tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=jam-recorder
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-jama-software
+  label: Jama Software
+  partner_name: Jama Software
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=notion
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-joincube-inc
+  label: Joincube Inc.
+  partner: beamer
+  partner_name: Joincube Inc.
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=beamer
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-kimola-inc
+  label: Kimola, Inc.
+  partner: kimola
+  partner_name: Kimola, Inc.
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=kimola-inc
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-klaviyo-inc
+  label: Klaviyo, Inc.
+  partner: klaviyo
+  partner_name: Klaviyo, Inc.
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=klaviyo-test
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-lang-ai
+  label: Lang.ai
+  partner: langai
+  partner_name: Lang.ai
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=lang-ai-us-jft0
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-level-ai
+  label: Level AI
+  partner: level-ai
+  partner_name: Level AI
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=level-ai
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-linear
+  label: Linear
+  partner: linear-app
+  partner_name: Linear
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=linear-8uw0
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-logrocket
+  label: LogRocket
+  partner: logrocket
+  partner_name: LogRocket
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=logrocket
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-lokalise
+  label: Lokalise
+  partner: lokalise
+  partner_name: Lokalise
+  category: Knowledge sources
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=lokalise-for-articles
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-loris-ai
+  label: Loris AI
+  partner: loris
+  partner_name: Loris AI
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=loris-cqa
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-madkudu
+  label: MadKudu
+  partner: madkudu
+  partner_name: MadKudu
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=madkudu-4ih3
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-magnet-brains-software-tech
+  label: Magnet Brains Software Tech.
+  partner: pabbly-connect
+  partner_name: Magnet Brains Software Tech.
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=pabbly-connect-y4ot
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-mailboxvalidator
+  label: MailboxValidator
+  partner_name: MailboxValidator
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=mailboxvalidator-email-validation
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-make-formerly-integromat
+  label: Make (formerly Integromat)
+  partner: make
+  partner_name: Make (formerly Integromat)
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=integromat-2-6xjv
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-membrane-inc
+  label: Membrane Inc.
+  partner: membrane
+  partner_name: Membrane Inc.
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=membrane-integration-app
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-merge
+  label: Merge
+  partner_name: Merge
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=merge
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-meya
+  label: Meya
+  partner: meyaai
+  partner_name: Meya
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=meya
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-miuros
+  label: Miuros
+  partner: miuros
+  partner_name: Miuros
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=miuros-e5zv
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-nocode-ltd
+  label: NOCODE LTD
+  partner: latenode
+  partner_name: NOCODE LTD
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=latenode
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-nango
+  label: Nango
+  partner_name: Nango
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=nangoapp
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-neverbounce
+  label: NeverBounce
+  partner: neverbounce
+  partner_name: NeverBounce
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=neverbounce
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-nightfall-ai
+  label: Nightfall AI
+  partner_name: Nightfall AI
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=nightfall-nfxm
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-nomnom-insights
+  label: NomNom Insights
+  partner: enjoyhq
+  partner_name: NomNom Insights
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=nomnom
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-nutshell
+  label: Nutshell
+  partner: nutshell
+  partner_name: Nutshell
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=nutshell
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-omnisend
+  label: Omnisend
+  partner: omnisend
+  partner_name: Omnisend
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=omnisend
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-paperform
+  label: Paperform
+  partner: paperform
+  partner_name: Paperform
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=paperform-7ix9
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-pipedream-inc
+  label: Pipedream, Inc.
+  partner: pipedream
+  partner_name: Pipedream, Inc.
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=pipedream
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-plaid
+  label: Plaid
+  partner_name: Plaid
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=plaid_2026_app
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-planhat
+  label: Planhat
+  partner: planhat
+  partner_name: Planhat
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=planhat
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-plivo
+  label: Plivo
+  partner: plivo
+  partner_name: Plivo
+  category: Messaging Channels
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=plivo
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-polytomic-inc
+  label: Polytomic Inc.
+  partner: polytomic
+  partner_name: Polytomic Inc.
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=polytomic
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-poptin-ltd
+  label: Poptin LTD
+  partner: poptin
+  partner_name: Poptin LTD
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=poptin-app
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-productboard
+  label: Productboard
+  partner: productboard
+  partner_name: Productboard
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=productboard
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-qualio
+  label: Qualio
+  partner_name: Qualio
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=qualio-app-integration
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-quantive
+  label: Quantive
+  partner_name: Quantive
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=gtmhub
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-realtimeboard-inc
+  label: RealtimeBoard, Inc.
+  partner_name: RealtimeBoard, Inc.
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cardinal-7mib
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-reforge
+  label: Reforge
+  partner_name: Reforge
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=monterey-ai
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-relay-app-inc
+  label: Relay.app Inc.
+  partner: relay-app
+  partner_name: Relay.app Inc.
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=relay-jq8g
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-revenuecat
+  label: RevenueCat
+  partner: revenuecat
+  partner_name: RevenueCat
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=revenuecat-customer-profiles-2oan
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-rippling
+  label: Rippling
+  partner_name: Rippling
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=rippling-os95
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-saymine-technologies-ltd
+  label: SayMine Technologies LTD
+  partner_name: SayMine Technologies LTD
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=mine-privacy-portal
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-scytale-ai
+  label: Scytale AI
+  partner_name: Scytale AI
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=scytale-intercom-integration
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-segmetrics
+  label: SegMetrics
+  partner: segmetrics
+  partner_name: SegMetrics
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=segmetrics
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-segment
+  label: Segment
+  partner: segment
+  partner_name: Segment
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=segment
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-sendinblue-sas
+  label: Sendinblue SAS
+  partner_name: Sendinblue SAS
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=sendinblue-na55
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-sessionstack
+  label: SessionStack
+  partner: sessionstack
+  partner_name: SessionStack
+  category: Inbox tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=sessionstack-intercom
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-siena-labs-inc
+  label: Siena Labs Inc.
+  partner: siena
+  partner_name: Siena Labs Inc.
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=siena-ai
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-smartsuite-holdings-llc
+  label: SmartSuite Holdings LLC.
+  partner: smartsuite
+  partner_name: SmartSuite Holdings LLC.
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=smartsuite-2uaa
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-smartling-inc
+  label: Smartling, Inc.
+  partner: smartling
+  partner_name: Smartling, Inc.
+  category: Knowledge sources
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=smartling-integration-app
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-smartlook
+  label: Smartlook
+  partner: smartlook
+  partner_name: Smartlook
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=smartlook
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-sorry
+  label: Sorry™
+  partner: sorry
+  partner_name: Sorry™
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=sorry-yb8v
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-surfboard
+  label: Surfboard
+  partner: surfboard
+  partner_name: Surfboard
+  category: Inbox tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=surfboard-dm0s
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-survicate
+  label: Survicate
+  partner: survicate
+  partner_name: Survicate
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=survicate
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-talkdesk
+  label: Talkdesk
+  partner: talkdesk
+  partner_name: Talkdesk
+  category: Phone & Video
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=talkdesk
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-the-mobile-first-company
+  label: The Mobile-First Company
+  partner: the-mobile-first-company
+  partner_name: The Mobile-First Company
+  category: Phone & Video
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=allo
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-tonkean
+  label: Tonkean
+  partner: tonkean
+  partner_name: Tonkean
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=tonkean
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-transcend
+  label: Transcend
+  partner_name: Transcend
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=transcend-vuxu
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-trelica
+  label: Trelica
+  partner_name: Trelica
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=trelica
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-triple-whale
+  label: Triple Whale
+  partner: triple-whale
+  partner_name: Triple Whale
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=triple-whale-u2tg
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-ultimate
+  label: Ultimate
+  partner: ultimateai
+  partner_name: Ultimate
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=ultimate-chatbot
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-unbabel
+  label: Unbabel
+  partner: unbabel
+  partner_name: Unbabel
+  category: Inbox tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=unbabel-chat-translation
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-unito
+  label: Unito
+  partner: unito
+  partner_name: Unito
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=unito
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-userback
+  label: Userback
+  partner: userback
+  partner_name: Userback
+  category: Surveys & Feedback
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=userback-18fu
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-userpilot
+  label: Userpilot
+  partner: userpilot
+  partner_name: Userpilot
+  category: Knowledge sources
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=userpilot-ntae
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-vectorize-ai
+  label: Vectorize AI
+  partner_name: Vectorize AI
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=vectorize_oauth_prod
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-vitally
+  label: Vitally
+  partner: vitally
+  partner_name: Vitally
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=vitally
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-von
+  label: Von
+  partner: von
+  partner_name: Von
+  category: Customer data & CRM
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=von-key
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-wistia
+  label: Wistia
+  partner: wistia
+  partner_name: Wistia
+  category: Marketing & Campaigns
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=wistia
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-workato
+  label: Workato
+  partner: workato
+  partner_name: Workato
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=workato
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-zelta
+  label: Zelta
+  partner_name: Zelta
+  category: Analytics
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zelta-bfi8
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-zenadmin
+  label: ZenAdmin
+  partner_name: ZenAdmin
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=hybr1d
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-zeta-ai-inc-viktor
+  label: Zeta AI, Inc. (Viktor)
+  partner: viktor
+  partner_name: Zeta AI, Inc. (Viktor)
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=viktor-t30h
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-zight
+  label: Zight
+  partner: zight
+  partner_name: Zight
+  category: Inbox tools
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zight-client
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-zoom-video-communications
+  label: Zoom Video Communications
+  partner: zoom
+  partner_name: Zoom Video Communications
+  category: Intercom App Store app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zoom-zva-69d0
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-hyperping-com
+  label: hyperping.com
+  partner: hyperping
+  partner_name: hyperping.com
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=hp-08-prod
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-incident-io
+  label: incident.io
+  partner: incident-io
+  partner_name: incident.io
+  category: Issue tracking & Ticketing
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=incident-io-status-page-9tsq
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: intercom-ketch
+  label: ketch
+  partner_name: ketch
+  category: Automation platforms
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=ketch-data-privacy
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null

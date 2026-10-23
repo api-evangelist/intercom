@@ -40,6 +40,8 @@ checked:
 - https://www.sequoiacap.com/our-companies/
 - https://www.sequoiacap.com/sitemap.xml
 - hubspot/integrations/hubspot-integration-edges.yml
+- https://app.intercom.com/ember/public/appstore/app_packages?page=1
+- https://www.intercom.com/app-store
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -1111,6 +1113,3221 @@ edges:
   detected: '2026-10-21'
   detected_by: mirror-platform-listings.py
   category: LIVE_CHAT
+- partner_name: Zoho Corporation
+  app: Zoho PageSense
+  apps:
+  - Zoho Assist
+  - Zoho Desk
+  - Zoho PageSense
+  listing_count: 3
+  partner: zoho
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zoho-page-sense
+  category: Analytics
+  app_categories:
+  - Analytics
+  - Issue tracking & Ticketing
+  - Phone & Video
+  partner_url: https://www.zoho.com/pagesense/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Aircall
+  app: Aircall Now V2
+  apps:
+  - Aircall
+  - Aircall Now V2
+  listing_count: 2
+  partner: aircall
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=aircall-now-v2-prod-4jyz
+  category: Phone & Video
+  app_categories:
+  - Phone & Video
+  partner_url: https://aircall.io/call-center-software-integrations/intercom/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Amplitude
+  app: Amplitude Engage
+  apps:
+  - Amplitude (EU)
+  - Amplitude Engage
+  listing_count: 2
+  partner: amplitude
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=amplitude
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://amplitude.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Chargebee
+  app: Chargebee Subscription Billing
+  apps:
+  - Chargebee Subscription Billing
+  - Chargebee for Inbox
+  listing_count: 2
+  partner: chargebee
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chargebee-subscriptions
+  category: Ecommerce & Payments
+  app_categories:
+  - Ecommerce & Payments
+  partner_url: https://www.chargebee.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: ChartMogul
+  app: ChartMogul Data Sync
+  apps:
+  - ChartMogul
+  - ChartMogul Data Sync
+  listing_count: 2
+  partner: chartmogul
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chartmogul-data-sync
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://chartmogul.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Fivetran Inc.
+  app: Fivetran
+  apps:
+  - Fivetran
+  - Fivetran Second App
+  listing_count: 2
+  partner: fivetran
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=fivetran-6z0a
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.fivetran.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Heap
+  app: Targeting with Heap
+  apps:
+  - Heap
+  - Targeting with Heap
+  listing_count: 2
+  partner: heap
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=heap-data-out
+  category: Customer data & CRM
+  app_categories:
+  - Analytics
+  - Customer data & CRM
+  partner_url: https://heap.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Pendo
+  app: Pendo
+  apps:
+  - Pendo
+  - Pendo Feedback (EU)
+  listing_count: 2
+  partner: pendoio
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=pendo-agent-toolkit
+  category: Analytics
+  app_categories:
+  - Analytics
+  - Surveys & Feedback
+  partner_url: https://www.pendo.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Rudderstack
+  app: Rudderstack
+  apps:
+  - Rudderstack
+  listing_count: 2
+  partner: rudderstack
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=rudderstack-dwrn
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.rudderstack.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: SaaS Labs
+  app: JustCall Direct
+  apps:
+  - JustCall Direct
+  - JustCall Phone Integration
+  listing_count: 2
+  partner: justcall
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=justcall-direct
+  category: Phone & Video
+  app_categories:
+  - Phone & Video
+  partner_url: https://justcall.io?utm_source=intercomdirectintegrationmarketplace&utm_medium=integrationpartnerlisting&utm_campaign=integration
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Actiondesk
+  app: Actiondesk
+  apps:
+  - Actiondesk
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=newtestintegration
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.actiondesk.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: actiondesk
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: AdEspresso
+  app: AdEspresso
+  apps:
+  - AdEspresso
+  listing_count: 1
+  partner: adespresso
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=adespresso
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://adespresso.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: AfterShip
+  app: AfterShip Post-Purchase
+  apps:
+  - AfterShip Post-Purchase
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=aftership-tracking-test
+  category: Ecommerce & Payments
+  app_categories:
+  - Ecommerce & Payments
+  partner_url: https://www.aftership.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: aftership
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: AiurLabs
+  app: Archbee
+  apps:
+  - Archbee
+  listing_count: 1
+  partner: archbee
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=archbee
+  category: Knowledge sources
+  app_categories:
+  - Knowledge sources
+  partner_url: https://www.archbee.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: AnnounceKit
+  app: AnnounceKit
+  apps:
+  - AnnounceKit
+  listing_count: 1
+  partner: announcekit
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=announcekit
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://announcekit.app
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Asana
+  app: Asana
+  apps:
+  - Asana
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=asana-integration-fh0h
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://asana.com/apps/intercom
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: asana
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: AskNicely
+  app: AskNicely NPS Chat
+  apps:
+  - AskNicely NPS Chat
+  listing_count: 1
+  partner: asknicely
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=asknicely-nps-chat
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://www.asknicely.com/?ccn=Partner_Intercom_MessengerApp&cid=7010I000001JpJH&ls=Referral&utm_medium=Referral&utm_source=Intercom&utm_campaign=Partner_Intercom_MessengerApp%22%3ERead
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Assembled
+  app: Assembled
+  apps:
+  - Assembled
+  listing_count: 1
+  partner: assembled
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=assembled
+  category: Inbox tools
+  app_categories:
+  - Inbox tools
+  partner_url: https://www.assembled.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Baremetrics
+  app: Baremetrics
+  apps:
+  - Baremetrics
+  listing_count: 1
+  partner: baremetrics
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=baremetrics-9cu9
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://baremetrics.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Better Stack
+  app: Better Stack
+  apps:
+  - Better Stack
+  listing_count: 1
+  partner: betterstack
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=betterstack-status-pages
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://betterstack.com/uptime
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Bettermode Inc.
+  app: Bettermode
+  apps:
+  - Bettermode
+  listing_count: 1
+  partner: bettermode
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=tribe-new
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://bettermode.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Bonjoro
+  app: Bonjoro
+  apps:
+  - Bonjoro
+  listing_count: 1
+  partner: bonjoro
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=bonjoro
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://www.bonjoro.com/integration/intercom
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Botpress
+  app: Desk Ticket Intelligence
+  apps:
+  - Desk Ticket Intelligence
+  listing_count: 1
+  partner: botpress
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=desk-oauth-staging
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://botpress.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Brainfish
+  app: Brainfish
+  apps:
+  - Brainfish
+  listing_count: 1
+  partner: brainfish
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=brainfish-prod
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://brainfishai.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Breakout Platforms Inc.
+  app: Cobalt
+  apps:
+  - Cobalt
+  listing_count: 1
+  partner: cobalt
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cobalt-nui6
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.gocobalt.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Cal.com, Inc.
+  app: Cal.com
+  apps:
+  - Cal.com
+  listing_count: 1
+  partner: cal-com
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cal-com-dont
+  category: Scheduling tools
+  app_categories:
+  - Scheduling tools
+  partner_url: https://cal.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Calendly
+  app: Calendly
+  apps:
+  - Calendly
+  listing_count: 1
+  partner: calendly
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=calendly
+  category: Scheduling tools
+  app_categories:
+  - Scheduling tools
+  partner_url: https://calendly.com?utm_medium=partner&utm_source=intercom&utm_campaign=intercom_App_Listing&utm_content=main_home_page_link
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Canny
+  app: Canny
+  apps:
+  - Canny
+  listing_count: 1
+  partner: canny
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=canny-ullv
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://canny.io
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Census
+  app: Census
+  apps:
+  - Census
+  listing_count: 1
+  partner: getcensus
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=census-qapb
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://getcensus.com?utm_source=intercom&utm_medium=description&utm_campaign=intercom_marketplace
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Chameleon
+  app: Chameleon
+  apps:
+  - Chameleon
+  listing_count: 1
+  partner: chameleon
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chameleon
+  category: Knowledge sources
+  app_categories:
+  - Knowledge sources
+  partner_url: https://www.chameleon.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: ChargeDesk Pty Ltd
+  app: ChargeDesk
+  apps:
+  - ChargeDesk
+  listing_count: 1
+  partner: chargedesk
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chargedesk
+  category: Ecommerce & Payments
+  app_categories:
+  - Ecommerce & Payments
+  partner_url: https://chargedesk.com/intercom
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Chili Piper
+  app: Chili Piper
+  apps:
+  - Chili Piper
+  listing_count: 1
+  partner: chili-piper
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=chili-piper-aj5s
+  category: Scheduling tools
+  app_categories:
+  - Scheduling tools
+  partner_url: https://www.chilipiper.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: ClickUp
+  app: ClickUp
+  apps:
+  - ClickUp
+  listing_count: 1
+  partner: clickup
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=clickup
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://clickup.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: ClosedLoop Labs LLC
+  app: ClosedLoop AI
+  apps:
+  - ClosedLoop AI
+  listing_count: 1
+  partner: closedloop
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=closedloop-ai
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://closedloop.sh
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: CloudEagle
+  app: CloudEagle
+  apps:
+  - CloudEagle
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=testapp-vr2a
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://cloudeagle.ai
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: cloudeagle
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: CloudTalk
+  app: CloudTalk
+  apps:
+  - CloudTalk
+  listing_count: 1
+  partner: cloudtalk
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cloudtalk-integration
+  category: Phone & Video
+  app_categories:
+  - Phone & Video
+  partner_url: https://www.cloudtalk.io/?utm_campaign=14920761-Intercom%20Marketplace&utm_source=intercom_marketplace&utm_medium=referral
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: CompanyHub IT Solution Pvt Ltd
+  app: Integrately
+  apps:
+  - Integrately
+  listing_count: 1
+  partner: integrately
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=test_integrately
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://app.integrately.com/explore-automations
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: CreateShift
+  app: ProdPad
+  apps:
+  - ProdPad
+  listing_count: 1
+  partner: prodpad
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=prodpad
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://www.prodpad.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Crowdin
+  app: Crowdin
+  apps:
+  - Crowdin
+  listing_count: 1
+  partner: crowdin
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=crowdin
+  category: Knowledge sources
+  app_categories:
+  - Knowledge sources
+  partner_url: https://crowdin.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Daily.co
+  app: Daily.co Video Calls
+  apps:
+  - Daily.co Video Calls
+  listing_count: 1
+  partner: daily-co
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=daily-co
+  category: Phone & Video
+  app_categories:
+  - Phone & Video
+  partner_url: https://www.daily.co
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: DataGrail, Inc.
+  app: DataGrail Privacy Management
+  apps:
+  - DataGrail Privacy Management
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=datagrail-intercom-integration
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://www.datagrail.io/?utm_source=Intercom&utm_medium=partnership&utm_campaign=partner_listing&utm_content=Homepage
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: datagrail
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Deep BlueDot
+  app: Syncly
+  apps:
+  - Syncly
+  listing_count: 1
+  partner: syncly
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=syncly
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://syncly.app/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Delighted
+  app: Delighted Inc.
+  apps:
+  - Delighted Inc.
+  listing_count: 1
+  partner: delighted
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=delighted-inc
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://delighted.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Devart
+  app: Skyvia
+  apps:
+  - Skyvia
+  listing_count: 1
+  partner: skyvia
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=skyvia
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://skyvia.com/?utm_source=intercom_marketplace&utm_medium=referral&utm_campaign=marketplace
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Dialpad
+  app: Dialpad Meetings
+  apps:
+  - Dialpad
+  - Dialpad Meetings
+  listing_count: 2
+  partner: dialpad
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=uberconference-app
+  category: Phone & Video
+  app_categories:
+  - Phone & Video
+  partner_url: https://www.dialpad.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  other_publisher_names:
+  - Dialpad, Inc.
+- partner_name: Dovetail
+  app: Dovetail
+  apps:
+  - Dovetail
+  listing_count: 1
+  partner: dovetail
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=dovetail-prod
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://dovetail.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Dreamdata
+  app: Dreamdata
+  apps:
+  - Dreamdata
+  listing_count: 1
+  partner: dreamdata
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=dreamdata-io-i8oi
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://dreamdata.io/blog
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Dub Technologies, Inc.
+  app: Dub Partners
+  apps:
+  - Dub Partners
+  listing_count: 1
+  partner: dub
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=dub-ejgb
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://dub.co/partners
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Encharge
+  app: Encharge
+  apps:
+  - Encharge
+  listing_count: 1
+  partner: encharge
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=encharge
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://encharge.io
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Enterpret
+  app: Enterpret
+  apps:
+  - Enterpret
+  listing_count: 1
+  partner: enterpret
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=enterpret-mw31
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.enterpret.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Equals
+  app: Equals
+  apps:
+  - Equals
+  listing_count: 1
+  partner: equals
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=equals-app-store
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://equals.com/integrations/intercom/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Estuary
+  app: Estuary
+  apps:
+  - Estuary
+  listing_count: 1
+  partner: estuary
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=estuary
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://estuary.dev
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Fini Inc.
+  app: Sophie AI
+  apps:
+  - Sophie AI
+  listing_count: 1
+  partner: fini
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=ask-fini-ai
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://www.usefini.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Forethought
+  app: Forethought
+  apps:
+  - Forethought
+  listing_count: 1
+  partner: forethought
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=forethought-10nv
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://forethought.ai/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Front
+  app: Front
+  apps:
+  - Front
+  listing_count: 1
+  partner: front
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=front
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://front.com?utm_source=partner-marketplace&utm_medium=referral&utm_campaign=Ongoing_Intercom-listing_awareness_global
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Fullstory
+  app: Fullstory
+  apps:
+  - Fullstory
+  listing_count: 1
+  partner: fullstory
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=fullstory
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.fullstory.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Fullview
+  app: Fullview
+  apps:
+  - Fullview
+  listing_count: 1
+  partner: fullview
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=fullview
+  category: Inbox tools
+  app_categories:
+  - Inbox tools
+  partner_url: https://www.fullview.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Geckoboard
+  app: Geckoboard
+  apps:
+  - Geckoboard
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=geckoboard-production-app
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.geckoboard.com/product/data-sources/intercom/?utm_medium=referral&utm_source=intercom&utm_campaign=intercom_app_directory&utm_content=Geckoboard
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: geckoboard
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: General Intelligence Company
+  app: Cofounder
+  apps:
+  - Cofounder
+  listing_count: 1
+  partner: general-intelligence
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cofounder
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://cofounder.co
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Gradient Labs
+  app: Gradient Labs
+  apps:
+  - Gradient Labs
+  listing_count: 1
+  partner: gradient-labs
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=gradient-labs-ithd
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://gradient-labs.ai/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Gumloop
+  app: Gumloop
+  apps:
+  - Gumloop
+  listing_count: 1
+  partner: gumloop
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=gumloop-4nw6
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.gumloop.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Guru
+  app: Guru
+  apps:
+  - Guru
+  listing_count: 1
+  partner: guru
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=intercom-articles-guru
+  category: Knowledge sources
+  app_categories:
+  - Knowledge sources
+  partner_url: https://www.getguru.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: HockeyStack, Inc.
+  app: HockeyStack
+  apps:
+  - HockeyStack
+  listing_count: 1
+  partner: hockeystack
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=hockeystack
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.hockeystack.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Hull
+  app: Hull
+  apps:
+  - Hull
+  listing_count: 1
+  partner: hull
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=hull
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://www.hull.io
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: IBM Watson
+  app: Watson Assistant
+  apps:
+  - Watson Assistant
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=watson-assist
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://www.ibm.com/cloud/watson-assistant/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: ibm-watson
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: IFTTT
+  app: IFTTT
+  apps:
+  - IFTTT
+  listing_count: 1
+  partner: ifttt
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=ifttt-90as
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://ifttt.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Instatus
+  app: Instatus
+  apps:
+  - Instatus
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=instatus-77y
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://instatus.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: instatus
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Integry
+  app: Integry
+  apps:
+  - Integry
+  listing_count: 1
+  partner: integry
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=integry-b0q1
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://integry.io
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Jam
+  app: Jam for Customer Support
+  apps:
+  - Jam for Customer Support
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=jam-recorder
+  category: Inbox tools
+  app_categories:
+  - Inbox tools
+  partner_url: https://jam.dev/cs
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: jam
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Jama Software
+  app: Jama Analyze
+  apps:
+  - Jama Analyze
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=notion
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.jamasoftware.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: jama-software
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Joincube Inc.
+  app: Beamer
+  apps:
+  - Beamer
+  listing_count: 1
+  partner: beamer
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=beamer
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://www.getbeamer.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Kimola, Inc.
+  app: Kimola Cognitive
+  apps:
+  - Kimola Cognitive
+  listing_count: 1
+  partner: kimola
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=kimola-inc
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://kimola.com/cognitive
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Klaviyo, Inc.
+  app: Klaviyo
+  apps:
+  - Klaviyo
+  listing_count: 1
+  partner: klaviyo
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=klaviyo-test
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://www.klaviyo.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Lang.ai
+  app: Lang.ai Support Automation
+  apps:
+  - Lang.ai Support Automation
+  listing_count: 1
+  partner: langai
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=lang-ai-us-jft0
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://lang.ai
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Level AI
+  app: Level AI
+  apps:
+  - Level AI
+  listing_count: 1
+  partner: level-ai
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=level-ai
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://thelevel.ai
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Linear
+  app: Linear
+  apps:
+  - Linear
+  listing_count: 1
+  partner: linear-app
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=linear-8uw0
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://linear.app/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: LogRocket
+  app: LogRocket
+  apps:
+  - LogRocket
+  listing_count: 1
+  partner: logrocket
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=logrocket
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://logrocket.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Lokalise
+  app: Lokalise for Articles
+  apps:
+  - Lokalise Messages for Inbox
+  - Lokalise for Articles
+  listing_count: 2
+  partner: lokalise
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=lokalise-for-articles
+  category: Knowledge sources
+  app_categories:
+  - Inbox tools
+  - Knowledge sources
+  partner_url: https://lokalise.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  other_publisher_names:
+  - Lokalise, Inc.
+- partner_name: Loris AI
+  app: Loris CQA
+  apps:
+  - Loris CQA
+  listing_count: 1
+  partner: loris
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=loris-cqa
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://loris.ai/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: MadKudu
+  app: MadKudu Lead Scoring
+  apps:
+  - MadKudu Lead Scoring
+  listing_count: 1
+  partner: madkudu
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=madkudu-4ih3
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://www.madkudu.com/intercom
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Magnet Brains Software Tech.
+  app: Pabbly Connect
+  apps:
+  - Pabbly Connect
+  listing_count: 1
+  partner: pabbly-connect
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=pabbly-connect-y4ot
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.pabbly.com/connect/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: MailboxValidator
+  app: MailboxValidator
+  apps:
+  - MailboxValidator
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=mailboxvalidator-email-validation
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://www.mailboxvalidator.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: mailboxvalidator
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Make (formerly Integromat)
+  app: Make
+  apps:
+  - Make
+  listing_count: 1
+  partner: make
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=integromat-2-6xjv
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.make.com/en?utm_medium=partner&utm_source=intercom&utm_campaign=intercom-partner-program
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Membrane Inc.
+  app: Membrane
+  apps:
+  - Membrane
+  listing_count: 1
+  partner: membrane
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=membrane-integration-app
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://getmembrane.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Merge
+  app: Merge
+  apps:
+  - Merge
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=merge
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://merge.dev/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: merge
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Meya
+  app: Meya
+  apps:
+  - Meya
+  listing_count: 1
+  partner: meyaai
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=meya
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://meya.ai
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Miuros
+  app: Miuros
+  apps:
+  - Miuros
+  listing_count: 1
+  partner: miuros
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=miuros-e5zv
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://miuros.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: NOCODE LTD
+  app: Latenode
+  apps:
+  - Latenode
+  listing_count: 1
+  partner: latenode
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=latenode
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://latenode.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Nango
+  app: NangoDeveloper
+  apps:
+  - NangoDeveloper
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=nangoapp
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://nango.dev
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: nango
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: NeverBounce
+  app: NeverBounce
+  apps:
+  - NeverBounce
+  listing_count: 1
+  partner: neverbounce
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=neverbounce
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://neverbounce.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Nightfall AI
+  app: Nightfall DLP
+  apps:
+  - Nightfall DLP
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=nightfall-nfxm
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://nightfall.ai/intercom
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: nightfall-ai
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: NomNom Insights
+  app: EnjoyHQ
+  apps:
+  - EnjoyHQ
+  listing_count: 1
+  partner: enjoyhq
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=nomnom
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://getenjoyhq.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Nutshell
+  app: Nutshell
+  apps:
+  - Nutshell
+  listing_count: 1
+  partner: nutshell
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=nutshell
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://www.nutshell.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Omnisend
+  app: Omnisend
+  apps:
+  - Omnisend
+  listing_count: 1
+  partner: omnisend
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=omnisend
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://www.omnisend.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Paperform
+  app: Paperform
+  apps:
+  - Paperform
+  listing_count: 1
+  partner: paperform
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=paperform-7ix9
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://paperform.co
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Pipedream, Inc.
+  app: Pipedream
+  apps:
+  - Pipedream
+  listing_count: 1
+  partner: pipedream
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=pipedream
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://pipedream.com/apps/intercom
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Plaid
+  app: Plaid
+  apps:
+  - Plaid
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=plaid_2026_app
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://plaid.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: plaid
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Planhat
+  app: Planhat
+  apps:
+  - Planhat
+  listing_count: 1
+  partner: planhat
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=planhat
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://planhat.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Plivo
+  app: Plivo
+  apps:
+  - Plivo
+  listing_count: 1
+  partner: plivo
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=plivo
+  category: Messaging Channels
+  app_categories:
+  - Messaging Channels
+  partner_url: https://www.plivo.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Polytomic Inc.
+  app: Polytomic
+  apps:
+  - Polytomic
+  listing_count: 1
+  partner: polytomic
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=polytomic
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.polytomic.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Poptin LTD
+  app: Poptin
+  apps:
+  - Poptin
+  listing_count: 1
+  partner: poptin
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=poptin-app
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://www.poptin.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Productboard
+  app: Productboard
+  apps:
+  - Productboard
+  listing_count: 1
+  partner: productboard
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=productboard
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://www.productboard.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Qualio
+  app: Qualio
+  apps:
+  - Qualio
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=qualio-app-integration
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://docs.qualio.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: qualio
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Quantive
+  app: Quantive Results
+  apps:
+  - Quantive Results
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=gtmhub
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://quantive.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: quantive
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: RealtimeBoard, Inc.
+  app: Miro Insights
+  apps:
+  - Miro Insights
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=cardinal-7mib
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://insights.miro.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: miro
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Reforge
+  app: Reforge Insights
+  apps:
+  - Reforge Insights
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=monterey-ai
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://reforge.com/insights
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: reforge
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Relay.app Inc.
+  app: Relay.app
+  apps:
+  - Relay.app
+  listing_count: 1
+  partner: relay-app
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=relay-jq8g
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.relay.app
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: RevenueCat
+  app: RevenueCat Customer Profiles
+  apps:
+  - RevenueCat Customer Profiles
+  listing_count: 1
+  partner: revenuecat
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=revenuecat-customer-profiles-2oan
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://www.revenuecat.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Rippling
+  app: Rippling
+  apps:
+  - Rippling
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=rippling-os95
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.rippling.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: rippling
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: SayMine Technologies LTD
+  app: MineOS
+  apps:
+  - MineOS
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=mine-privacy-portal
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://mineos.ai
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: mine
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Scytale AI
+  app: Scytale AI
+  apps:
+  - Scytale AI
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=scytale-intercom-integration
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://scytale.ai/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: scytale
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: SegMetrics
+  app: SegMetrics
+  apps:
+  - SegMetrics
+  listing_count: 1
+  partner: segmetrics
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=segmetrics
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://segmetrics.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Segment
+  app: Segment
+  apps:
+  - Segment
+  listing_count: 1
+  partner: segment
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=segment
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://www.segment.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Sendinblue SAS
+  app: Sendinblue
+  apps:
+  - Sendinblue
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=sendinblue-na55
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://www.sendinblue.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: sendinblue
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: SessionStack
+  app: SessionStack
+  apps:
+  - SessionStack
+  listing_count: 1
+  partner: sessionstack
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=sessionstack-intercom
+  category: Inbox tools
+  app_categories:
+  - Inbox tools
+  partner_url: https://www.sessionstack.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Siena Labs Inc.
+  app: Siena AI
+  apps:
+  - Siena AI
+  listing_count: 1
+  partner: siena
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=siena-ai
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://siena.cx
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: SmartSuite Holdings LLC.
+  app: SmartSuite
+  apps:
+  - SmartSuite
+  listing_count: 1
+  partner: smartsuite
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=smartsuite-2uaa
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://www.smartsuite.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Smartling, Inc.
+  app: Smartling
+  apps:
+  - Smartling
+  listing_count: 1
+  partner: smartling
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=smartling-integration-app
+  category: Knowledge sources
+  app_categories:
+  - Knowledge sources
+  partner_url: https://www.smartling.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Smartlook
+  app: Smartlook
+  apps:
+  - Smartlook
+  listing_count: 1
+  partner: smartlook
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=smartlook
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.smartlook.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Sorry™
+  app: Sorry™ Status Page
+  apps:
+  - Sorry™ Status Page
+  listing_count: 1
+  partner: sorry
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=sorry-yb8v
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://www.sorryapp.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Surfboard
+  app: Surfboard
+  apps:
+  - Surfboard
+  listing_count: 1
+  partner: surfboard
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=surfboard-dm0s
+  category: Inbox tools
+  app_categories:
+  - Inbox tools
+  partner_url: https://teamsurfboard.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Survicate
+  app: Survicate Customer Feedback Platform
+  apps:
+  - Survicate Customer Feedback Platform
+  listing_count: 1
+  partner: survicate
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=survicate
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://survicate.com/integrations/intercom-survey/?utm_source=intercom&utm_medium=integrations&utm_campaign=marketplace
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Talkdesk
+  app: Talkdesk
+  apps:
+  - Talkdesk
+  listing_count: 1
+  partner: talkdesk
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=talkdesk
+  category: Phone & Video
+  app_categories:
+  - Phone & Video
+  partner_url: https://support.talkdesk.com/hc/en-us/sections/200947759-Intercom
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: The Mobile-First Company
+  app: Allo
+  apps:
+  - Allo
+  listing_count: 1
+  partner: the-mobile-first-company
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=allo
+  category: Phone & Video
+  app_categories:
+  - Phone & Video
+  partner_url: https://withallo.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Tonkean
+  app: Tonkean
+  apps:
+  - Tonkean
+  listing_count: 1
+  partner: tonkean
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=tonkean
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.tonkean.com/?utm_source=intercom&utm_medium=referral&utm_campaign=partner
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Transcend
+  app: Transcend
+  apps:
+  - Transcend
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=transcend-vuxu
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://transcend.io/?utm_source=intercom&utm_medium=partnerdirectory&utm_campaign=partner-directory-inbound-evergreen
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: transcend-io
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Trelica
+  app: Trelica
+  apps:
+  - Trelica
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=trelica
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://trelica.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: trelica
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Triple Whale
+  app: Triple Whale
+  apps:
+  - Triple Whale
+  listing_count: 1
+  partner: triple-whale
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=triple-whale-u2tg
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.triplewhale.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Ultimate
+  app: Ultimate chatbot
+  apps:
+  - Ultimate chatbot
+  listing_count: 1
+  partner: ultimateai
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=ultimate-chatbot
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://www.ultimate.ai/?utm_campaign=Partner%20Marketing&utm_source=intercommarketplace
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Unbabel
+  app: Unbabel for Intercom
+  apps:
+  - Unbabel for Intercom
+  listing_count: 1
+  partner: unbabel
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=unbabel-chat-translation
+  category: Inbox tools
+  app_categories:
+  - Inbox tools
+  partner_url: http://go.unbabel.com/intercom
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Unito
+  app: Unito
+  apps:
+  - Unito
+  listing_count: 1
+  partner: unito
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=unito
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://unito.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Userback
+  app: Userback
+  apps:
+  - Userback
+  listing_count: 1
+  partner: userback
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=userback-18fu
+  category: Surveys & Feedback
+  app_categories:
+  - Surveys & Feedback
+  partner_url: https://www.userback.io
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Userpilot
+  app: Userpilot
+  apps:
+  - Userpilot
+  listing_count: 1
+  partner: userpilot
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=userpilot-ntae
+  category: Knowledge sources
+  app_categories:
+  - Knowledge sources
+  partner_url: https://userpilot.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Vectorize AI
+  app: Vectorize
+  apps:
+  - Vectorize
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=vectorize_oauth_prod
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://vectorize.io/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: vectorize-io
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Vitally
+  app: Vitally
+  apps:
+  - Vitally
+  listing_count: 1
+  partner: vitally
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=vitally
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://vitally.io
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Von
+  app: VON
+  apps:
+  - VON
+  listing_count: 1
+  partner: von
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=von-key
+  category: Customer data & CRM
+  app_categories:
+  - Customer data & CRM
+  partner_url: https://vonlabs.ai/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Wistia
+  app: Wistia
+  apps:
+  - Wistia
+  listing_count: 1
+  partner: wistia
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=wistia
+  category: Marketing & Campaigns
+  app_categories:
+  - Marketing & Campaigns
+  partner_url: https://wistia.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Workato
+  app: Workato
+  apps:
+  - Workato
+  listing_count: 1
+  partner: workato
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=workato
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://workato.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Zapier
+  app: Zapier
+  apps:
+  - Zapier
+  listing_count: 1
+  partner: zapier
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zapier
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://zapier.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Zelta
+  app: Zelta
+  apps:
+  - Zelta
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zelta-bfi8
+  category: Analytics
+  app_categories:
+  - Analytics
+  partner_url: https://www.zelta.ai/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: zelta
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: ZenAdmin
+  app: ZenAdmin
+  apps:
+  - ZenAdmin
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=hybr1d
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://zenadmin.ai
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: zenadmin
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
+- partner_name: Zeta AI, Inc. (Viktor)
+  app: Viktor
+  apps:
+  - Viktor
+  listing_count: 1
+  partner: viktor
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=viktor-t30h
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  - Customer data & CRM
+  partner_url: https://viktor.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Zight
+  app: Zight Screen Recording
+  apps:
+  - Zight Screen Recording
+  listing_count: 1
+  partner: zight
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zight-client
+  category: Inbox tools
+  app_categories:
+  - Inbox tools
+  partner_url: https://zight.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: Zoom Video Communications
+  app: Zoom Virtual Agent
+  apps:
+  - Zoom Virtual Agent
+  listing_count: 1
+  partner: zoom
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=zoom-zva-69d0
+  category: Intercom App Store app
+  app_categories: []
+  partner_url: https://zoom.us/zva/index/admin#/admin-integrations
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: hyperping.com
+  app: Hyperping
+  apps:
+  - Hyperping
+  listing_count: 1
+  partner: hyperping
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=hp-08-prod
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://hyperping.com
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: incident.io
+  app: incident.io
+  apps:
+  - incident.io
+  listing_count: 1
+  partner: incident-io
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=incident-io-status-page-9tsq
+  category: Issue tracking & Ticketing
+  app_categories:
+  - Issue tracking & Ticketing
+  partner_url: https://incident.io
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+- partner_name: ketch
+  app: Ketch Data Privacy
+  apps:
+  - Ketch Data Privacy
+  listing_count: 1
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://www.intercom.com/app-store/?app_package_code=ketch-data-privacy
+  category: Automation platforms
+  app_categories:
+  - Automation platforms
+  partner_url: https://www.ketch.com/
+  signal_note: Intercom App Store listing (built_by + developer_homepage_url from the storefront's own public app_packages
+    JSON); listing count, app names and store categories are context, never counted
+  detected_by: sweep-intercom-app-store.py
+  detected: '2026-10-23'
+  partner_held:
+    candidate: ketch-io
+    why: 'market-fit gate: partner''s own tags carry no customer-support / chat / messaging / CRM / marketing /
+      feedback / analytics / data / automation term'
 templates:
 - title: Send new Intercom conversations as Slack channel messages
   url: https://zapier.com/apps/intercom/integrations/slack/60874/send-new-intercom-conversations-as-slack-channel-messages
