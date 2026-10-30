@@ -1,4 +1,4 @@
-# Intercom (intercom)
+# Intercom
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,62 +66,195 @@
 
 Intercom is an AI-powered customer service platform that enables businesses to build seamless customized experiences through its Help Desk and Messenger. The Intercom API allows developers to integrate with the Intercom platform using RESTful APIs and SDKs.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/intercom/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/intercom/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Customer Service · Messaging · Conversational AI · Help Desk · Chatbots
 
-## Scope
+## Intercom on APIs.io
 
-- **Type:** Index
+Everything profiled for Intercom is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/intercom/](https://apis.io/providers/intercom/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (9)
 
-- AI
-- Customer Service
-- Customer Support
-- Messaging
+- [Intercom Admins API](https://apis.io/apis/intercom/intercom-admins-api/) — Workspace teammates and admin information.
+- [Intercom Articles API](https://apis.io/apis/intercom/intercom-articles-api/) — Manage Help Center articles.
+- [Intercom Companies API](https://apis.io/apis/intercom/intercom-companies-api/) — Manage company records associated with contacts.
+- [Intercom Contacts API](https://apis.io/apis/intercom/intercom-contacts-api/) — Manage users and leads in your Intercom workspace.
+- [Intercom Conversations API](https://apis.io/apis/intercom/intercom-conversations-api/) — Manage conversations between contacts and admins.
+- [Intercom Data Events API](https://apis.io/apis/intercom/intercom-data-events-api/) — Submit and retrieve user activity events.
+- [Intercom Messages API](https://apis.io/apis/intercom/intercom-messages-api/) — Send outbound messages from Intercom to contacts.
+- [Intercom News API](https://apis.io/apis/intercom/intercom-news-api/) — Manage news items in the Help Desk.
+- [Intercom Segments API](https://apis.io/apis/intercom/intercom-segments-api/) — Access user and company segments.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-07-02
-- **Modified:** 2026-05-30
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### AsyncAPI (1)
 
-### Intercom API
+Event-driven and webhook contracts.
 
-The Intercom API provides programmatic access to the Intercom customer service platform. Build apps on the complete AI customer service platform and create seamless customized experiences in the Intercom Help Desk and Messenger using APIs and SDKs.
+- [Intercom Webhooks](https://apis.io/asyncapis/intercom/intercom-webhooks-asyncapi/)
 
-- **Human URL:** [https://developers.intercom.com/](https://developers.intercom.com/)
-- **Base URL:** `https://api.intercom.io`
+#### Event channels (1)
 
-#### Tags
+Individual events and webhooks the provider emits.
 
-- Customer Service
-- Messaging
-- REST
+- [/intercom/webhook](https://apis.io/channels/intercom/intercom-webhook/)
 
-#### Properties
+#### GraphQL (1)
 
-- [Documentation](https://developers.intercom.com/docs/)
-- [Getting Started](https://developers.intercom.com/docs/get-started/)
-- [Authentication](https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/)
-- [OpenAPI](openapi/intercom-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/intercom.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/intercom.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [AsyncAPI](asyncapi/intercom-webhooks-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
+GraphQL schemas.
 
-## Common Properties
+- [Moved to /providers/intercom/](https://apis.io/graphqls/intercom/intercom-graphql/)
 
-- [GitHub Organization](https://github.com/intercom)
-- [LinkedIn](https://www.linkedin.com/company/intercom)
-- [Portal](https://developers.intercom.com/)
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [intercom](https://apis.io/servers/intercom/intercom/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Intercom Agentic Access](https://apis.io/agentic-access/intercom/intercom-agentic-access/)
+
+#### JSON Schema (9)
+
+The data models the API reads and writes.
+
+- [Admin](https://apis.io/schemas/intercom/intercom-admin/)
+- [Article](https://apis.io/schemas/intercom/intercom-article/)
+- [Company](https://apis.io/schemas/intercom/intercom-company/)
+- [CompanyList](https://apis.io/schemas/intercom/intercom-companylist/)
+- [Contact](https://apis.io/schemas/intercom/intercom-contact/)
+- [ContactList](https://apis.io/schemas/intercom/intercom-contactlist/)
+- [Conversation](https://apis.io/schemas/intercom/intercom-conversation/)
+- [ConversationList](https://apis.io/schemas/intercom/intercom-conversationlist/)
+- [Segment](https://apis.io/schemas/intercom/intercom-segment/)
+
+#### JSON Structure (1)
+
+Data models expressed in JSON Structure.
+
+- [Intercom Structure](https://apis.io/json-structure/intercom/intercom-structure/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Intercom Domain Vocabulary](https://apis.io/vocabularies/intercom/intercom-vocabulary/)
+
+#### Collections (10)
+
+Postman and Open Collection request collections.
+
+- [Intercom API](https://apis.io/collections/intercom/open-intercom/)
+- [Intercom Admins API](https://apis.io/collections/intercom/open-intercom-admins-api/)
+- [Intercom Admins Articles API](https://apis.io/collections/intercom/open-intercom-articles-api/)
+- [Intercom Admins Companies API](https://apis.io/collections/intercom/open-intercom-companies-api/)
+- [Intercom Admins Contacts API](https://apis.io/collections/intercom/open-intercom-contacts-api/)
+- [Intercom Admins Conversations API](https://apis.io/collections/intercom/open-intercom-conversations-api/)
+- [Intercom Admins Data Events API](https://apis.io/collections/intercom/open-intercom-data-events-api/)
+- [Intercom Admins Messages API](https://apis.io/collections/intercom/open-intercom-messages-api/)
+- [Intercom Admins News API](https://apis.io/collections/intercom/open-intercom-news-api/)
+- [Intercom Admins Segments API](https://apis.io/collections/intercom/open-intercom-segments-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Intercom — asyncapi rules](https://apis.io/rules/intercom/intercom-asyncapi-spectral-rules/)
+- [Intercom — jsonschema rules](https://apis.io/rules/intercom/intercom-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Intercom Authentication](https://apis.io/security/intercom/intercom-authentication/)
+- [Intercom Domain Security](https://apis.io/security/intercom/intercom-domain-security/)
+- [Intercom Vulnerability Disclosure](https://apis.io/security/intercom/intercom-vulnerability-disclosure/)
+
+#### Plans and pricing (2)
+
+Published plans, tiers and prices.
+
+- [Intercom Plans Pricing](https://apis.io/plans/intercom/intercom-plans-pricing/)
+- [Intercom Price Estimates](https://apis.io/plans/intercom/intercom-price-estimates/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Intercom Rate Limits](https://apis.io/rate-limits/intercom/intercom-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Intercom Finops](https://apis.io/finops/intercom/intercom-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.intercom.com/)
 - [Documentation](https://developers.intercom.com/docs/)
+- [Pricing](https://www.intercom.com/pricing)
 - [Support](https://www.intercom.com/help/)
-- [Sign Up](https://app.intercom.com/a/signup/)
-- [Features](undefined)
-- [L L Ms Txt](https://developers.intercom.com/llms.txt)
+- [Blog](https://www.intercom.com/blog/feed/)
+- [GitHub](https://github.com/intercom)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 51.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 54.4 |
+| Contract governance | 13.6 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 55.3 |
+
+**Agent readiness 29.9** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 16.4** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/intercom/](https://apis.io/providers/intercom/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Intercom: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/intercom/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
